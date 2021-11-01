@@ -39,7 +39,7 @@ def get_assambly_element(ifc_file, element):
     return out
 
 
-def main(ifc_loc, rule_list):
+def set_layer(ifc_loc, rule_list):
     # Парсим IFC и разбиваем на слои
     ifc_file = ifcopenshell.open(ifc_loc)
     used_element = []
@@ -80,7 +80,7 @@ def main(ifc_loc, rule_list):
             new_layer = ifc_file.createIfcPresentationLayerAssignment(name, '', IfcShapes, '')
     for name, element in list_element.items():
         new_layer = ifc_file.createIfcPresentationLayerAssignment(name, "", element, "")
-    ifc_loc_edit = str(ifc_loc.replace('.ifc', '_правильный.ifc'))
+    ifc_loc_edit = str(ifc_loc.replace('.ifc', '_clean.ifc'))
     ifc_file.write(ifc_loc_edit)
     return len(used_element)
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     work_path = os.path.abspath(os.getcwd())
     ifc_file = []
     for file in os.listdir(work_path):
-        if file.endswith('.ifc') and not file.endswith('_правильный.ifc'):
+        if file.endswith('.ifc') and not file.endswith('_clean.ifc'):
             ifc_file.append(os.path.join(work_path, file))
             print(os.path.join(work_path, file))
     assert len(ifc_file) > 0
@@ -99,5 +99,5 @@ if __name__ == "__main__":
         rule_list = get_rule(layers_rule)
         assert len(rule_list) > 0
     for ifc_loc in ifc_file:
-        print(ifc_loc, main(ifc_loc, rule_list))
+        print(ifc_loc, set_layer(ifc_loc, rule_list))
     print('End')

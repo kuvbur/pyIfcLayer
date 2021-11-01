@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d78c1815-8eb7-478b-8917-d269326b3ff4}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>pyifclayer.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.8</InterpreterId>
+    <IsWindowsApplication>True</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="desktop.ini" />
+    <Content Include="ifcopenshell\desktop.ini" />
+    <Content Include="ifcopenshell\express\desktop.ini" />
+    <Content Include="ifcopenshell\express\README.txt" />
+    <Content Include="ifcopenshell\geom\desktop.ini" />
+    <Content Include="ifcopenshell\util\desktop.ini" />
+    <Content Include="ifcopenshell\util\schema\desktop.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ifcopenshell\entity_instance.py" />
+    <Compile Include="ifcopenshell\express\bootstrap.py" />
+    <Compile Include="ifcopenshell\express\codegen.py" />
+    <Compile Include="ifcopenshell\express\definitions.py" />
+    <Compile Include="ifcopenshell\express\documentation.py" />
+    <Compile Include="ifcopenshell\express\express_parser.py" />
+    <Compile Include="ifcopenshell\express\header.py" />
+    <Compile Include="ifcopenshell\express\implementation.py" />
+    <Compile Include="ifcopenshell\express\mapping.py" />
+    <Compile Include="ifcopenshell\express\nodes.py" />
+    <Compile Include="ifcopenshell\express\schema.py" />
+    <Compile Include="ifcopenshell\express\schema_class.py" />
+    <Compile Include="ifcopenshell\express\templates.py" />
+    <Compile Include="ifcopenshell\express\__init__.py" />
+    <Compile Include="ifcopenshell\file.py" />
+    <Compile Include="ifcopenshell\geom\app.py" />
+    <Compile Include="ifcopenshell\geom\code_editor_pane.py" />
+    <Compile Include="ifcopenshell\geom\main.py" />
+    <Compile Include="ifcopenshell\geom\occ_utils.py" />
+    <Compile Include="ifcopenshell\geom\__init__.py" />
+    <Compile Include="ifcopenshell\guid.py" />
+    <Compile Include="ifcopenshell\ifcopenshell_wrapper.py" />
+    <Compile Include="ifcopenshell\main.py" />
+    <Compile Include="ifcopenshell\template.py" />
+    <Compile Include="ifcopenshell\util\date.py" />
+    <Compile Include="ifcopenshell\util\element.py" />
+    <Compile Include="ifcopenshell\util\geolocation.py" />
+    <Compile Include="ifcopenshell\util\placement.py" />
+    <Compile Include="ifcopenshell\util\pset.py" />
+    <Compile Include="ifcopenshell\util\schema.py" />
+    <Compile Include="ifcopenshell\util\selector.py" />
+    <Compile Include="ifcopenshell\util\type.py" />
+    <Compile Include="ifcopenshell\util\unit.py" />
+    <Compile Include="ifcopenshell\util\__init__.py" />
+    <Compile Include="ifcopenshell\validate.py" />
+    <Compile Include="ifcopenshell\__init__.py" />
+    <Compile Include="pyArchIFC2NavisIFC.py" />
+    <Compile Include="pyifclayer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ifcopenshell" />
+    <Folder Include="ifcopenshell\express" />
+    <Folder Include="ifcopenshell\geom" />
+    <Folder Include="ifcopenshell\util" />
+    <Folder Include="ifcopenshell\util\schema" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+    <InterpreterReference Include="Global|PythonCore|3.7-32" />
+    <InterpreterReference Include="Global|PythonCore|3.8" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
