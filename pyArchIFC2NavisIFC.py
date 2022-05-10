@@ -1,22 +1,57 @@
-from builtins import isinstance
-
-import flatdict
+import cmath
+import math
 import os
 import uuid
 import ifcopenshell
+from datetime import datetime
+from multiprocessing.dummy import Pool as ThreadPool
+
+script_path = os.path.abspath(os.path.dirname(__file__))
+work_path = os.path.join(os.path.abspath(os.getcwd()), 'ifc')
+out_path = os.path.join(os.path.abspath(os.getcwd()), 'ifc_clean')
+done_path = os.path.join(os.path.abspath(os.getcwd()), 'ifc_done')
 
 rgb = {'Белый': (255, 255, 255),
        'Тёмно-зелёный': (25, 129, 0),
        'Зелёный': (0, 255, 0),
        'Светло-зелёный': (28, 255, 50),
-       'Светло-серый': (80, 80, 80),
-       'Тёмно-серый': (150, 150, 150),
+       'Тёмно-серый': (80, 80, 80),
+       'Светло-серый': (150, 150, 150),
        'Серый': (120, 120, 120),
        'Голубой': (30, 184, 253),
        'Коричневый': (139, 71, 38),
        'Пурпурный': (205, 38, 38),
        'All': (50, 50, 50)
        }
+
+pset_level = 'Naviswork - уровни'
+
+level = {'Шифр здания': 0, 'Шифр специализации': 1, 'Шифр подгруппы': 2, 'Шифр сборки': 3, 'Шифр элемента': 4}
+coord_file = os.path.join(work_path, 'Координаты начала здания (пересечение А_1).txt')
+
+
+def get_coord(coord_file):
+    f = open(coord_file, 'r', encoding='utf-8')
+    coord = {}
+    for line in f:
+        if '1166' in line:
+            c = line.split('\t')
+            ang = float(c[4].strip('°').replace(',', '.'))
+            if abs(ang - 360) < 0.001:
+                ang = 0
+            id = c[0]
+            i = 0
+            if id in coord.keys():
+                sid = id
+                while sid in coord.keys():
+                    i = i + 1
+                    sid = id + '.' + str(i)
+                id = sid
+            coord[id] = [float(c[1].replace(',', '.')), float(c[2].replace(',', '.')),
+                         float(c[3].replace(',', '.')),
+                         ang]
+    return coord
+
 
 def create_guid():
     return ifcopenshell.guid.compress(uuid.uuid1().hex)
@@ -43,25 +78,50 @@ def dict_add_list(key_el, list_el):
 
 class IFCConvert(object):
     def __init__(self, ifc_file):
+        self.flag_write = True
+        self.start_time = datetime.now()
         self.ifc_filename = ifc_file
+        print('\nЧтение файла ' + os.path.split(self.ifc_filename)[1])
+        id_bilding = ifc_file.split('\\')[-1]
+        id_bilding = id_bilding.split('.')[0]
+        self.id_bilding = id_bilding.replace('GCC-SNH-PD-', '')
         self.ifc = ifcopenshell.open(ifc_file)
         self.place = self.ifc.by_type("IfcSite")[0]
-        self.place = self.ifc.by_type("IfcSite")[0]
+        self.place.Name = self.id_bilding
         self.owner_history = self.ifc.by_type("IfcOwnerHistory")[0]
         self.del_unused()
         self.color = self.get_dict_material()
         self.stage = {}
 
+    def set_coord(self, coord):
+        if self.id_bilding not in coord:
+            print('\n---------------- НЕ НАЙДЕНЫ КООРДИНАТЫ ' + self.id_bilding + ' ----------------')
+            self.flag_write = False
+            return
+        x = coord[self.id_bilding][0] + 4061156
+        y = coord[self.id_bilding][1] + 3780570
+        z = coord[self.id_bilding][2]
+        ang = coord[self.id_bilding][3] * math.pi / 180
+        vekt = (math.cos(ang), math.sin(ang), 0.0)
+        # Замена координат начала
+        if self.place.ObjectPlacement is not None and self.place.ObjectPlacement.is_a("IfcLocalPlacement"):
+            print('\nУстановка начала координат')
+            self.place.ObjectPlacement.RelativePlacement.Location.Coordinates = (x, y, z)
+            self.place.ObjectPlacement.RelativePlacement.RefDirection.DirectionRatios = vekt
+
     def del_unused(self):
+        if not self.flag_write:
+            return
         self.del_storey()
         self.del_layer()
 
     def get_dict_material(self):
         color = {}
+        print('\nСоздание словаря с материалами ' + os.path.split(self.ifc_filename)[1])
         for c, rgbc in rgb.items():
             mat = self.ifc.createIfcMaterial(c)
             r, g, b = rgbc
-            col = self.ifc.createIfcColourRgb(None, r / 255, g / 255, b / 255)
+            col = self.ifc.createIfcColourRgb(c, r / 255, g / 255, b / 255)
             ssr = self.ifc.createIfcSurfaceStyleRendering(col, None, None, None, None, None, None, None, "FLAT")
             iss = self.ifc.createIfcSurfaceStyle(None, "BOTH", [ssr])
             psa = self.ifc.createIfcPresentationStyleAssignment([iss])
@@ -88,29 +148,39 @@ class IFCConvert(object):
         imd = self.ifc.createIfcMaterialDefinitionRepresentation(None, None, [isr], mat)
         self.ifc.createIfcRelAssociatesMaterial(create_guid(), self.owner_history, 'MaterialLink',
                                                 '', [element], mat)
-        pass
 
-    def write(self):
-        ifc_loc_edit = str(self.ifc_filename.replace('.ifc', '_правильный.ifc'))
+    def write(self, out_path):
+        if not self.flag_write:
+            return
+        print('\nЗапись в файл ' + os.path.split(self.ifc_filename)[1])
+        ifc_loc_edit = os.path.join(out_path, os.path.split(self.ifc_filename)[1])
         self.ifc.write(ifc_loc_edit)
+        print('\nВремя обработки - ' + os.path.split(self.ifc_filename)[1] + ' {}'.format(
+            datetime.now() - self.start_time))
 
     def del_layer(self):
-        for t in ['IfcRelAssociatesMaterial', 'IfcPresentationLayerAssignment', 'IfcRelAssociatesClassification', 'IfcStyledItem', 'IfcPresentationStyle']:
+        print('Удаление слоёв ' + os.path.split(self.ifc_filename)[1])
+        for t in ['IfcRelAssociatesMaterial', 'IfcPresentationLayerAssignment', 'IfcRelAssociatesClassification',
+                  'IfcStyledItem', 'IfcPresentationStyle', 'IfcMaterial', 'IfcSurfaceStyle']:
             for layer in self.ifc.by_type(t):
                 self.ifc.remove(layer)
 
     def del_storey(self):
+        print('Удаление этажей ' + os.path.split(self.ifc_filename)[1])
         new_elements = []
         self.grids = self.ifc.by_type('IfcGrid')
-        for c in self.ifc.by_type('IfcRelContainedInSpatialStructure'):
-            if c.RelatingStructure.is_a('IfcBuildingStorey'):
+        for c in self.ifc.by_type('ifcrelcontainedinspatialstructure'):
+            if c.RelatingStructure.is_a('ifcbuildingstorey'):
                 for el in c.RelatedElements:
                     new_elements.append(el)
                 self.ifc.remove(c.RelatingStructure)
                 self.ifc.remove(c)
-        self.ifc.remove(self.ifc.by_type('IfcBuilding')[0])
+        self.ifc.remove(self.ifc.by_type('ifcbuilding')[0])
 
     def del_assemblies(self):
+        if not self.flag_write:
+            return
+        print('\nУдаление сборок ' + os.path.split(self.ifc_filename)[1])
         for a in self.ifc.by_type('IfcElementAssembly'):
             self.ifc.remove(a)
 
@@ -138,7 +208,7 @@ class IFCConvert(object):
             elements.extend(self.grids)
         return self._add_assembly_(elements, group_name, parent_name)
 
-    # Уровень 4
+    # Уровень 5
     def group_level_5(self, state, key_1, key_2, key_3, key_4):
         group_name = key_4
         parent_name = key_3
@@ -205,6 +275,8 @@ class IFCConvert(object):
 
     # Уровень 1
     def group_level_1(self, state):
+        if not self.flag_write:
+            return
         projects = []
         for element in state.keys():
             project_group = self.group_level_2(state, element)
@@ -214,6 +286,9 @@ class IFCConvert(object):
                                                          self.place)
 
     def get_stage(self, pset_level, level_name):
+        if not self.flag_write:
+            return
+        print('Получение списка свойств ' + os.path.split(self.ifc_filename)[1])
         level_dict = {}
         for pset in self.ifc.by_type('IfcPropertySetDefinition'):
             if pset.Name == pset_level:
@@ -228,7 +303,13 @@ class IFCConvert(object):
         for p in pset.HasProperties:
             if p.Name in level_name:
                 inx_level = level_name[p.Name]
-                level_key[inx_level] = p.NominalValue.wrappedValue
+                val = p.NominalValue.wrappedValue
+                id_building = p.NominalValue.wrappedValue
+                if '-' in id_building:
+                    id_building = id_building.split('-')[0]
+                if not id_building.startswith('1166'):
+                    val = val.replace(id_building, self.id_bilding)
+                level_key[inx_level] = val
             if p.Name == 'Цвет':
                 color = p.NominalValue.wrappedValue
         elements = []
@@ -241,19 +322,23 @@ class IFCConvert(object):
                 elements.append(o)
         t1 = level_key[n_level - 1]
         t2 = level_key[n_level - 2]
-        if t1 == t2 or len(t1)<1:
+        if t1 == t2 or len(t1) < 1:
             level_key[n_level - 1] = 'else'
         return dict_add_list(level_key, elements)
 
     def set_pset(self):
+        if not self.flag_write:
+            return
+        print('Разбивка по уровням ' + os.path.split(self.ifc_filename)[1])
         for pset in self.ifc.by_type('IfcPropertySetDefinition'):
             if "Naviswork" in pset.Name and "уровни" not in pset.Name:
                 t = pset.Name
                 t = t.replace('Naviswork - ', '')
                 pset.Name = t
+                pset.Description = pset.Name
                 if hasattr(pset, 'HasProperties'):
                     for p in pset.HasProperties:
-                        if len(p.NominalValue.wrappedValue)==0:
+                        if len(p.NominalValue.wrappedValue) == 0:
                             p.NominalValue.wrappedValue = " "
             else:
                 if hasattr(pset, 'PropertyDefinitionOf'):
@@ -265,23 +350,32 @@ class IFCConvert(object):
                 self.ifc.remove(pset)
 
 
+def run(ifc_loc):
+    ifc_t = IFCConvert(ifc_loc)
+    coord = get_coord(coord_file)
+    ifc_t.set_coord(coord)
+    stage = ifc_t.get_stage(pset_level, level)
+    ifc_t.del_assemblies()
+    ifc_t.get_dict_material()
+    ifc_t.group_level_1(stage)
+    ifc_t.set_pset()
+    ifc_t.write(out_path)
+    os.replace(ifc_loc, os.path.join(done_path, os.path.split(ifc_loc)[1]))
+
+
 if __name__ == "__main__":
-    script_path = os.path.abspath(os.path.dirname(__file__))
-    work_path = os.path.abspath(os.getcwd())
     ifc_file = []
+    start_time = datetime.now()
     for file in os.listdir(work_path):
-        if file.endswith('.ifc') and not file.endswith('_правильный.ifc'):
+        if file.endswith('.ifc') and not file.endswith('_clean.ifc'):
             ifc_file.append(os.path.join(work_path, file))
-            print(os.path.join(work_path, file))
+            fname = os.path.split(os.path.join(work_path, file))
     assert len(ifc_file) > 0
-    pset_level = 'Naviswork - уровни'
-    level = {'Шифр здания': 0, 'Шифр специализации': 1, 'Шифр подгруппы': 2, 'Шифр сборки': 3, 'Шифр элемента': 4}
-    for ifc_loc in ifc_file:
-        ifc_t = IFCConvert(ifc_loc)
-        stage = ifc_t.get_stage(pset_level, level)
-        ifc_t.del_assemblies()
-        ifc_t.get_dict_material()
-        ifc_t.group_level_1(stage)
-        ifc_t.set_pset()
-        ifc_t.write()
-    print('End')
+    if len(ifc_file) > 1:
+        pool = ThreadPool(min(len(ifc_file), 8))
+        results = pool.map(run, ifc_file)
+        pool.close()
+        pool.join()
+    else:
+        run(ifc_file[0])
+    print('Общее время обработки ' + str(len(ifc_file)) + ' файлов обработки - {}'.format(datetime.now() - start_time))

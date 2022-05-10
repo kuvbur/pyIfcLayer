@@ -80,15 +80,7 @@ def global2local(matrix, eastings, northings, orthogonal_height, x_axis_abscissa
     result[1, 3] = (result[1, 3] - northings) / scale
     result[2, 3] = (result[2, 3] - orthogonal_height) / scale
     return (
-        np.linalg.inv(
-            np.matrix(
-                [
-                    [x[0], y[0], 0, 0],
-                    [x[1], y[1], 0, 0],
-                    [x[2], y[2], 1, 0],
-                    [0, 0, 0, 1],
-                ]
-            )
+np.linalg.inv(np.matrix([[x[0], y[0], 0, 0],[x[1], y[1], 0, 0],[x[2], y[2], 1, 0],[0, 0, 0, 1],])
         )
         @ result
     )
