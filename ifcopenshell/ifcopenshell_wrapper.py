@@ -159,137 +159,129 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _ifcopenshell_wrapper.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
-class settings(_object):
+class IteratorSettings(_object):
     """Proxy of C++ IfcGeom::IteratorSettings class."""
 
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, settings, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IteratorSettings, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, settings, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, IteratorSettings, name)
     __repr__ = _swig_repr
-    WELD_VERTICES = _ifcopenshell_wrapper.settings_WELD_VERTICES
-    USE_WORLD_COORDS = _ifcopenshell_wrapper.settings_USE_WORLD_COORDS
-    CONVERT_BACK_UNITS = _ifcopenshell_wrapper.settings_CONVERT_BACK_UNITS
-    USE_BREP_DATA = _ifcopenshell_wrapper.settings_USE_BREP_DATA
-    SEW_SHELLS = _ifcopenshell_wrapper.settings_SEW_SHELLS
-    FASTER_BOOLEANS = _ifcopenshell_wrapper.settings_FASTER_BOOLEANS
-    DISABLE_OPENING_SUBTRACTIONS = _ifcopenshell_wrapper.settings_DISABLE_OPENING_SUBTRACTIONS
-    DISABLE_TRIANGULATION = _ifcopenshell_wrapper.settings_DISABLE_TRIANGULATION
-    APPLY_DEFAULT_MATERIALS = _ifcopenshell_wrapper.settings_APPLY_DEFAULT_MATERIALS
-    INCLUDE_CURVES = _ifcopenshell_wrapper.settings_INCLUDE_CURVES
-    EXCLUDE_SOLIDS_AND_SURFACES = _ifcopenshell_wrapper.settings_EXCLUDE_SOLIDS_AND_SURFACES
-    NO_NORMALS = _ifcopenshell_wrapper.settings_NO_NORMALS
-    GENERATE_UVS = _ifcopenshell_wrapper.settings_GENERATE_UVS
-    APPLY_LAYERSETS = _ifcopenshell_wrapper.settings_APPLY_LAYERSETS
-    SEARCH_FLOOR = _ifcopenshell_wrapper.settings_SEARCH_FLOOR
-    SITE_LOCAL_PLACEMENT = _ifcopenshell_wrapper.settings_SITE_LOCAL_PLACEMENT
-    BUILDING_LOCAL_PLACEMENT = _ifcopenshell_wrapper.settings_BUILDING_LOCAL_PLACEMENT
-    VALIDATE_QUANTITIES = _ifcopenshell_wrapper.settings_VALIDATE_QUANTITIES
-    LAYERSET_FIRST = _ifcopenshell_wrapper.settings_LAYERSET_FIRST
-    EDGE_ARROWS = _ifcopenshell_wrapper.settings_EDGE_ARROWS
-    DISABLE_BOOLEAN_RESULT = _ifcopenshell_wrapper.settings_DISABLE_BOOLEAN_RESULT
-    NO_WIRE_INTERSECTION_CHECK = _ifcopenshell_wrapper.settings_NO_WIRE_INTERSECTION_CHECK
-    NO_WIRE_INTERSECTION_TOLERANCE = _ifcopenshell_wrapper.settings_NO_WIRE_INTERSECTION_TOLERANCE
-    STRICT_TOLERANCE = _ifcopenshell_wrapper.settings_STRICT_TOLERANCE
-    NUM_SETTINGS = _ifcopenshell_wrapper.settings_NUM_SETTINGS
+    WELD_VERTICES = _ifcopenshell_wrapper.IteratorSettings_WELD_VERTICES
+    USE_WORLD_COORDS = _ifcopenshell_wrapper.IteratorSettings_USE_WORLD_COORDS
+    CONVERT_BACK_UNITS = _ifcopenshell_wrapper.IteratorSettings_CONVERT_BACK_UNITS
+    USE_BREP_DATA = _ifcopenshell_wrapper.IteratorSettings_USE_BREP_DATA
+    SEW_SHELLS = _ifcopenshell_wrapper.IteratorSettings_SEW_SHELLS
+    DISABLE_OPENING_SUBTRACTIONS = _ifcopenshell_wrapper.IteratorSettings_DISABLE_OPENING_SUBTRACTIONS
+    DISABLE_TRIANGULATION = _ifcopenshell_wrapper.IteratorSettings_DISABLE_TRIANGULATION
+    APPLY_DEFAULT_MATERIALS = _ifcopenshell_wrapper.IteratorSettings_APPLY_DEFAULT_MATERIALS
+    INCLUDE_CURVES = _ifcopenshell_wrapper.IteratorSettings_INCLUDE_CURVES
+    EXCLUDE_SOLIDS_AND_SURFACES = _ifcopenshell_wrapper.IteratorSettings_EXCLUDE_SOLIDS_AND_SURFACES
+    NO_NORMALS = _ifcopenshell_wrapper.IteratorSettings_NO_NORMALS
+    GENERATE_UVS = _ifcopenshell_wrapper.IteratorSettings_GENERATE_UVS
+    APPLY_LAYERSETS = _ifcopenshell_wrapper.IteratorSettings_APPLY_LAYERSETS
+    ELEMENT_HIERARCHY = _ifcopenshell_wrapper.IteratorSettings_ELEMENT_HIERARCHY
+    SITE_LOCAL_PLACEMENT = _ifcopenshell_wrapper.IteratorSettings_SITE_LOCAL_PLACEMENT
+    BUILDING_LOCAL_PLACEMENT = _ifcopenshell_wrapper.IteratorSettings_BUILDING_LOCAL_PLACEMENT
+    VALIDATE_QUANTITIES = _ifcopenshell_wrapper.IteratorSettings_VALIDATE_QUANTITIES
+    LAYERSET_FIRST = _ifcopenshell_wrapper.IteratorSettings_LAYERSET_FIRST
+    EDGE_ARROWS = _ifcopenshell_wrapper.IteratorSettings_EDGE_ARROWS
+    DISABLE_BOOLEAN_RESULT = _ifcopenshell_wrapper.IteratorSettings_DISABLE_BOOLEAN_RESULT
+    NO_WIRE_INTERSECTION_CHECK = _ifcopenshell_wrapper.IteratorSettings_NO_WIRE_INTERSECTION_CHECK
+    NO_WIRE_INTERSECTION_TOLERANCE = _ifcopenshell_wrapper.IteratorSettings_NO_WIRE_INTERSECTION_TOLERANCE
+    STRICT_TOLERANCE = _ifcopenshell_wrapper.IteratorSettings_STRICT_TOLERANCE
+    DEBUG_BOOLEAN = _ifcopenshell_wrapper.IteratorSettings_DEBUG_BOOLEAN
+    BOOLEAN_ATTEMPT_2D = _ifcopenshell_wrapper.IteratorSettings_BOOLEAN_ATTEMPT_2D
+    NUM_SETTINGS = _ifcopenshell_wrapper.IteratorSettings_NUM_SETTINGS
 
     def __init__(self):
-        """__init__(IfcGeom::IteratorSettings self) -> settings"""
-        this = _ifcopenshell_wrapper.new_settings()
+        """__init__(IfcGeom::IteratorSettings self) -> IteratorSettings"""
+        this = _ifcopenshell_wrapper.new_IteratorSettings()
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
     def deflection_tolerance(self):
-        """deflection_tolerance(settings self) -> double"""
-        return _ifcopenshell_wrapper.settings_deflection_tolerance(self)
+        """deflection_tolerance(IteratorSettings self) -> double"""
+        return _ifcopenshell_wrapper.IteratorSettings_deflection_tolerance(self)
 
 
     def angular_tolerance(self):
-        """angular_tolerance(settings self) -> double"""
-        return _ifcopenshell_wrapper.settings_angular_tolerance(self)
+        """angular_tolerance(IteratorSettings self) -> double"""
+        return _ifcopenshell_wrapper.IteratorSettings_angular_tolerance(self)
+
+
+    def context_ids(self):
+        """context_ids(IteratorSettings self) -> std::set< int >"""
+        return _ifcopenshell_wrapper.IteratorSettings_context_ids(self)
 
 
     def set_deflection_tolerance(self, value):
-        """set_deflection_tolerance(settings self, double value)"""
-        return _ifcopenshell_wrapper.settings_set_deflection_tolerance(self, value)
+        """set_deflection_tolerance(IteratorSettings self, double value)"""
+        return _ifcopenshell_wrapper.IteratorSettings_set_deflection_tolerance(self, value)
 
 
     def set_angular_tolerance(self, value):
-        """set_angular_tolerance(settings self, double value)"""
-        return _ifcopenshell_wrapper.settings_set_angular_tolerance(self, value)
+        """set_angular_tolerance(IteratorSettings self, double value)"""
+        return _ifcopenshell_wrapper.IteratorSettings_set_angular_tolerance(self, value)
 
 
     def force_space_transparency(self, *args):
         """
-        force_space_transparency(settings self) -> double
-        force_space_transparency(settings self, double value)
+        force_space_transparency(IteratorSettings self) -> double
+        force_space_transparency(IteratorSettings self, double value)
         """
-        return _ifcopenshell_wrapper.settings_force_space_transparency(self, *args)
+        return _ifcopenshell_wrapper.IteratorSettings_force_space_transparency(self, *args)
+
+
+    def set_context_ids(self, value):
+        """set_context_ids(IteratorSettings self, std::vector< int,std::allocator< int > > value)"""
+        return _ifcopenshell_wrapper.IteratorSettings_set_context_ids(self, value)
 
 
     def get(self, setting):
-        """get(settings self, IfcGeom::IteratorSettings::SettingField setting) -> bool"""
-        return _ifcopenshell_wrapper.settings_get(self, setting)
+        """get(IteratorSettings self, uint64_t setting) -> bool"""
+        return _ifcopenshell_wrapper.IteratorSettings_get(self, setting)
 
 
     def set(self, setting, value):
-        """set(settings self, IfcGeom::IteratorSettings::SettingField setting, bool value)"""
-        return _ifcopenshell_wrapper.settings_set(self, setting, value)
+        """set(IteratorSettings self, uint64_t setting, bool value)"""
+        return _ifcopenshell_wrapper.IteratorSettings_set(self, setting, value)
 
-    __swig_setmethods__["offset"] = _ifcopenshell_wrapper.settings_offset_set
-    __swig_getmethods__["offset"] = _ifcopenshell_wrapper.settings_offset_get
+    __swig_setmethods__["offset"] = _ifcopenshell_wrapper.IteratorSettings_offset_set
+    __swig_getmethods__["offset"] = _ifcopenshell_wrapper.IteratorSettings_offset_get
     if _newclass:
-        offset = _swig_property(_ifcopenshell_wrapper.settings_offset_get, _ifcopenshell_wrapper.settings_offset_set)
-    __swig_setmethods__["rotation"] = _ifcopenshell_wrapper.settings_rotation_set
-    __swig_getmethods__["rotation"] = _ifcopenshell_wrapper.settings_rotation_get
+        offset = _swig_property(_ifcopenshell_wrapper.IteratorSettings_offset_get, _ifcopenshell_wrapper.IteratorSettings_offset_set)
+    __swig_setmethods__["rotation"] = _ifcopenshell_wrapper.IteratorSettings_rotation_set
+    __swig_getmethods__["rotation"] = _ifcopenshell_wrapper.IteratorSettings_rotation_get
     if _newclass:
-        rotation = _swig_property(_ifcopenshell_wrapper.settings_rotation_get, _ifcopenshell_wrapper.settings_rotation_set)
+        rotation = _swig_property(_ifcopenshell_wrapper.IteratorSettings_rotation_get, _ifcopenshell_wrapper.IteratorSettings_rotation_set)
 
+    def get_raw(self):
+        """get_raw(IteratorSettings self) -> uint64_t"""
+        return _ifcopenshell_wrapper.IteratorSettings_get_raw(self)
 
-    old_init = __init__
-
-    def __init__(self, **kwargs):
-       	self.old_init()
-       	for k, v in kwargs.items():
-       		self.set(getattr(self, k), v)
-
-    def __repr__(self):
-    	def d():
-    		import numbers
-    		for x in dir(self):
-    			if x.isupper() and x not in {"NUM_SETTINGS", "USE_PYTHON_OPENCASCADE"}:
-    				v = getattr(self, x)
-    				if isinstance(v, numbers.Integral):
-    					yield x
-
-    	return "%s(%s)" % (
-    		type(self).__name__,
-    		(", ".join(map(lambda x: "%s = %r" % (x, self.get(getattr(self, x))), d())))
-    	)
-
-
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_settings
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_IteratorSettings
     __del__ = lambda self: None
-settings_swigregister = _ifcopenshell_wrapper.settings_swigregister
-settings_swigregister(settings)
+IteratorSettings_swigregister = _ifcopenshell_wrapper.IteratorSettings_swigregister
+IteratorSettings_swigregister(IteratorSettings)
 
-class ElementSettings(settings):
+class ElementSettings(IteratorSettings):
     """Proxy of C++ IfcGeom::ElementSettings class."""
 
     __swig_setmethods__ = {}
-    for _s in [settings]:
+    for _s in [IteratorSettings]:
         __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, ElementSettings, name, value)
     __swig_getmethods__ = {}
-    for _s in [settings]:
+    for _s in [IteratorSettings]:
         __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
     __getattr__ = lambda self, name: _swig_getattr(self, ElementSettings, name)
     __repr__ = _swig_repr
 
     def __init__(self, settings, unit_magnitude, element_type):
-        """__init__(IfcGeom::ElementSettings self, settings settings, double unit_magnitude, std::string const & element_type) -> ElementSettings"""
+        """__init__(IfcGeom::ElementSettings self, IteratorSettings settings, double unit_magnitude, std::string const & element_type) -> ElementSettings"""
         this = _ifcopenshell_wrapper.new_ElementSettings(settings, unit_magnitude, element_type)
         try:
             self.this.append(this)
@@ -310,6 +302,314 @@ class ElementSettings(settings):
 ElementSettings_swigregister = _ifcopenshell_wrapper.ElementSettings_swigregister
 ElementSettings_swigregister(ElementSettings)
 
+class Matrix(_object):
+    """Proxy of C++ IfcGeom::Matrix class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Matrix, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Matrix, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, settings, trsf):
+        """__init__(IfcGeom::Matrix self, ElementSettings settings, gp_Trsf const & trsf) -> Matrix"""
+        this = _ifcopenshell_wrapper.new_Matrix(settings, trsf)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def data(self):
+        """data(Matrix self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.Matrix_data(self)
+
+
+            # Hide the getters with read-only property implementations
+    data = property(data)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_Matrix
+    __del__ = lambda self: None
+Matrix_swigregister = _ifcopenshell_wrapper.Matrix_swigregister
+Matrix_swigregister(Matrix)
+
+class Transformation(_object):
+    """Proxy of C++ IfcGeom::Transformation class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Transformation, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Transformation, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, settings, trsf):
+        """__init__(IfcGeom::Transformation self, ElementSettings settings, gp_Trsf const & trsf) -> Transformation"""
+        this = _ifcopenshell_wrapper.new_Transformation(settings, trsf)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def data(self):
+        """data(Transformation self) -> gp_Trsf const &"""
+        return _ifcopenshell_wrapper.Transformation_data(self)
+
+
+    def matrix(self):
+        """matrix(Transformation self) -> Matrix"""
+        return _ifcopenshell_wrapper.Transformation_matrix(self)
+
+
+    def inverted(self):
+        """inverted(Transformation self) -> Transformation"""
+        return _ifcopenshell_wrapper.Transformation_inverted(self)
+
+
+    def multiplied(self, other):
+        """multiplied(Transformation self, Transformation other) -> Transformation"""
+        return _ifcopenshell_wrapper.Transformation_multiplied(self, other)
+
+
+            # Hide the getters with read-only property implementations
+    matrix = property(matrix)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_Transformation
+    __del__ = lambda self: None
+Transformation_swigregister = _ifcopenshell_wrapper.Transformation_swigregister
+Transformation_swigregister(Transformation)
+
+class Element(_object):
+    """Proxy of C++ IfcGeom::Element class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Element, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Element, name)
+    __repr__ = _swig_repr
+
+    def id(self):
+        """id(Element self) -> int"""
+        return _ifcopenshell_wrapper.Element_id(self)
+
+
+    def parent_id(self):
+        """parent_id(Element self) -> int"""
+        return _ifcopenshell_wrapper.Element_parent_id(self)
+
+
+    def name(self):
+        """name(Element self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Element_name(self)
+
+
+    def type(self):
+        """type(Element self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Element_type(self)
+
+
+    def guid(self):
+        """guid(Element self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Element_guid(self)
+
+
+    def context(self):
+        """context(Element self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Element_context(self)
+
+
+    def unique_id(self):
+        """unique_id(Element self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Element_unique_id(self)
+
+
+    def transformation(self):
+        """transformation(Element self) -> Transformation"""
+        return _ifcopenshell_wrapper.Element_transformation(self)
+
+
+    def product(self):
+        """product(Element self) -> IfcBaseEntity"""
+        return _ifcopenshell_wrapper.Element_product(self)
+
+
+    def parents(self):
+        """parents(Element self) -> std::vector< IfcGeom::Element const *,std::allocator< IfcGeom::Element const * > > const"""
+        return _ifcopenshell_wrapper.Element_parents(self)
+
+
+    def SetParents(self, newparents):
+        """SetParents(Element self, std::vector< IfcGeom::Element const *,std::allocator< IfcGeom::Element const * > > newparents)"""
+        return _ifcopenshell_wrapper.Element_SetParents(self, newparents)
+
+
+    def __init__(self, settings, id, parent_id, name, type, guid, context, trsf, product):
+        """__init__(IfcGeom::Element self, ElementSettings settings, int id, int parent_id, std::string const & name, std::string const & type, std::string const & guid, std::string const & context, gp_Trsf const & trsf, IfcBaseEntity product) -> Element"""
+        this = _ifcopenshell_wrapper.new_Element(settings, id, parent_id, name, type, guid, context, trsf, product)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_Element
+    __del__ = lambda self: None
+
+    def product_(self):
+        """product_(Element self) -> entity_instance"""
+        return _ifcopenshell_wrapper.Element_product_(self)
+
+
+            # Hide the getters with read-only property implementations
+    id = property(id)
+    parent_id = property(parent_id)
+    name = property(name)
+    type = property(type)
+    guid = property(guid)
+    context = property(context)
+    unique_id = property(unique_id)
+    transformation = property(transformation)
+    product = property(product_)
+
+Element_swigregister = _ifcopenshell_wrapper.Element_swigregister
+Element_swigregister(Element)
+
+def __eq__(element1, element2):
+    """__eq__(Element element1, Element element2) -> bool"""
+    return _ifcopenshell_wrapper.__eq__(element1, element2)
+
+def __lt__(element1, element2):
+    """__lt__(Element element1, Element element2) -> bool"""
+    return _ifcopenshell_wrapper.__lt__(element1, element2)
+
+class BRepElement(Element):
+    """Proxy of C++ IfcGeom::BRepElement class."""
+
+    __swig_setmethods__ = {}
+    for _s in [Element]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, BRepElement, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Element]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, BRepElement, name)
+    __repr__ = _swig_repr
+
+    def geometry_pointer(self):
+        """geometry_pointer(BRepElement self) -> boost::shared_ptr< IfcGeom::Representation::BRep > const &"""
+        return _ifcopenshell_wrapper.BRepElement_geometry_pointer(self)
+
+
+    def geometry(self):
+        """geometry(BRepElement self) -> BRep"""
+        return _ifcopenshell_wrapper.BRepElement_geometry(self)
+
+
+    def __init__(self, id, parent_id, name, type, guid, context, trsf, geometry, product):
+        """__init__(IfcGeom::BRepElement self, int id, int parent_id, std::string const & name, std::string const & type, std::string const & guid, std::string const & context, gp_Trsf const & trsf, boost::shared_ptr< IfcGeom::Representation::BRep > const & geometry, IfcBaseEntity product) -> BRepElement"""
+        this = _ifcopenshell_wrapper.new_BRepElement(id, parent_id, name, type, guid, context, trsf, geometry, product)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def calculate_projected_surface_area(self, along_x, along_y, along_z):
+        """calculate_projected_surface_area(BRepElement self, double & along_x, double & along_y, double & along_z) -> bool"""
+        return _ifcopenshell_wrapper.BRepElement_calculate_projected_surface_area(self, along_x, along_y, along_z)
+
+
+    def calc_volume_(self):
+        """calc_volume_(BRepElement self) -> double"""
+        return _ifcopenshell_wrapper.BRepElement_calc_volume_(self)
+
+
+    def calc_surface_area_(self):
+        """calc_surface_area_(BRepElement self) -> double"""
+        return _ifcopenshell_wrapper.BRepElement_calc_surface_area_(self)
+
+
+            # Hide the getters with read-only property implementations
+    geometry = property(geometry)
+    volume = property(calc_volume_)
+    surface_area = property(calc_surface_area_)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_BRepElement
+    __del__ = lambda self: None
+BRepElement_swigregister = _ifcopenshell_wrapper.BRepElement_swigregister
+BRepElement_swigregister(BRepElement)
+
+class TriangulationElement(Element):
+    """Proxy of C++ IfcGeom::TriangulationElement class."""
+
+    __swig_setmethods__ = {}
+    for _s in [Element]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, TriangulationElement, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Element]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, TriangulationElement, name)
+    __repr__ = _swig_repr
+
+    def geometry(self):
+        """geometry(TriangulationElement self) -> Triangulation"""
+        return _ifcopenshell_wrapper.TriangulationElement_geometry(self)
+
+
+    def geometry_pointer(self):
+        """geometry_pointer(TriangulationElement self) -> boost::shared_ptr< IfcGeom::Representation::Triangulation > const &"""
+        return _ifcopenshell_wrapper.TriangulationElement_geometry_pointer(self)
+
+
+    def __init__(self, *args):
+        """
+        __init__(IfcGeom::TriangulationElement self, BRepElement shape_model) -> TriangulationElement
+        __init__(IfcGeom::TriangulationElement self, Element element, boost::shared_ptr< IfcGeom::Representation::Triangulation > const & geometry) -> TriangulationElement
+        """
+        this = _ifcopenshell_wrapper.new_TriangulationElement(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+            # Hide the getters with read-only property implementations
+    geometry = property(geometry)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_TriangulationElement
+    __del__ = lambda self: None
+TriangulationElement_swigregister = _ifcopenshell_wrapper.TriangulationElement_swigregister
+TriangulationElement_swigregister(TriangulationElement)
+
+class SerializedElement(Element):
+    """Proxy of C++ IfcGeom::SerializedElement class."""
+
+    __swig_setmethods__ = {}
+    for _s in [Element]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SerializedElement, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Element]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, SerializedElement, name)
+    __repr__ = _swig_repr
+
+    def geometry(self):
+        """geometry(SerializedElement self) -> Serialization"""
+        return _ifcopenshell_wrapper.SerializedElement_geometry(self)
+
+
+    def __init__(self, shape_model):
+        """__init__(IfcGeom::SerializedElement self, BRepElement shape_model) -> SerializedElement"""
+        this = _ifcopenshell_wrapper.new_SerializedElement(shape_model)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_SerializedElement
+    __del__ = lambda self: None
+
+            # Hide the getters with read-only property implementations
+    geometry = property(geometry)
+
+SerializedElement_swigregister = _ifcopenshell_wrapper.SerializedElement_swigregister
+SerializedElement_swigregister(SerializedElement)
+
 class Material(_object):
     """Proxy of C++ IfcGeom::Material class."""
 
@@ -319,12 +619,12 @@ class Material(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, Material, name)
     __repr__ = _swig_repr
 
-    def __init__(self, style=None):
+    def __init__(self, *args):
         """
-        __init__(IfcGeom::Material self, IfcGeom::SurfaceStyle const * style=None) -> Material
         __init__(IfcGeom::Material self) -> Material
+        __init__(IfcGeom::Material self, std::shared_ptr< IfcGeom::SurfaceStyle const > const & arg2) -> Material
         """
-        this = _ifcopenshell_wrapper.new_Material(style)
+        this = _ifcopenshell_wrapper.new_Material(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -383,6 +683,11 @@ class Material(_object):
     def __eq__(self, other):
         """__eq__(Material self, Material other) -> bool"""
         return _ifcopenshell_wrapper.Material___eq__(self, other)
+
+
+    def get_style(self):
+        """get_style(Material self) -> IfcGeom::SurfaceStyle const &"""
+        return _ifcopenshell_wrapper.Material_get_style(self)
 
 
             # Hide the getters with read-only property implementations
@@ -514,12 +819,12 @@ class Serialization(Representation):
 
 
     def surface_styles(self):
-        """surface_styles(Serialization self) -> std::vector< double > const &"""
+        """surface_styles(Serialization self) -> std::vector< double,std::allocator< double > > const &"""
         return _ifcopenshell_wrapper.Serialization_surface_styles(self)
 
 
     def surface_style_ids(self):
-        """surface_style_ids(Serialization self) -> std::vector< int > const &"""
+        """surface_style_ids(Serialization self) -> std::vector< int,std::allocator< int > > const &"""
         return _ifcopenshell_wrapper.Serialization_surface_style_ids(self)
 
 
@@ -547,6 +852,1458 @@ class Serialization(Representation):
 Serialization_swigregister = _ifcopenshell_wrapper.Serialization_swigregister
 Serialization_swigregister(Serialization)
 
+class Triangulation(Representation):
+    """Proxy of C++ IfcGeom::Representation::Triangulation class."""
+
+    __swig_setmethods__ = {}
+    for _s in [Representation]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Triangulation, name, value)
+    __swig_getmethods__ = {}
+    for _s in [Representation]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, Triangulation, name)
+    __repr__ = _swig_repr
+
+    def id(self):
+        """id(Triangulation self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Triangulation_id(self)
+
+
+    def verts(self):
+        """verts(Triangulation self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_verts(self)
+
+
+    def faces(self):
+        """faces(Triangulation self) -> std::vector< int,std::allocator< int > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_faces(self)
+
+
+    def edges(self):
+        """edges(Triangulation self) -> std::vector< int,std::allocator< int > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_edges(self)
+
+
+    def normals(self):
+        """normals(Triangulation self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_normals(self)
+
+
+    def uvs(self):
+        """uvs(Triangulation self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_uvs(self)
+
+
+    def material_ids(self):
+        """material_ids(Triangulation self) -> std::vector< int,std::allocator< int > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_material_ids(self)
+
+
+    def materials(self):
+        """materials(Triangulation self) -> std::vector< IfcGeom::Material,std::allocator< IfcGeom::Material > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_materials(self)
+
+
+    def item_ids(self):
+        """item_ids(Triangulation self) -> std::vector< int,std::allocator< int > > const &"""
+        return _ifcopenshell_wrapper.Triangulation_item_ids(self)
+
+
+    def __init__(self, *args):
+        """
+        __init__(IfcGeom::Representation::Triangulation self, BRep shape_model) -> Triangulation
+        __init__(IfcGeom::Representation::Triangulation self, ElementSettings settings, std::string const & id, std::vector< double,std::allocator< double > > const & verts, std::vector< int,std::allocator< int > > const & faces, std::vector< int,std::allocator< int > > const & edges, std::vector< double,std::allocator< double > > const & normals, std::vector< double,std::allocator< double > > const & uvs, std::vector< int,std::allocator< int > > const & material_ids, std::vector< std::shared_ptr< IfcGeom::SurfaceStyle >,std::allocator< std::shared_ptr< IfcGeom::SurfaceStyle > > > const & styles, std::vector< int,std::allocator< int > > const & item_ids) -> Triangulation
+        """
+        this = _ifcopenshell_wrapper.new_Triangulation(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_Triangulation
+    __del__ = lambda self: None
+
+    def box_project_uvs(vertices, normals):
+        """box_project_uvs(std::vector< double,std::allocator< double > > const & vertices, std::vector< double,std::allocator< double > > const & normals) -> std::vector< double,std::allocator< double > >"""
+        return _ifcopenshell_wrapper.Triangulation_box_project_uvs(vertices, normals)
+
+    box_project_uvs = staticmethod(box_project_uvs)
+
+            # Hide the getters with read-only property implementations
+    id = property(id)
+    faces = property(faces)
+    edges = property(edges)
+    material_ids = property(material_ids)
+    materials = property(materials)
+    item_ids = property(item_ids)
+
+
+            # Hide the getters with read-only property implementations
+    verts = property(verts)
+    normals = property(normals)
+
+Triangulation_swigregister = _ifcopenshell_wrapper.Triangulation_swigregister
+Triangulation_swigregister(Triangulation)
+
+def Triangulation_box_project_uvs(vertices, normals):
+    """Triangulation_box_project_uvs(std::vector< double,std::allocator< double > > const & vertices, std::vector< double,std::allocator< double > > const & normals) -> std::vector< double,std::allocator< double > >"""
+    return _ifcopenshell_wrapper.Triangulation_box_project_uvs(vertices, normals)
+
+class Iterator(_object):
+    """Proxy of C++ IfcGeom::Iterator class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, Iterator, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, Iterator, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        """
+        __init__(IfcGeom::Iterator self, IteratorSettings settings, file file, int num_threads=1) -> Iterator
+        __init__(IfcGeom::Iterator self, IteratorSettings settings, file file) -> Iterator
+        __init__(IfcGeom::Iterator self, IteratorSettings settings, file file, std::vector< IfcGeom::filter_t,std::allocator< IfcGeom::filter_t > > const & filters, int num_threads=1) -> Iterator
+        __init__(IfcGeom::Iterator self, IteratorSettings settings, file file, std::vector< IfcGeom::filter_t,std::allocator< IfcGeom::filter_t > > const & filters) -> Iterator
+        """
+        this = _ifcopenshell_wrapper.new_Iterator(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_Iterator
+    __del__ = lambda self: None
+
+    def initialize(self):
+        """initialize(Iterator self) -> bool"""
+        return _ifcopenshell_wrapper.Iterator_initialize(self)
+
+
+    def progress(self):
+        """progress(Iterator self) -> int"""
+        return _ifcopenshell_wrapper.Iterator_progress(self)
+
+
+    def compute_bounds(self, with_geometry):
+        """compute_bounds(Iterator self, bool with_geometry)"""
+        return _ifcopenshell_wrapper.Iterator_compute_bounds(self, with_geometry)
+
+
+    def bounds_min(self):
+        """bounds_min(Iterator self) -> gp_XYZ const &"""
+        return _ifcopenshell_wrapper.Iterator_bounds_min(self)
+
+
+    def bounds_max(self):
+        """bounds_max(Iterator self) -> gp_XYZ const &"""
+        return _ifcopenshell_wrapper.Iterator_bounds_max(self)
+
+
+    def unit_name(self):
+        """unit_name(Iterator self) -> std::string const &"""
+        return _ifcopenshell_wrapper.Iterator_unit_name(self)
+
+
+    def unit_magnitude(self):
+        """unit_magnitude(Iterator self) -> double"""
+        return _ifcopenshell_wrapper.Iterator_unit_magnitude(self)
+
+
+    def file(self):
+        """file(Iterator self) -> file"""
+        return _ifcopenshell_wrapper.Iterator_file(self)
+
+
+    def next(self):
+        """next(Iterator self) -> entity_instance"""
+        return _ifcopenshell_wrapper.Iterator_next(self)
+
+
+    def get(self):
+        """get(Iterator self) -> Element"""
+        return _ifcopenshell_wrapper.Iterator_get(self)
+
+
+    def get_native(self):
+        """get_native(Iterator self) -> BRepElement"""
+        return _ifcopenshell_wrapper.Iterator_get_native(self)
+
+
+    def get_object(self, id):
+        """get_object(Iterator self, int id) -> Element"""
+        return _ifcopenshell_wrapper.Iterator_get_object(self, id)
+
+
+    def create(self):
+        """create(Iterator self) -> entity_instance"""
+        return _ifcopenshell_wrapper.Iterator_create(self)
+
+
+    def set_cache(self, cache):
+        """set_cache(Iterator self, GeometrySerializer cache)"""
+        return _ifcopenshell_wrapper.Iterator_set_cache(self, cache)
+
+Iterator_swigregister = _ifcopenshell_wrapper.Iterator_swigregister
+Iterator_swigregister(Iterator)
+
+class SerializerSettings(IteratorSettings):
+    """Proxy of C++ SerializerSettings class."""
+
+    __swig_setmethods__ = {}
+    for _s in [IteratorSettings]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SerializerSettings, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IteratorSettings]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, SerializerSettings, name)
+    __repr__ = _swig_repr
+    USE_ELEMENT_NAMES = _ifcopenshell_wrapper.SerializerSettings_USE_ELEMENT_NAMES
+    USE_ELEMENT_GUIDS = _ifcopenshell_wrapper.SerializerSettings_USE_ELEMENT_GUIDS
+    USE_MATERIAL_NAMES = _ifcopenshell_wrapper.SerializerSettings_USE_MATERIAL_NAMES
+    USE_ELEMENT_TYPES = _ifcopenshell_wrapper.SerializerSettings_USE_ELEMENT_TYPES
+    USE_ELEMENT_HIERARCHY = _ifcopenshell_wrapper.SerializerSettings_USE_ELEMENT_HIERARCHY
+    USE_ELEMENT_STEPIDS = _ifcopenshell_wrapper.SerializerSettings_USE_ELEMENT_STEPIDS
+    USE_Y_UP = _ifcopenshell_wrapper.SerializerSettings_USE_Y_UP
+    NUM_SETTINGS = _ifcopenshell_wrapper.SerializerSettings_NUM_SETTINGS
+
+    def __init__(self):
+        """__init__(SerializerSettings self) -> SerializerSettings"""
+        this = _ifcopenshell_wrapper.new_SerializerSettings()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_setmethods__["precision"] = _ifcopenshell_wrapper.SerializerSettings_precision_set
+    __swig_getmethods__["precision"] = _ifcopenshell_wrapper.SerializerSettings_precision_get
+    if _newclass:
+        precision = _swig_property(_ifcopenshell_wrapper.SerializerSettings_precision_get, _ifcopenshell_wrapper.SerializerSettings_precision_set)
+    DEFAULT_PRECISION = _ifcopenshell_wrapper.SerializerSettings_DEFAULT_PRECISION
+
+
+    old_init = __init__
+
+    def __init__(self, **kwargs):
+       	self.old_init()
+       	for k, v in kwargs.items():
+       		self.set(getattr(self, k), v)
+
+    def __repr__(self):
+    	def d():
+    		import numbers
+    		for x in dir(self):
+    			if x.isupper() and x not in {"NUM_SETTINGS", "USE_PYTHON_OPENCASCADE", "DEFAULT_PRECISION"}:
+    				v = getattr(self, x)
+    				if isinstance(v, numbers.Integral):
+    					yield x
+
+    	return "%s(%s)" % (
+    		type(self).__name__,
+    		(", ".join(map(lambda x: "%s = %r" % (x, self.get(getattr(self, x))), d())))
+    	)
+
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_SerializerSettings
+    __del__ = lambda self: None
+SerializerSettings_swigregister = _ifcopenshell_wrapper.SerializerSettings_swigregister
+SerializerSettings_swigregister(SerializerSettings)
+
+class buffer(_object):
+    """Proxy of C++ stream_or_filename class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, buffer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, buffer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        """
+        __init__(stream_or_filename self, std::string const & fn) -> buffer
+        __init__(stream_or_filename self) -> buffer
+        """
+        this = _ifcopenshell_wrapper.new_buffer(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def get_value(self):
+        """get_value(buffer self) -> std::string"""
+        return _ifcopenshell_wrapper.buffer_get_value(self)
+
+
+    def filename(self):
+        """filename(buffer self) -> boost::optional< std::string >"""
+        return _ifcopenshell_wrapper.buffer_filename(self)
+
+
+    def is_ready(self):
+        """is_ready(buffer self) -> bool"""
+        return _ifcopenshell_wrapper.buffer_is_ready(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_buffer
+    __del__ = lambda self: None
+buffer_swigregister = _ifcopenshell_wrapper.buffer_swigregister
+buffer_swigregister(buffer)
+
+class GeometrySerializer(_object):
+    """Proxy of C++ GeometrySerializer class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GeometrySerializer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, GeometrySerializer, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    READ_BREP = _ifcopenshell_wrapper.GeometrySerializer_READ_BREP
+    READ_TRIANGULATION = _ifcopenshell_wrapper.GeometrySerializer_READ_TRIANGULATION
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_GeometrySerializer
+    __del__ = lambda self: None
+
+    def isTesselated(self):
+        """isTesselated(GeometrySerializer self) -> bool"""
+        return _ifcopenshell_wrapper.GeometrySerializer_isTesselated(self)
+
+
+    def write(self, *args):
+        """
+        write(GeometrySerializer self, TriangulationElement o)
+        write(GeometrySerializer self, BRepElement o)
+        """
+        return _ifcopenshell_wrapper.GeometrySerializer_write(self, *args)
+
+
+    def setUnitNameAndMagnitude(self, name, magnitude):
+        """setUnitNameAndMagnitude(GeometrySerializer self, std::string const & name, float magnitude)"""
+        return _ifcopenshell_wrapper.GeometrySerializer_setUnitNameAndMagnitude(self, name, magnitude)
+
+
+    def read(self, *args):
+        """
+        read(GeometrySerializer self, file f, std::string const & guid, std::string const & representation_id, GeometrySerializer::read_type rt) -> Element
+        read(GeometrySerializer self, file f, std::string const & guid, std::string const & representation_id) -> Element
+        """
+        return _ifcopenshell_wrapper.GeometrySerializer_read(self, *args)
+
+
+    def settings(self, *args):
+        """
+        settings(GeometrySerializer self) -> SerializerSettings
+        settings(GeometrySerializer self) -> SerializerSettings
+        """
+        return _ifcopenshell_wrapper.GeometrySerializer_settings(self, *args)
+
+
+    def object_id(self, o):
+        """object_id(GeometrySerializer self, Element o) -> std::string"""
+        return _ifcopenshell_wrapper.GeometrySerializer_object_id(self, o)
+
+GeometrySerializer_swigregister = _ifcopenshell_wrapper.GeometrySerializer_swigregister
+GeometrySerializer_swigregister(GeometrySerializer)
+
+class WriteOnlyGeometrySerializer(GeometrySerializer):
+    """Proxy of C++ WriteOnlyGeometrySerializer class."""
+
+    __swig_setmethods__ = {}
+    for _s in [GeometrySerializer]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, WriteOnlyGeometrySerializer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [GeometrySerializer]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, WriteOnlyGeometrySerializer, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def read(self, *args):
+        """
+        read(WriteOnlyGeometrySerializer self, file arg2, std::string const & arg3, std::string const & arg4, GeometrySerializer::read_type arg5) -> Element
+        read(WriteOnlyGeometrySerializer self, file arg2, std::string const & arg3, std::string const & arg4) -> Element
+        """
+        return _ifcopenshell_wrapper.WriteOnlyGeometrySerializer_read(self, *args)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_WriteOnlyGeometrySerializer
+    __del__ = lambda self: None
+WriteOnlyGeometrySerializer_swigregister = _ifcopenshell_wrapper.WriteOnlyGeometrySerializer_swigregister
+WriteOnlyGeometrySerializer_swigregister(WriteOnlyGeometrySerializer)
+
+class storey_sorter(_object):
+    """Proxy of C++ storey_sorter class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, storey_sorter, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, storey_sorter, name)
+    __repr__ = _swig_repr
+
+    def __call__(self, ad, bd):
+        """__call__(storey_sorter self, drawing_key const & ad, drawing_key const & bd) -> bool"""
+        return _ifcopenshell_wrapper.storey_sorter___call__(self, ad, bd)
+
+
+    def __init__(self):
+        """__init__(storey_sorter self) -> storey_sorter"""
+        this = _ifcopenshell_wrapper.new_storey_sorter()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_storey_sorter
+    __del__ = lambda self: None
+storey_sorter_swigregister = _ifcopenshell_wrapper.storey_sorter_swigregister
+storey_sorter_swigregister(storey_sorter)
+
+class horizontal_plan(_object):
+    """Proxy of C++ horizontal_plan class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, horizontal_plan, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, horizontal_plan, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["storey"] = _ifcopenshell_wrapper.horizontal_plan_storey_set
+    __swig_getmethods__["storey"] = _ifcopenshell_wrapper.horizontal_plan_storey_get
+    if _newclass:
+        storey = _swig_property(_ifcopenshell_wrapper.horizontal_plan_storey_get, _ifcopenshell_wrapper.horizontal_plan_storey_set)
+    __swig_setmethods__["elevation"] = _ifcopenshell_wrapper.horizontal_plan_elevation_set
+    __swig_getmethods__["elevation"] = _ifcopenshell_wrapper.horizontal_plan_elevation_get
+    if _newclass:
+        elevation = _swig_property(_ifcopenshell_wrapper.horizontal_plan_elevation_get, _ifcopenshell_wrapper.horizontal_plan_elevation_set)
+    __swig_setmethods__["offset"] = _ifcopenshell_wrapper.horizontal_plan_offset_set
+    __swig_getmethods__["offset"] = _ifcopenshell_wrapper.horizontal_plan_offset_get
+    if _newclass:
+        offset = _swig_property(_ifcopenshell_wrapper.horizontal_plan_offset_get, _ifcopenshell_wrapper.horizontal_plan_offset_set)
+    __swig_setmethods__["next_elevation"] = _ifcopenshell_wrapper.horizontal_plan_next_elevation_set
+    __swig_getmethods__["next_elevation"] = _ifcopenshell_wrapper.horizontal_plan_next_elevation_get
+    if _newclass:
+        next_elevation = _swig_property(_ifcopenshell_wrapper.horizontal_plan_next_elevation_get, _ifcopenshell_wrapper.horizontal_plan_next_elevation_set)
+
+    def __init__(self):
+        """__init__(horizontal_plan self) -> horizontal_plan"""
+        this = _ifcopenshell_wrapper.new_horizontal_plan()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_horizontal_plan
+    __del__ = lambda self: None
+horizontal_plan_swigregister = _ifcopenshell_wrapper.horizontal_plan_swigregister
+horizontal_plan_swigregister(horizontal_plan)
+
+class horizontal_plan_at_element(_object):
+    """Proxy of C++ horizontal_plan_at_element class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, horizontal_plan_at_element, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, horizontal_plan_at_element, name)
+    __repr__ = _swig_repr
+
+    def __init__(self):
+        """__init__(horizontal_plan_at_element self) -> horizontal_plan_at_element"""
+        this = _ifcopenshell_wrapper.new_horizontal_plan_at_element()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_horizontal_plan_at_element
+    __del__ = lambda self: None
+horizontal_plan_at_element_swigregister = _ifcopenshell_wrapper.horizontal_plan_at_element_swigregister
+horizontal_plan_at_element_swigregister(horizontal_plan_at_element)
+
+class vertical_section(_object):
+    """Proxy of C++ vertical_section class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, vertical_section, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, vertical_section, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["plane"] = _ifcopenshell_wrapper.vertical_section_plane_set
+    __swig_getmethods__["plane"] = _ifcopenshell_wrapper.vertical_section_plane_get
+    if _newclass:
+        plane = _swig_property(_ifcopenshell_wrapper.vertical_section_plane_get, _ifcopenshell_wrapper.vertical_section_plane_set)
+    __swig_setmethods__["name"] = _ifcopenshell_wrapper.vertical_section_name_set
+    __swig_getmethods__["name"] = _ifcopenshell_wrapper.vertical_section_name_get
+    if _newclass:
+        name = _swig_property(_ifcopenshell_wrapper.vertical_section_name_get, _ifcopenshell_wrapper.vertical_section_name_set)
+    __swig_setmethods__["with_projection"] = _ifcopenshell_wrapper.vertical_section_with_projection_set
+    __swig_getmethods__["with_projection"] = _ifcopenshell_wrapper.vertical_section_with_projection_get
+    if _newclass:
+        with_projection = _swig_property(_ifcopenshell_wrapper.vertical_section_with_projection_get, _ifcopenshell_wrapper.vertical_section_with_projection_set)
+    __swig_setmethods__["scale"] = _ifcopenshell_wrapper.vertical_section_scale_set
+    __swig_getmethods__["scale"] = _ifcopenshell_wrapper.vertical_section_scale_get
+    if _newclass:
+        scale = _swig_property(_ifcopenshell_wrapper.vertical_section_scale_get, _ifcopenshell_wrapper.vertical_section_scale_set)
+    __swig_setmethods__["size"] = _ifcopenshell_wrapper.vertical_section_size_set
+    __swig_getmethods__["size"] = _ifcopenshell_wrapper.vertical_section_size_get
+    if _newclass:
+        size = _swig_property(_ifcopenshell_wrapper.vertical_section_size_get, _ifcopenshell_wrapper.vertical_section_size_set)
+
+    def __init__(self):
+        """__init__(vertical_section self) -> vertical_section"""
+        this = _ifcopenshell_wrapper.new_vertical_section()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_vertical_section
+    __del__ = lambda self: None
+vertical_section_swigregister = _ifcopenshell_wrapper.vertical_section_swigregister
+vertical_section_swigregister(vertical_section)
+
+class geometry_data(_object):
+    """Proxy of C++ geometry_data class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, geometry_data, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, geometry_data, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["compound_local"] = _ifcopenshell_wrapper.geometry_data_compound_local_set
+    __swig_getmethods__["compound_local"] = _ifcopenshell_wrapper.geometry_data_compound_local_get
+    if _newclass:
+        compound_local = _swig_property(_ifcopenshell_wrapper.geometry_data_compound_local_get, _ifcopenshell_wrapper.geometry_data_compound_local_set)
+    __swig_setmethods__["dash_arrays"] = _ifcopenshell_wrapper.geometry_data_dash_arrays_set
+    __swig_getmethods__["dash_arrays"] = _ifcopenshell_wrapper.geometry_data_dash_arrays_get
+    if _newclass:
+        dash_arrays = _swig_property(_ifcopenshell_wrapper.geometry_data_dash_arrays_get, _ifcopenshell_wrapper.geometry_data_dash_arrays_set)
+    __swig_setmethods__["trsf"] = _ifcopenshell_wrapper.geometry_data_trsf_set
+    __swig_getmethods__["trsf"] = _ifcopenshell_wrapper.geometry_data_trsf_get
+    if _newclass:
+        trsf = _swig_property(_ifcopenshell_wrapper.geometry_data_trsf_get, _ifcopenshell_wrapper.geometry_data_trsf_set)
+    __swig_setmethods__["product"] = _ifcopenshell_wrapper.geometry_data_product_set
+    __swig_getmethods__["product"] = _ifcopenshell_wrapper.geometry_data_product_get
+    if _newclass:
+        product = _swig_property(_ifcopenshell_wrapper.geometry_data_product_get, _ifcopenshell_wrapper.geometry_data_product_set)
+    __swig_setmethods__["storey"] = _ifcopenshell_wrapper.geometry_data_storey_set
+    __swig_getmethods__["storey"] = _ifcopenshell_wrapper.geometry_data_storey_get
+    if _newclass:
+        storey = _swig_property(_ifcopenshell_wrapper.geometry_data_storey_get, _ifcopenshell_wrapper.geometry_data_storey_set)
+    __swig_setmethods__["storey_elevation"] = _ifcopenshell_wrapper.geometry_data_storey_elevation_set
+    __swig_getmethods__["storey_elevation"] = _ifcopenshell_wrapper.geometry_data_storey_elevation_get
+    if _newclass:
+        storey_elevation = _swig_property(_ifcopenshell_wrapper.geometry_data_storey_elevation_get, _ifcopenshell_wrapper.geometry_data_storey_elevation_set)
+    __swig_setmethods__["ifc_name"] = _ifcopenshell_wrapper.geometry_data_ifc_name_set
+    __swig_getmethods__["ifc_name"] = _ifcopenshell_wrapper.geometry_data_ifc_name_get
+    if _newclass:
+        ifc_name = _swig_property(_ifcopenshell_wrapper.geometry_data_ifc_name_get, _ifcopenshell_wrapper.geometry_data_ifc_name_set)
+    __swig_setmethods__["svg_name"] = _ifcopenshell_wrapper.geometry_data_svg_name_set
+    __swig_getmethods__["svg_name"] = _ifcopenshell_wrapper.geometry_data_svg_name_get
+    if _newclass:
+        svg_name = _swig_property(_ifcopenshell_wrapper.geometry_data_svg_name_get, _ifcopenshell_wrapper.geometry_data_svg_name_set)
+
+    def __init__(self):
+        """__init__(geometry_data self) -> geometry_data"""
+        this = _ifcopenshell_wrapper.new_geometry_data()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_geometry_data
+    __del__ = lambda self: None
+geometry_data_swigregister = _ifcopenshell_wrapper.geometry_data_swigregister
+geometry_data_swigregister(geometry_data)
+
+class drawing_meta(_object):
+    """Proxy of C++ drawing_meta class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, drawing_meta, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, drawing_meta, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["pln_3d"] = _ifcopenshell_wrapper.drawing_meta_pln_3d_set
+    __swig_getmethods__["pln_3d"] = _ifcopenshell_wrapper.drawing_meta_pln_3d_get
+    if _newclass:
+        pln_3d = _swig_property(_ifcopenshell_wrapper.drawing_meta_pln_3d_get, _ifcopenshell_wrapper.drawing_meta_pln_3d_set)
+    __swig_setmethods__["matrix_3"] = _ifcopenshell_wrapper.drawing_meta_matrix_3_set
+    __swig_getmethods__["matrix_3"] = _ifcopenshell_wrapper.drawing_meta_matrix_3_get
+    if _newclass:
+        matrix_3 = _swig_property(_ifcopenshell_wrapper.drawing_meta_matrix_3_get, _ifcopenshell_wrapper.drawing_meta_matrix_3_set)
+
+    def __init__(self):
+        """__init__(drawing_meta self) -> drawing_meta"""
+        this = _ifcopenshell_wrapper.new_drawing_meta()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_drawing_meta
+    __del__ = lambda self: None
+drawing_meta_swigregister = _ifcopenshell_wrapper.drawing_meta_swigregister
+drawing_meta_swigregister(drawing_meta)
+
+ON_SLABS_AT_FLOORPLANS = _ifcopenshell_wrapper.ON_SLABS_AT_FLOORPLANS
+ON_SLABS_AND_WALLS = _ifcopenshell_wrapper.ON_SLABS_AND_WALLS
+ALWAYS = _ifcopenshell_wrapper.ALWAYS
+class SvgSerializer(WriteOnlyGeometrySerializer):
+    """Proxy of C++ SvgSerializer class."""
+
+    __swig_setmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, SvgSerializer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, SvgSerializer, name)
+    __repr__ = _swig_repr
+    SH_NONE = _ifcopenshell_wrapper.SvgSerializer_SH_NONE
+    SH_FULL = _ifcopenshell_wrapper.SvgSerializer_SH_FULL
+    SH_LEFT = _ifcopenshell_wrapper.SvgSerializer_SH_LEFT
+
+    def __init__(self, out_filename, settings):
+        """__init__(SvgSerializer self, buffer out_filename, SerializerSettings settings) -> SvgSerializer"""
+        this = _ifcopenshell_wrapper.new_SvgSerializer(out_filename, settings)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def addXCoordinate(self, fi):
+        """addXCoordinate(SvgSerializer self, boost::shared_ptr< util::string_buffer::float_item > const & fi)"""
+        return _ifcopenshell_wrapper.SvgSerializer_addXCoordinate(self, fi)
+
+
+    def addYCoordinate(self, fi):
+        """addYCoordinate(SvgSerializer self, boost::shared_ptr< util::string_buffer::float_item > const & fi)"""
+        return _ifcopenshell_wrapper.SvgSerializer_addYCoordinate(self, fi)
+
+
+    def addSizeComponent(self, fi):
+        """addSizeComponent(SvgSerializer self, boost::shared_ptr< util::string_buffer::float_item > const & fi)"""
+        return _ifcopenshell_wrapper.SvgSerializer_addSizeComponent(self, fi)
+
+
+    def growBoundingBox(self, x, y):
+        """growBoundingBox(SvgSerializer self, double x, double y)"""
+        return _ifcopenshell_wrapper.SvgSerializer_growBoundingBox(self, x, y)
+
+
+    def writeHeader(self):
+        """writeHeader(SvgSerializer self)"""
+        return _ifcopenshell_wrapper.SvgSerializer_writeHeader(self)
+
+
+    def doWriteHeader(self):
+        """doWriteHeader(SvgSerializer self)"""
+        return _ifcopenshell_wrapper.SvgSerializer_doWriteHeader(self)
+
+
+    def ready(self):
+        """ready(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_ready(self)
+
+
+    def write(self, *args):
+        """
+        write(SvgSerializer self, TriangulationElement arg2)
+        write(SvgSerializer self, BRepElement o)
+        write(SvgSerializer self, SvgSerializer::path_object & p, TopoDS_Shape const & wire, boost::optional< std::vector< double,std::allocator< double > > > dash_array)
+        write(SvgSerializer self, SvgSerializer::path_object & p, TopoDS_Shape const & wire)
+        write(SvgSerializer self, geometry_data data)
+        """
+        return _ifcopenshell_wrapper.SvgSerializer_write(self, *args)
+
+
+    def start_path(self, *args):
+        """
+        start_path(SvgSerializer self, gp_Pln const & p, IfcBaseEntity storey, std::string const & id) -> SvgSerializer::path_object
+        start_path(SvgSerializer self, gp_Pln const & p, std::string const & drawing_name, std::string const & id) -> SvgSerializer::path_object &
+        """
+        return _ifcopenshell_wrapper.SvgSerializer_start_path(self, *args)
+
+
+    def isTesselated(self):
+        """isTesselated(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_isTesselated(self)
+
+
+    def finalize(self):
+        """finalize(SvgSerializer self)"""
+        return _ifcopenshell_wrapper.SvgSerializer_finalize(self)
+
+
+    def setUnitNameAndMagnitude(self, arg2, arg3):
+        """setUnitNameAndMagnitude(SvgSerializer self, std::string const & arg2, float arg3)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setUnitNameAndMagnitude(self, arg2, arg3)
+
+
+    def setFile(self, f):
+        """setFile(SvgSerializer self, file f)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setFile(self, f)
+
+
+    def setBoundingRectangle(self, width, height):
+        """setBoundingRectangle(SvgSerializer self, double width, double height)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setBoundingRectangle(self, width, height)
+
+
+    def setSectionHeight(self, h, storey=None):
+        """
+        setSectionHeight(SvgSerializer self, double h, IfcBaseEntity storey=None)
+        setSectionHeight(SvgSerializer self, double h)
+        """
+        return _ifcopenshell_wrapper.SvgSerializer_setSectionHeight(self, h, storey)
+
+
+    def setSectionHeightsFromStoreys(self, offset=1.2):
+        """
+        setSectionHeightsFromStoreys(SvgSerializer self, double offset=1.2)
+        setSectionHeightsFromStoreys(SvgSerializer self)
+        """
+        return _ifcopenshell_wrapper.SvgSerializer_setSectionHeightsFromStoreys(self, offset)
+
+
+    def setPrintSpaceNames(self, b):
+        """setPrintSpaceNames(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setPrintSpaceNames(self, b)
+
+
+    def setPrintSpaceAreas(self, b):
+        """setPrintSpaceAreas(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setPrintSpaceAreas(self, b)
+
+
+    def setDrawStoreyHeights(self, sh):
+        """setDrawStoreyHeights(SvgSerializer self, SvgSerializer::storey_height_display_types sh)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setDrawStoreyHeights(self, sh)
+
+
+    def setDrawDoorArcs(self, b):
+        """setDrawDoorArcs(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setDrawDoorArcs(self, b)
+
+
+    def setStoreyHeightLineLength(self, d):
+        """setStoreyHeightLineLength(SvgSerializer self, double d)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setStoreyHeightLineLength(self, d)
+
+
+    def setSpaceNameTransform(self, v):
+        """setSpaceNameTransform(SvgSerializer self, std::string const & v)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setSpaceNameTransform(self, v)
+
+
+    def addTextAnnotations(self, k):
+        """addTextAnnotations(SvgSerializer self, drawing_key const & k)"""
+        return _ifcopenshell_wrapper.SvgSerializer_addTextAnnotations(self, k)
+
+
+    def resize(self):
+        """resize(SvgSerializer self) -> std::array< std::array< double,3 >,3 >"""
+        return _ifcopenshell_wrapper.SvgSerializer_resize(self)
+
+
+    def resetScale(self):
+        """resetScale(SvgSerializer self)"""
+        return _ifcopenshell_wrapper.SvgSerializer_resetScale(self)
+
+
+    def setSectionRef(self, s):
+        """setSectionRef(SvgSerializer self, boost::optional< std::string > const & s)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setSectionRef(self, s)
+
+
+    def setElevationRef(self, s):
+        """setElevationRef(SvgSerializer self, boost::optional< std::string > const & s)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setElevationRef(self, s)
+
+
+    def setElevationRefGuid(self, s):
+        """setElevationRefGuid(SvgSerializer self, boost::optional< std::string > const & s)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setElevationRefGuid(self, s)
+
+
+    def setAutoSection(self, b):
+        """setAutoSection(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setAutoSection(self, b)
+
+
+    def setAutoElevation(self, b):
+        """setAutoElevation(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setAutoElevation(self, b)
+
+
+    def setUseNamespace(self, b):
+        """setUseNamespace(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setUseNamespace(self, b)
+
+
+    def setUseHlrPoly(self, b):
+        """setUseHlrPoly(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setUseHlrPoly(self, b)
+
+
+    def setUsePrefiltering(self, b):
+        """setUsePrefiltering(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setUsePrefiltering(self, b)
+
+
+    def getUsePrefiltering(self):
+        """getUsePrefiltering(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_getUsePrefiltering(self)
+
+
+    def setSegmentProjection(self, b):
+        """setSegmentProjection(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setSegmentProjection(self, b)
+
+
+    def getSegmentProjection(self):
+        """getSegmentProjection(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_getSegmentProjection(self)
+
+
+    def setPolygonal(self, b):
+        """setPolygonal(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setPolygonal(self, b)
+
+
+    def setAlwaysProject(self, b):
+        """setAlwaysProject(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setAlwaysProject(self, b)
+
+
+    def setWithoutStoreys(self, b):
+        """setWithoutStoreys(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setWithoutStoreys(self, b)
+
+
+    def setNoCSS(self, b):
+        """setNoCSS(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setNoCSS(self, b)
+
+
+    def setUnifyInputs(self, b):
+        """setUnifyInputs(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setUnifyInputs(self, b)
+
+
+    def getUnifyInputs(self):
+        """getUnifyInputs(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_getUnifyInputs(self)
+
+
+    def setScale(self, s):
+        """setScale(SvgSerializer self, double s)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setScale(self, s)
+
+
+    def setDrawingCenter(self, x, y):
+        """setDrawingCenter(SvgSerializer self, double x, double y)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setDrawingCenter(self, x, y)
+
+
+    def nameElement(self, *args):
+        """
+        nameElement(SvgSerializer self, IfcBaseEntity storey, Element elem) -> std::string
+        nameElement(SvgSerializer self, IfcBaseEntity elem) -> std::string
+        """
+        return _ifcopenshell_wrapper.SvgSerializer_nameElement(self, *args)
+
+
+    def idElement(self, elem):
+        """idElement(SvgSerializer self, IfcBaseEntity elem) -> std::string"""
+        return _ifcopenshell_wrapper.SvgSerializer_idElement(self, elem)
+
+
+    def object_id(self, storey, o):
+        """object_id(SvgSerializer self, IfcBaseEntity storey, Element o) -> std::string"""
+        return _ifcopenshell_wrapper.SvgSerializer_object_id(self, storey, o)
+
+
+    def addDrawing(self, pos, dir, ref, name, include_projection):
+        """addDrawing(SvgSerializer self, gp_Pnt const & pos, gp_Dir const & dir, gp_Dir const & ref, std::string const & name, bool include_projection)"""
+        return _ifcopenshell_wrapper.SvgSerializer_addDrawing(self, pos, dir, ref, name, include_projection)
+
+
+    def setSubtractionSettings(self, sbp):
+        """setSubtractionSettings(SvgSerializer self, subtract_before_project sbp)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setSubtractionSettings(self, sbp)
+
+
+    def getSubtractionSettings(self):
+        """getSubtractionSettings(SvgSerializer self) -> subtract_before_project"""
+        return _ifcopenshell_wrapper.SvgSerializer_getSubtractionSettings(self)
+
+
+    def setProfileThreshold(self, i):
+        """setProfileThreshold(SvgSerializer self, int i)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setProfileThreshold(self, i)
+
+
+    def getProfileThreshold(self):
+        """getProfileThreshold(SvgSerializer self) -> int"""
+        return _ifcopenshell_wrapper.SvgSerializer_getProfileThreshold(self)
+
+
+    def setMirrorY(self, b):
+        """setMirrorY(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setMirrorY(self, b)
+
+
+    def getMirrorY(self):
+        """getMirrorY(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_getMirrorY(self)
+
+
+    def setMirrorX(self, b):
+        """setMirrorX(SvgSerializer self, bool b)"""
+        return _ifcopenshell_wrapper.SvgSerializer_setMirrorX(self, b)
+
+
+    def getMirrorX(self):
+        """getMirrorX(SvgSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.SvgSerializer_getMirrorX(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_SvgSerializer
+    __del__ = lambda self: None
+SvgSerializer_swigregister = _ifcopenshell_wrapper.SvgSerializer_swigregister
+SvgSerializer_swigregister(SvgSerializer)
+
+class HdfSerializer(GeometrySerializer):
+    """Proxy of C++ HdfSerializer class."""
+
+    __swig_setmethods__ = {}
+    for _s in [GeometrySerializer]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, HdfSerializer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [GeometrySerializer]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, HdfSerializer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, hdf_filename, settings, read_only=False):
+        """
+        __init__(HdfSerializer self, std::string const & hdf_filename, SerializerSettings settings, bool read_only=False) -> HdfSerializer
+        __init__(HdfSerializer self, std::string const & hdf_filename, SerializerSettings settings) -> HdfSerializer
+        """
+        this = _ifcopenshell_wrapper.new_HdfSerializer(hdf_filename, settings, read_only)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_HdfSerializer
+    __del__ = lambda self: None
+
+    def ready(self):
+        """ready(HdfSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.HdfSerializer_ready(self)
+
+
+    def writeHeader(self):
+        """writeHeader(HdfSerializer self)"""
+        return _ifcopenshell_wrapper.HdfSerializer_writeHeader(self)
+
+
+    def write(self, *args):
+        """
+        write(HdfSerializer self, Element o) -> H5::Group
+        write(HdfSerializer self, BRepElement o)
+        write(HdfSerializer self, TriangulationElement o)
+        """
+        return _ifcopenshell_wrapper.HdfSerializer_write(self, *args)
+
+
+    def remove(self, guid):
+        """remove(HdfSerializer self, std::string const & guid)"""
+        return _ifcopenshell_wrapper.HdfSerializer_remove(self, guid)
+
+
+    def read(self, *args):
+        """
+        read(HdfSerializer self, file f, std::string const & guid, std::string const & arg4, GeometrySerializer::read_type rt) -> Element
+        read(HdfSerializer self, file f, std::string const & guid, std::string const & arg4) -> Element
+        """
+        return _ifcopenshell_wrapper.HdfSerializer_read(self, *args)
+
+
+    def finalize(self):
+        """finalize(HdfSerializer self)"""
+        return _ifcopenshell_wrapper.HdfSerializer_finalize(self)
+
+
+    def isTesselated(self):
+        """isTesselated(HdfSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.HdfSerializer_isTesselated(self)
+
+
+    def setUnitNameAndMagnitude(self, arg2, arg3):
+        """setUnitNameAndMagnitude(HdfSerializer self, std::string const & arg2, float arg3)"""
+        return _ifcopenshell_wrapper.HdfSerializer_setUnitNameAndMagnitude(self, arg2, arg3)
+
+
+    def setFile(self, arg2):
+        """setFile(HdfSerializer self, file arg2)"""
+        return _ifcopenshell_wrapper.HdfSerializer_setFile(self, arg2)
+
+HdfSerializer_swigregister = _ifcopenshell_wrapper.HdfSerializer_swigregister
+HdfSerializer_swigregister(HdfSerializer)
+
+class WaveFrontOBJSerializer(WriteOnlyGeometrySerializer):
+    """Proxy of C++ WaveFrontOBJSerializer class."""
+
+    __swig_setmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, WaveFrontOBJSerializer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, WaveFrontOBJSerializer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, obj_filename, mtl_filename, settings):
+        """__init__(WaveFrontOBJSerializer self, buffer obj_filename, buffer mtl_filename, SerializerSettings settings) -> WaveFrontOBJSerializer"""
+        this = _ifcopenshell_wrapper.new_WaveFrontOBJSerializer(obj_filename, mtl_filename, settings)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_WaveFrontOBJSerializer
+    __del__ = lambda self: None
+
+    def ready(self):
+        """ready(WaveFrontOBJSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_ready(self)
+
+
+    def writeHeader(self):
+        """writeHeader(WaveFrontOBJSerializer self)"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_writeHeader(self)
+
+
+    def writeMaterial(self, style):
+        """writeMaterial(WaveFrontOBJSerializer self, Material style)"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_writeMaterial(self, style)
+
+
+    def write(self, *args):
+        """
+        write(WaveFrontOBJSerializer self, TriangulationElement o)
+        write(WaveFrontOBJSerializer self, BRepElement arg2)
+        """
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_write(self, *args)
+
+
+    def finalize(self):
+        """finalize(WaveFrontOBJSerializer self)"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_finalize(self)
+
+
+    def isTesselated(self):
+        """isTesselated(WaveFrontOBJSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_isTesselated(self)
+
+
+    def setUnitNameAndMagnitude(self, arg2, arg3):
+        """setUnitNameAndMagnitude(WaveFrontOBJSerializer self, std::string const & arg2, float arg3)"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_setUnitNameAndMagnitude(self, arg2, arg3)
+
+
+    def setFile(self, arg2):
+        """setFile(WaveFrontOBJSerializer self, file arg2)"""
+        return _ifcopenshell_wrapper.WaveFrontOBJSerializer_setFile(self, arg2)
+
+WaveFrontOBJSerializer_swigregister = _ifcopenshell_wrapper.WaveFrontOBJSerializer_swigregister
+WaveFrontOBJSerializer_swigregister(WaveFrontOBJSerializer)
+
+class XmlSerializer(_object):
+    """Proxy of C++ XmlSerializer class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, XmlSerializer, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, XmlSerializer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, file, xml_filename):
+        """__init__(XmlSerializer self, file file, std::string const & xml_filename) -> XmlSerializer"""
+        this = _ifcopenshell_wrapper.new_XmlSerializer(file, xml_filename)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_XmlSerializer
+    __del__ = lambda self: None
+
+    def ready(self):
+        """ready(XmlSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.XmlSerializer_ready(self)
+
+
+    def writeHeader(self):
+        """writeHeader(XmlSerializer self)"""
+        return _ifcopenshell_wrapper.XmlSerializer_writeHeader(self)
+
+
+    def finalize(self):
+        """finalize(XmlSerializer self)"""
+        return _ifcopenshell_wrapper.XmlSerializer_finalize(self)
+
+
+    def setFile(self, arg2):
+        """setFile(XmlSerializer self, file arg2)"""
+        return _ifcopenshell_wrapper.XmlSerializer_setFile(self, arg2)
+
+XmlSerializer_swigregister = _ifcopenshell_wrapper.XmlSerializer_swigregister
+XmlSerializer_swigregister(XmlSerializer)
+
+class XmlSerializerFactory(_object):
+    """Proxy of C++ XmlSerializerFactory class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, XmlSerializerFactory, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, XmlSerializerFactory, name)
+    __repr__ = _swig_repr
+
+    def implementations():
+        """implementations() -> XmlSerializerFactory::Factory &"""
+        return _ifcopenshell_wrapper.XmlSerializerFactory_implementations()
+
+    implementations = staticmethod(implementations)
+
+    def __init__(self):
+        """__init__(XmlSerializerFactory self) -> XmlSerializerFactory"""
+        this = _ifcopenshell_wrapper.new_XmlSerializerFactory()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_XmlSerializerFactory
+    __del__ = lambda self: None
+XmlSerializerFactory_swigregister = _ifcopenshell_wrapper.XmlSerializerFactory_swigregister
+XmlSerializerFactory_swigregister(XmlSerializerFactory)
+
+def XmlSerializerFactory_implementations():
+    """XmlSerializerFactory_implementations() -> XmlSerializerFactory::Factory &"""
+    return _ifcopenshell_wrapper.XmlSerializerFactory_implementations()
+
+class GltfSerializer(WriteOnlyGeometrySerializer):
+    """Proxy of C++ GltfSerializer class."""
+
+    __swig_setmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, GltfSerializer, name, value)
+    __swig_getmethods__ = {}
+    for _s in [WriteOnlyGeometrySerializer]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, GltfSerializer, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, filename, settings):
+        """__init__(GltfSerializer self, std::string const & filename, SerializerSettings settings) -> GltfSerializer"""
+        this = _ifcopenshell_wrapper.new_GltfSerializer(filename, settings)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_GltfSerializer
+    __del__ = lambda self: None
+
+    def ready(self):
+        """ready(GltfSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.GltfSerializer_ready(self)
+
+
+    def writeHeader(self):
+        """writeHeader(GltfSerializer self)"""
+        return _ifcopenshell_wrapper.GltfSerializer_writeHeader(self)
+
+
+    def write(self, *args):
+        """
+        write(GltfSerializer self, TriangulationElement o)
+        write(GltfSerializer self, BRepElement arg2)
+        """
+        return _ifcopenshell_wrapper.GltfSerializer_write(self, *args)
+
+
+    def finalize(self):
+        """finalize(GltfSerializer self)"""
+        return _ifcopenshell_wrapper.GltfSerializer_finalize(self)
+
+
+    def isTesselated(self):
+        """isTesselated(GltfSerializer self) -> bool"""
+        return _ifcopenshell_wrapper.GltfSerializer_isTesselated(self)
+
+
+    def setUnitNameAndMagnitude(self, arg2, arg3):
+        """setUnitNameAndMagnitude(GltfSerializer self, std::string const & arg2, float arg3)"""
+        return _ifcopenshell_wrapper.GltfSerializer_setUnitNameAndMagnitude(self, arg2, arg3)
+
+
+    def setFile(self, arg2):
+        """setFile(GltfSerializer self, file arg2)"""
+        return _ifcopenshell_wrapper.GltfSerializer_setFile(self, arg2)
+
+GltfSerializer_swigregister = _ifcopenshell_wrapper.GltfSerializer_swigregister
+GltfSerializer_swigregister(GltfSerializer)
+
+class ray_intersection_results(_object):
+    """Proxy of C++ std::vector<(IfcGeom::ray_intersection_result)> class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ray_intersection_results, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ray_intersection_results, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        """iterator(ray_intersection_results self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.ray_intersection_results_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(ray_intersection_results self) -> bool"""
+        return _ifcopenshell_wrapper.ray_intersection_results___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(ray_intersection_results self) -> bool"""
+        return _ifcopenshell_wrapper.ray_intersection_results___bool__(self)
+
+
+    def __len__(self):
+        """__len__(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::size_type"""
+        return _ifcopenshell_wrapper.ray_intersection_results___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i, std::vector< IfcGeom::ray_intersection_result >::difference_type j) -> ray_intersection_results"""
+        return _ifcopenshell_wrapper.ray_intersection_results___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i, std::vector< IfcGeom::ray_intersection_result >::difference_type j)
+        __setslice__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i, std::vector< IfcGeom::ray_intersection_result >::difference_type j, ray_intersection_results v)
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i, std::vector< IfcGeom::ray_intersection_result >::difference_type j)"""
+        return _ifcopenshell_wrapper.ray_intersection_results___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i)
+        __delitem__(ray_intersection_results self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(ray_intersection_results self, PySliceObject * slice) -> ray_intersection_results
+        __getitem__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i) -> ray_intersection_result
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(ray_intersection_results self, PySliceObject * slice, ray_intersection_results v)
+        __setitem__(ray_intersection_results self, PySliceObject * slice)
+        __setitem__(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::difference_type i, ray_intersection_result x)
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(ray_intersection_results self) -> ray_intersection_result"""
+        return _ifcopenshell_wrapper.ray_intersection_results_pop(self)
+
+
+    def append(self, x):
+        """append(ray_intersection_results self, ray_intersection_result x)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_append(self, x)
+
+
+    def empty(self):
+        """empty(ray_intersection_results self) -> bool"""
+        return _ifcopenshell_wrapper.ray_intersection_results_empty(self)
+
+
+    def size(self):
+        """size(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::size_type"""
+        return _ifcopenshell_wrapper.ray_intersection_results_size(self)
+
+
+    def swap(self, v):
+        """swap(ray_intersection_results self, ray_intersection_results v)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_swap(self, v)
+
+
+    def begin(self):
+        """begin(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::iterator"""
+        return _ifcopenshell_wrapper.ray_intersection_results_begin(self)
+
+
+    def end(self):
+        """end(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::iterator"""
+        return _ifcopenshell_wrapper.ray_intersection_results_end(self)
+
+
+    def rbegin(self):
+        """rbegin(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::reverse_iterator"""
+        return _ifcopenshell_wrapper.ray_intersection_results_rbegin(self)
+
+
+    def rend(self):
+        """rend(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::reverse_iterator"""
+        return _ifcopenshell_wrapper.ray_intersection_results_rend(self)
+
+
+    def clear(self):
+        """clear(ray_intersection_results self)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::allocator_type"""
+        return _ifcopenshell_wrapper.ray_intersection_results_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(ray_intersection_results self)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::iterator pos) -> std::vector< IfcGeom::ray_intersection_result >::iterator
+        erase(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::iterator first, std::vector< IfcGeom::ray_intersection_result >::iterator last) -> std::vector< IfcGeom::ray_intersection_result >::iterator
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(IfcGeom::ray_intersection_result)> self) -> ray_intersection_results
+        __init__(std::vector<(IfcGeom::ray_intersection_result)> self, ray_intersection_results arg2) -> ray_intersection_results
+        __init__(std::vector<(IfcGeom::ray_intersection_result)> self, std::vector< IfcGeom::ray_intersection_result >::size_type size) -> ray_intersection_results
+        __init__(std::vector<(IfcGeom::ray_intersection_result)> self, std::vector< IfcGeom::ray_intersection_result >::size_type size, ray_intersection_result value) -> ray_intersection_results
+        """
+        this = _ifcopenshell_wrapper.new_ray_intersection_results(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        """push_back(ray_intersection_results self, ray_intersection_result x)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_push_back(self, x)
+
+
+    def front(self):
+        """front(ray_intersection_results self) -> ray_intersection_result"""
+        return _ifcopenshell_wrapper.ray_intersection_results_front(self)
+
+
+    def back(self):
+        """back(ray_intersection_results self) -> ray_intersection_result"""
+        return _ifcopenshell_wrapper.ray_intersection_results_back(self)
+
+
+    def assign(self, n, x):
+        """assign(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::size_type n, ray_intersection_result x)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::size_type new_size)
+        resize(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::size_type new_size, ray_intersection_result x)
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::iterator pos, ray_intersection_result x) -> std::vector< IfcGeom::ray_intersection_result >::iterator
+        insert(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::iterator pos, std::vector< IfcGeom::ray_intersection_result >::size_type n, ray_intersection_result x)
+        """
+        return _ifcopenshell_wrapper.ray_intersection_results_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(ray_intersection_results self, std::vector< IfcGeom::ray_intersection_result >::size_type n)"""
+        return _ifcopenshell_wrapper.ray_intersection_results_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(ray_intersection_results self) -> std::vector< IfcGeom::ray_intersection_result >::size_type"""
+        return _ifcopenshell_wrapper.ray_intersection_results_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_ray_intersection_results
+    __del__ = lambda self: None
+ray_intersection_results_swigregister = _ifcopenshell_wrapper.ray_intersection_results_swigregister
+ray_intersection_results_swigregister(ray_intersection_results)
+
+class ray_intersection_result(_object):
+    """Proxy of C++ IfcGeom::ray_intersection_result class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ray_intersection_result, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ray_intersection_result, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["distance"] = _ifcopenshell_wrapper.ray_intersection_result_distance_set
+    __swig_getmethods__["distance"] = _ifcopenshell_wrapper.ray_intersection_result_distance_get
+    if _newclass:
+        distance = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_distance_get, _ifcopenshell_wrapper.ray_intersection_result_distance_set)
+    __swig_setmethods__["style_index"] = _ifcopenshell_wrapper.ray_intersection_result_style_index_set
+    __swig_getmethods__["style_index"] = _ifcopenshell_wrapper.ray_intersection_result_style_index_get
+    if _newclass:
+        style_index = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_style_index_get, _ifcopenshell_wrapper.ray_intersection_result_style_index_set)
+    __swig_setmethods__["instance"] = _ifcopenshell_wrapper.ray_intersection_result_instance_set
+    __swig_getmethods__["instance"] = _ifcopenshell_wrapper.ray_intersection_result_instance_get
+    if _newclass:
+        instance = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_instance_get, _ifcopenshell_wrapper.ray_intersection_result_instance_set)
+    __swig_setmethods__["position"] = _ifcopenshell_wrapper.ray_intersection_result_position_set
+    __swig_getmethods__["position"] = _ifcopenshell_wrapper.ray_intersection_result_position_get
+    if _newclass:
+        position = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_position_get, _ifcopenshell_wrapper.ray_intersection_result_position_set)
+    __swig_setmethods__["normal"] = _ifcopenshell_wrapper.ray_intersection_result_normal_set
+    __swig_getmethods__["normal"] = _ifcopenshell_wrapper.ray_intersection_result_normal_get
+    if _newclass:
+        normal = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_normal_get, _ifcopenshell_wrapper.ray_intersection_result_normal_set)
+    __swig_setmethods__["ray_distance"] = _ifcopenshell_wrapper.ray_intersection_result_ray_distance_set
+    __swig_getmethods__["ray_distance"] = _ifcopenshell_wrapper.ray_intersection_result_ray_distance_get
+    if _newclass:
+        ray_distance = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_ray_distance_get, _ifcopenshell_wrapper.ray_intersection_result_ray_distance_set)
+    __swig_setmethods__["dot_product"] = _ifcopenshell_wrapper.ray_intersection_result_dot_product_set
+    __swig_getmethods__["dot_product"] = _ifcopenshell_wrapper.ray_intersection_result_dot_product_get
+    if _newclass:
+        dot_product = _swig_property(_ifcopenshell_wrapper.ray_intersection_result_dot_product_get, _ifcopenshell_wrapper.ray_intersection_result_dot_product_set)
+
+    def __init__(self):
+        """__init__(IfcGeom::ray_intersection_result self) -> ray_intersection_result"""
+        this = _ifcopenshell_wrapper.new_ray_intersection_result()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_ray_intersection_result
+    __del__ = lambda self: None
+ray_intersection_result_swigregister = _ifcopenshell_wrapper.ray_intersection_result_swigregister
+ray_intersection_result_swigregister(ray_intersection_result)
+
 class tree(_object):
     """Proxy of C++ IfcGeom::tree class."""
 
@@ -560,7 +2317,8 @@ class tree(_object):
         """
         __init__(IfcGeom::tree self) -> tree
         __init__(IfcGeom::tree self, file f) -> tree
-        __init__(IfcGeom::tree self, file f, settings settings) -> tree
+        __init__(IfcGeom::tree self, file f, IteratorSettings settings) -> tree
+        __init__(IfcGeom::tree self, Iterator it) -> tree
         """
         this = _ifcopenshell_wrapper.new_tree(*args)
         try:
@@ -568,35 +2326,81 @@ class tree(_object):
         except __builtin__.Exception:
             self.this = this
 
-    def add_file(self, f, settings):
-        """add_file(tree self, file f, settings settings)"""
-        return _ifcopenshell_wrapper.tree_add_file(self, f, settings)
+    def add_file(self, *args):
+        """
+        add_file(tree self, file f, IteratorSettings settings)
+        add_file(tree self, Iterator it)
+        """
+        return _ifcopenshell_wrapper.tree_add_file(self, *args)
+
+
+    def add_element(self, elem):
+        """add_element(tree self, BRepElement elem)"""
+        return _ifcopenshell_wrapper.tree_add_element(self, elem)
+
+
+    def distances(self):
+        """distances(tree self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.tree_distances(self)
+
+
+    def protrusion_distances(self):
+        """protrusion_distances(tree self) -> std::vector< double,std::allocator< double > > const &"""
+        return _ifcopenshell_wrapper.tree_protrusion_distances(self)
+
+
+    def select_ray(self, p0, d, length=1000.):
+        """
+        select_ray(tree self, gp_Pnt const & p0, gp_Dir const & d, double length=1000.) -> ray_intersection_results
+        select_ray(tree self, gp_Pnt const & p0, gp_Dir const & d) -> ray_intersection_results
+        """
+        return _ifcopenshell_wrapper.tree_select_ray(self, p0, d, length)
+
+
+    def enable_face_styles(self, *args):
+        """
+        enable_face_styles(tree self) -> bool
+        enable_face_styles(tree self, bool b)
+        """
+        return _ifcopenshell_wrapper.tree_enable_face_styles(self, *args)
+
+
+    def styles(self):
+        """styles(tree self) -> std::vector< IfcGeom::Material,std::allocator< IfcGeom::Material > > const &"""
+        return _ifcopenshell_wrapper.tree_styles(self)
 
 
     def vector_to_list(ps):
-        """vector_to_list(std::vector< IfcUtil::IfcBaseEntity * > const & ps) -> IfcEntityList::ptr"""
+        """vector_to_list(std::vector< IfcUtil::IfcBaseEntity *,std::allocator< IfcUtil::IfcBaseEntity * > > const & ps) -> aggregate_of_instance::ptr"""
         return _ifcopenshell_wrapper.tree_vector_to_list(ps)
 
     vector_to_list = staticmethod(vector_to_list)
 
     def select_box(self, *args):
         """
-        select_box(tree self, entity_instance e, bool completely_within=False, double extend=-1.e-5) -> IfcEntityList::ptr
-        select_box(tree self, entity_instance e, bool completely_within=False) -> IfcEntityList::ptr
-        select_box(tree self, entity_instance e) -> IfcEntityList::ptr
-        select_box(tree self, gp_Pnt const & p) -> IfcEntityList::ptr
-        select_box(tree self, Bnd_Box const & b, bool completely_within=False) -> IfcEntityList::ptr
-        select_box(tree self, Bnd_Box const & b) -> IfcEntityList::ptr
+        select_box(tree self, entity_instance e, bool completely_within=False, double extend=-1.e-5) -> aggregate_of_instance::ptr
+        select_box(tree self, entity_instance e, bool completely_within=False) -> aggregate_of_instance::ptr
+        select_box(tree self, entity_instance e) -> aggregate_of_instance::ptr
+        select_box(tree self, gp_Pnt const & p) -> aggregate_of_instance::ptr
+        select_box(tree self, Bnd_Box const & b, bool completely_within=False) -> aggregate_of_instance::ptr
+        select_box(tree self, Bnd_Box const & b) -> aggregate_of_instance::ptr
         """
         return _ifcopenshell_wrapper.tree_select_box(self, *args)
 
 
     def select(self, *args):
         """
-        select(tree self, entity_instance e, bool completely_within=False) -> IfcEntityList::ptr
-        select(tree self, entity_instance e) -> IfcEntityList::ptr
-        select(tree self, gp_Pnt const & p) -> IfcEntityList::ptr
-        select(tree self, std::string const & shape_serialization) -> IfcEntityList::ptr
+        select(tree self, entity_instance e, bool completely_within=False, double extend=0.0) -> aggregate_of_instance::ptr
+        select(tree self, entity_instance e, bool completely_within=False) -> aggregate_of_instance::ptr
+        select(tree self, entity_instance e) -> aggregate_of_instance::ptr
+        select(tree self, gp_Pnt const & p, double extend=0.0) -> aggregate_of_instance::ptr
+        select(tree self, gp_Pnt const & p) -> aggregate_of_instance::ptr
+        select(tree self, std::string const & shape_serialization, bool completely_within=False, double extend=-1.e-5) -> aggregate_of_instance::ptr
+        select(tree self, std::string const & shape_serialization, bool completely_within=False) -> aggregate_of_instance::ptr
+        select(tree self, std::string const & shape_serialization) -> aggregate_of_instance::ptr
+        select(tree self, BRepElement elem, bool completely_within=False, double extend=-1.e-5) -> aggregate_of_instance::ptr
+        select(tree self, BRepElement elem, bool completely_within=False) -> aggregate_of_instance::ptr
+        select(tree self, BRepElement elem) -> aggregate_of_instance::ptr
         """
         return _ifcopenshell_wrapper.tree_select(self, *args)
 
@@ -606,30 +2410,26 @@ tree_swigregister = _ifcopenshell_wrapper.tree_swigregister
 tree_swigregister(tree)
 
 def tree_vector_to_list(ps):
-    """tree_vector_to_list(std::vector< IfcUtil::IfcBaseEntity * > const & ps) -> IfcEntityList::ptr"""
+    """tree_vector_to_list(std::vector< IfcUtil::IfcBaseEntity *,std::allocator< IfcUtil::IfcBaseEntity * > > const & ps) -> aggregate_of_instance::ptr"""
     return _ifcopenshell_wrapper.tree_vector_to_list(ps)
 
 
-def construct_iterator_single_precision_with_include_exclude(settings, file, elems, include, num_threads):
-    """construct_iterator_single_precision_with_include_exclude(settings settings, file file, std::vector< std::string > elems, bool include, int num_threads) -> IfcGeom::Iterator< float,float > *"""
-    return _ifcopenshell_wrapper.construct_iterator_single_precision_with_include_exclude(settings, file, elems, include, num_threads)
+def construct_iterator_with_include_exclude(settings, file, elems, include, num_threads):
+    """construct_iterator_with_include_exclude(IteratorSettings settings, file file, std::vector< std::string,std::allocator< std::string > > elems, bool include, int num_threads) -> Iterator"""
+    return _ifcopenshell_wrapper.construct_iterator_with_include_exclude(settings, file, elems, include, num_threads)
 
-def construct_iterator_double_precision_with_include_exclude(settings, file, elems, include, num_threads):
-    """construct_iterator_double_precision_with_include_exclude(settings settings, file file, std::vector< std::string > elems, bool include, int num_threads) -> iterator_double_precision"""
-    return _ifcopenshell_wrapper.construct_iterator_double_precision_with_include_exclude(settings, file, elems, include, num_threads)
+def construct_iterator_with_include_exclude_globalid(settings, file, elems, include, num_threads):
+    """construct_iterator_with_include_exclude_globalid(IteratorSettings settings, file file, std::vector< std::string,std::allocator< std::string > > elems, bool include, int num_threads) -> Iterator"""
+    return _ifcopenshell_wrapper.construct_iterator_with_include_exclude_globalid(settings, file, elems, include, num_threads)
 
-def construct_iterator_single_precision_with_include_exclude_globalid(settings, file, elems, include, num_threads):
-    """construct_iterator_single_precision_with_include_exclude_globalid(settings settings, file file, std::vector< std::string > elems, bool include, int num_threads) -> IfcGeom::Iterator< float,float > *"""
-    return _ifcopenshell_wrapper.construct_iterator_single_precision_with_include_exclude_globalid(settings, file, elems, include, num_threads)
-
-def construct_iterator_double_precision_with_include_exclude_globalid(settings, file, elems, include, num_threads):
-    """construct_iterator_double_precision_with_include_exclude_globalid(settings settings, file file, std::vector< std::string > elems, bool include, int num_threads) -> iterator_double_precision"""
-    return _ifcopenshell_wrapper.construct_iterator_double_precision_with_include_exclude_globalid(settings, file, elems, include, num_threads)
+def construct_iterator_with_include_exclude_id(settings, file, elems, include, num_threads):
+    """construct_iterator_with_include_exclude_id(IteratorSettings settings, file file, std::vector< int,std::allocator< int > > elems, bool include, int num_threads) -> Iterator"""
+    return _ifcopenshell_wrapper.construct_iterator_with_include_exclude_id(settings, file, elems, include, num_threads)
 
 def create_shape(settings, instance, representation=None):
     """
-    create_shape(settings settings, entity_instance instance, entity_instance representation=None) -> boost::variant< IfcGeom::Element< double,double > *,IfcGeom::Representation::Representation * >
-    create_shape(settings settings, entity_instance instance) -> boost::variant< IfcGeom::Element< double,double > *,IfcGeom::Representation::Representation * >
+    create_shape(IteratorSettings settings, entity_instance instance, entity_instance representation=None) -> boost::variant< IfcGeom::Element *,IfcGeom::Representation::Representation * >
+    create_shape(IteratorSettings settings, entity_instance instance) -> boost::variant< IfcGeom::Element *,IfcGeom::Representation::Representation * >
     """
     return _ifcopenshell_wrapper.create_shape(settings, instance, representation)
 
@@ -643,453 +2443,1672 @@ def serialise(schema_name, shape_str, advanced=True):
 def tesselate(schema_name, shape_str, d):
     """tesselate(std::string const & schema_name, std::string const & shape_str, double d) -> entity_instance"""
     return _ifcopenshell_wrapper.tesselate(schema_name, shape_str, d)
-class iterator_double_precision(_object):
-    """Proxy of C++ IfcGeom::Iterator<(double)> class."""
+class svg_line_segments(_object):
+    """Proxy of C++ std::vector<(std::array<(svgfill::point_2,2)>)> class."""
 
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, iterator_double_precision, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_line_segments, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, iterator_double_precision, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_line_segments, name)
     __repr__ = _swig_repr
 
-    def __init__(self, *args):
+    def iterator(self):
+        """iterator(svg_line_segments self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_line_segments_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_line_segments___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(svg_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_line_segments___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_line_segments___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i, std::vector< std::array< svgfill::point_2,2 > >::difference_type j) -> svg_line_segments"""
+        return _ifcopenshell_wrapper.svg_line_segments___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
         """
-        __init__(IfcGeom::Iterator<(double)> self, settings settings, file file, int num_threads=1) -> iterator_double_precision
-        __init__(IfcGeom::Iterator<(double)> self, settings settings, file file) -> iterator_double_precision
-        __init__(IfcGeom::Iterator<(double)> self, settings settings, file file, std::vector< IfcGeom::filter_t > const & filters, size_t num_threads=1) -> iterator_double_precision
-        __init__(IfcGeom::Iterator<(double)> self, settings settings, file file, std::vector< IfcGeom::filter_t > const & filters) -> iterator_double_precision
+        __setslice__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i, std::vector< std::array< svgfill::point_2,2 > >::difference_type j)
+        __setslice__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i, std::vector< std::array< svgfill::point_2,2 > >::difference_type j, svg_line_segments v)
         """
-        this = _ifcopenshell_wrapper.new_iterator_double_precision(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
+        return _ifcopenshell_wrapper.svg_line_segments___setslice__(self, *args)
 
-    def initialize(self):
-        """initialize(iterator_double_precision self) -> bool"""
-        return _ifcopenshell_wrapper.iterator_double_precision_initialize(self)
 
+    def __delslice__(self, i, j):
+        """__delslice__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i, std::vector< std::array< svgfill::point_2,2 > >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_line_segments___delslice__(self, i, j)
 
-    def progress(self):
-        """progress(iterator_double_precision self) -> int"""
-        return _ifcopenshell_wrapper.iterator_double_precision_progress(self)
 
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i)
+        __delitem__(svg_line_segments self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_line_segments___delitem__(self, *args)
 
-    def compute_bounds(self, with_geometry):
-        """compute_bounds(iterator_double_precision self, bool with_geometry)"""
-        return _ifcopenshell_wrapper.iterator_double_precision_compute_bounds(self, with_geometry)
 
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_line_segments self, PySliceObject * slice) -> svg_line_segments
+        __getitem__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i) -> line_segment
+        """
+        return _ifcopenshell_wrapper.svg_line_segments___getitem__(self, *args)
 
-    def bounds_min(self):
-        """bounds_min(iterator_double_precision self) -> gp_XYZ const &"""
-        return _ifcopenshell_wrapper.iterator_double_precision_bounds_min(self)
 
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_line_segments self, PySliceObject * slice, svg_line_segments v)
+        __setitem__(svg_line_segments self, PySliceObject * slice)
+        __setitem__(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::difference_type i, line_segment x)
+        """
+        return _ifcopenshell_wrapper.svg_line_segments___setitem__(self, *args)
 
-    def bounds_max(self):
-        """bounds_max(iterator_double_precision self) -> gp_XYZ const &"""
-        return _ifcopenshell_wrapper.iterator_double_precision_bounds_max(self)
 
+    def pop(self):
+        """pop(svg_line_segments self) -> line_segment"""
+        return _ifcopenshell_wrapper.svg_line_segments_pop(self)
 
-    def unit_name(self):
-        """unit_name(iterator_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.iterator_double_precision_unit_name(self)
 
+    def append(self, x):
+        """append(svg_line_segments self, line_segment x)"""
+        return _ifcopenshell_wrapper.svg_line_segments_append(self, x)
 
-    def unit_magnitude(self):
-        """unit_magnitude(iterator_double_precision self) -> double"""
-        return _ifcopenshell_wrapper.iterator_double_precision_unit_magnitude(self)
 
+    def empty(self):
+        """empty(svg_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_line_segments_empty(self)
 
-    def file(self):
-        """file(iterator_double_precision self) -> file"""
-        return _ifcopenshell_wrapper.iterator_double_precision_file(self)
 
+    def size(self):
+        """size(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_line_segments_size(self)
 
-    def next(self):
-        """next(iterator_double_precision self) -> entity_instance"""
-        return _ifcopenshell_wrapper.iterator_double_precision_next(self)
 
+    def swap(self, v):
+        """swap(svg_line_segments self, svg_line_segments v)"""
+        return _ifcopenshell_wrapper.svg_line_segments_swap(self, v)
 
-    def get(self):
-        """get(iterator_double_precision self) -> element_double_precision"""
-        return _ifcopenshell_wrapper.iterator_double_precision_get(self)
 
+    def begin(self):
+        """begin(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_line_segments_begin(self)
 
-    def get_native(self):
-        """get_native(iterator_double_precision self) -> IfcGeom::BRepElement< double,double > *"""
-        return _ifcopenshell_wrapper.iterator_double_precision_get_native(self)
 
+    def end(self):
+        """end(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_line_segments_end(self)
 
-    def get_object(self, id):
-        """get_object(iterator_double_precision self, int id) -> element_double_precision"""
-        return _ifcopenshell_wrapper.iterator_double_precision_get_object(self, id)
 
+    def rbegin(self):
+        """rbegin(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_line_segments_rbegin(self)
 
-    def create(self):
-        """create(iterator_double_precision self) -> entity_instance"""
-        return _ifcopenshell_wrapper.iterator_double_precision_create(self)
 
+    def rend(self):
+        """rend(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_line_segments_rend(self)
 
-    def mantissa_size():
-        """mantissa_size() -> int"""
-        return _ifcopenshell_wrapper.iterator_double_precision_mantissa_size()
 
-    mantissa_size = staticmethod(mantissa_size)
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_iterator_double_precision
-    __del__ = lambda self: None
-iterator_double_precision_swigregister = _ifcopenshell_wrapper.iterator_double_precision_swigregister
-iterator_double_precision_swigregister(iterator_double_precision)
+    def clear(self):
+        """clear(svg_line_segments self)"""
+        return _ifcopenshell_wrapper.svg_line_segments_clear(self)
 
-def iterator_double_precision_mantissa_size():
-    """iterator_double_precision_mantissa_size() -> int"""
-    return _ifcopenshell_wrapper.iterator_double_precision_mantissa_size()
 
-class element_double_precision(_object):
-    """Proxy of C++ IfcGeom::Element<(double)> class."""
+    def get_allocator(self):
+        """get_allocator(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_line_segments_get_allocator(self)
 
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, element_double_precision, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, element_double_precision, name)
-    __repr__ = _swig_repr
 
-    def id(self):
-        """id(element_double_precision self) -> int"""
-        return _ifcopenshell_wrapper.element_double_precision_id(self)
+    def pop_back(self):
+        """pop_back(svg_line_segments self)"""
+        return _ifcopenshell_wrapper.svg_line_segments_pop_back(self)
 
 
-    def parent_id(self):
-        """parent_id(element_double_precision self) -> int"""
-        return _ifcopenshell_wrapper.element_double_precision_parent_id(self)
-
-
-    def name(self):
-        """name(element_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.element_double_precision_name(self)
-
-
-    def type(self):
-        """type(element_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.element_double_precision_type(self)
-
-
-    def guid(self):
-        """guid(element_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.element_double_precision_guid(self)
-
-
-    def context(self):
-        """context(element_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.element_double_precision_context(self)
-
-
-    def unique_id(self):
-        """unique_id(element_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.element_double_precision_unique_id(self)
-
-
-    def transformation(self):
-        """transformation(element_double_precision self) -> transformation_double_precision"""
-        return _ifcopenshell_wrapper.element_double_precision_transformation(self)
-
-
-    def product(self):
-        """product(element_double_precision self) -> IfcBaseEntity"""
-        return _ifcopenshell_wrapper.element_double_precision_product(self)
-
-
-    def parents(self):
-        """parents(element_double_precision self) -> std::vector< IfcGeom::Element< double,double > const * > const"""
-        return _ifcopenshell_wrapper.element_double_precision_parents(self)
-
-
-    def SetParents(self, newparents):
-        """SetParents(element_double_precision self, std::vector< IfcGeom::Element< double,double > const * > newparents)"""
-        return _ifcopenshell_wrapper.element_double_precision_SetParents(self, newparents)
-
-
-    def __init__(self, settings, id, parent_id, name, type, guid, context, trsf, product):
-        """__init__(IfcGeom::Element<(double)> self, ElementSettings settings, int id, int parent_id, std::string const & name, std::string const & type, std::string const & guid, std::string const & context, gp_Trsf const & trsf, IfcBaseEntity product) -> element_double_precision"""
-        this = _ifcopenshell_wrapper.new_element_double_precision(settings, id, parent_id, name, type, guid, context, trsf, product)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_element_double_precision
-    __del__ = lambda self: None
-
-    def product_(self):
-        """product_(element_double_precision self) -> entity_instance"""
-        return _ifcopenshell_wrapper.element_double_precision_product_(self)
-
-
-            # Hide the getters with read-only property implementations
-    id = property(id)
-    parent_id = property(parent_id)
-    name = property(name)
-    type = property(type)
-    guid = property(guid)
-    context = property(context)
-    unique_id = property(unique_id)
-    transformation = property(transformation)
-    product = property(product_)
-
-element_double_precision_swigregister = _ifcopenshell_wrapper.element_double_precision_swigregister
-element_double_precision_swigregister(element_double_precision)
-
-def __eq__(*args):
-    """
-    __eq__(Element< P,PP > const & element1, Element< P,PP > const & element2) -> bool
-    __eq__(element_double_precision element1, element_double_precision element2) -> bool
-    """
-    return _ifcopenshell_wrapper.__eq__(*args)
-
-def __lt__(*args):
-    """
-    __lt__(Element< P,PP > const & element1, Element< P,PP > const & element2) -> bool
-    __lt__(element_double_precision element1, element_double_precision element2) -> bool
-    """
-    return _ifcopenshell_wrapper.__lt__(*args)
-
-class triangulation_element_double_precision(element_double_precision):
-    """Proxy of C++ IfcGeom::TriangulationElement<(double)> class."""
-
-    __swig_setmethods__ = {}
-    for _s in [element_double_precision]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, triangulation_element_double_precision, name, value)
-    __swig_getmethods__ = {}
-    for _s in [element_double_precision]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, triangulation_element_double_precision, name)
-    __repr__ = _swig_repr
-
-    def geometry(self):
-        """geometry(triangulation_element_double_precision self) -> triangulation_double_precision"""
-        return _ifcopenshell_wrapper.triangulation_element_double_precision_geometry(self)
-
-
-    def geometry_pointer(self):
-        """geometry_pointer(triangulation_element_double_precision self) -> boost::shared_ptr< IfcGeom::Representation::Triangulation< double > > const &"""
-        return _ifcopenshell_wrapper.triangulation_element_double_precision_geometry_pointer(self)
+    def erase(self, *args):
+        """
+        erase(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::iterator pos) -> std::vector< std::array< svgfill::point_2,2 > >::iterator
+        erase(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::iterator first, std::vector< std::array< svgfill::point_2,2 > >::iterator last) -> std::vector< std::array< svgfill::point_2,2 > >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_line_segments_erase(self, *args)
 
 
     def __init__(self, *args):
         """
-        __init__(IfcGeom::TriangulationElement<(double)> self, IfcGeom::BRepElement< double,double > const & shape_model) -> triangulation_element_double_precision
-        __init__(IfcGeom::TriangulationElement<(double)> self, element_double_precision element, boost::shared_ptr< IfcGeom::Representation::Triangulation< double > > const & geometry) -> triangulation_element_double_precision
+        __init__(std::vector<(std::array<(svgfill::point_2,2)>)> self) -> svg_line_segments
+        __init__(std::vector<(std::array<(svgfill::point_2,2)>)> self, svg_line_segments arg2) -> svg_line_segments
+        __init__(std::vector<(std::array<(svgfill::point_2,2)>)> self, std::vector< std::array< svgfill::point_2,2 > >::size_type size) -> svg_line_segments
+        __init__(std::vector<(std::array<(svgfill::point_2,2)>)> self, std::vector< std::array< svgfill::point_2,2 > >::size_type size, line_segment value) -> svg_line_segments
         """
-        this = _ifcopenshell_wrapper.new_triangulation_element_double_precision(*args)
+        this = _ifcopenshell_wrapper.new_svg_line_segments(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
-            # Hide the getters with read-only property implementations
-    geometry = property(geometry)
+    def push_back(self, x):
+        """push_back(svg_line_segments self, line_segment x)"""
+        return _ifcopenshell_wrapper.svg_line_segments_push_back(self, x)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_triangulation_element_double_precision
+
+    def front(self):
+        """front(svg_line_segments self) -> line_segment"""
+        return _ifcopenshell_wrapper.svg_line_segments_front(self)
+
+
+    def back(self):
+        """back(svg_line_segments self) -> line_segment"""
+        return _ifcopenshell_wrapper.svg_line_segments_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::size_type n, line_segment x)"""
+        return _ifcopenshell_wrapper.svg_line_segments_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::size_type new_size)
+        resize(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::size_type new_size, line_segment x)
+        """
+        return _ifcopenshell_wrapper.svg_line_segments_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::iterator pos, line_segment x) -> std::vector< std::array< svgfill::point_2,2 > >::iterator
+        insert(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::iterator pos, std::vector< std::array< svgfill::point_2,2 > >::size_type n, line_segment x)
+        """
+        return _ifcopenshell_wrapper.svg_line_segments_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_line_segments self, std::vector< std::array< svgfill::point_2,2 > >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_line_segments_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_line_segments self) -> std::vector< std::array< svgfill::point_2,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_line_segments_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_line_segments
     __del__ = lambda self: None
-triangulation_element_double_precision_swigregister = _ifcopenshell_wrapper.triangulation_element_double_precision_swigregister
-triangulation_element_double_precision_swigregister(triangulation_element_double_precision)
+svg_line_segments_swigregister = _ifcopenshell_wrapper.svg_line_segments_swigregister
+svg_line_segments_swigregister(svg_line_segments)
 
-class serialized_element_double_precision(element_double_precision):
-    """Proxy of C++ IfcGeom::SerializedElement<(double)> class."""
+class svg_groups_of_line_segments(_object):
+    """Proxy of C++ std::vector<(std::vector<(std::array<(svgfill::point_2,2)>)>)> class."""
 
     __swig_setmethods__ = {}
-    for _s in [element_double_precision]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, serialized_element_double_precision, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_groups_of_line_segments, name, value)
     __swig_getmethods__ = {}
-    for _s in [element_double_precision]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, serialized_element_double_precision, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_groups_of_line_segments, name)
     __repr__ = _swig_repr
 
-    def geometry(self):
-        """geometry(serialized_element_double_precision self) -> Serialization"""
-        return _ifcopenshell_wrapper.serialized_element_double_precision_geometry(self)
+    def iterator(self):
+        """iterator(svg_groups_of_line_segments self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_groups_of_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___nonzero__(self)
 
 
-    def __init__(self, shape_model):
-        """__init__(IfcGeom::SerializedElement<(double)> self, IfcGeom::BRepElement< double,double > const & shape_model) -> serialized_element_double_precision"""
-        this = _ifcopenshell_wrapper.new_serialized_element_double_precision(shape_model)
+    def __bool__(self):
+        """__bool__(svg_groups_of_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type j) -> svg_groups_of_line_segments"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type j)
+        __setslice__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type j, svg_groups_of_line_segments v)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i)
+        __delitem__(svg_groups_of_line_segments self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_groups_of_line_segments self, PySliceObject * slice) -> svg_groups_of_line_segments
+        __getitem__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i) -> svg_line_segments
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_groups_of_line_segments self, PySliceObject * slice, svg_groups_of_line_segments v)
+        __setitem__(svg_groups_of_line_segments self, PySliceObject * slice)
+        __setitem__(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::difference_type i, svg_line_segments x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(svg_groups_of_line_segments self) -> svg_line_segments"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_pop(self)
+
+
+    def append(self, x):
+        """append(svg_groups_of_line_segments self, svg_line_segments x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_append(self, x)
+
+
+    def empty(self):
+        """empty(svg_groups_of_line_segments self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_empty(self)
+
+
+    def size(self):
+        """size(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_size(self)
+
+
+    def swap(self, v):
+        """swap(svg_groups_of_line_segments self, svg_groups_of_line_segments v)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_swap(self, v)
+
+
+    def begin(self):
+        """begin(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_begin(self)
+
+
+    def end(self):
+        """end(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_end(self)
+
+
+    def rbegin(self):
+        """rbegin(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_rend(self)
+
+
+    def clear(self):
+        """clear(svg_groups_of_line_segments self)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(svg_groups_of_line_segments self)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator pos) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator
+        erase(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator first, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator last) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(std::vector<(std::array<(svgfill::point_2,2)>)>)> self) -> svg_groups_of_line_segments
+        __init__(std::vector<(std::vector<(std::array<(svgfill::point_2,2)>)>)> self, svg_groups_of_line_segments arg2) -> svg_groups_of_line_segments
+        __init__(std::vector<(std::vector<(std::array<(svgfill::point_2,2)>)>)> self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type size) -> svg_groups_of_line_segments
+        __init__(std::vector<(std::vector<(std::array<(svgfill::point_2,2)>)>)> self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type size, svg_line_segments value) -> svg_groups_of_line_segments
+        """
+        this = _ifcopenshell_wrapper.new_svg_groups_of_line_segments(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_serialized_element_double_precision
+
+    def push_back(self, x):
+        """push_back(svg_groups_of_line_segments self, svg_line_segments x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_push_back(self, x)
+
+
+    def front(self):
+        """front(svg_groups_of_line_segments self) -> svg_line_segments"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_front(self)
+
+
+    def back(self):
+        """back(svg_groups_of_line_segments self) -> svg_line_segments"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type n, svg_line_segments x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type new_size)
+        resize(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type new_size, svg_line_segments x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator pos, svg_line_segments x) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator
+        insert(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::iterator pos, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type n, svg_line_segments x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_groups_of_line_segments self, std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_groups_of_line_segments self) -> std::vector< std::vector< std::array< svgfill::point_2,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_line_segments_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_groups_of_line_segments
     __del__ = lambda self: None
+svg_groups_of_line_segments_swigregister = _ifcopenshell_wrapper.svg_groups_of_line_segments_swigregister
+svg_groups_of_line_segments_swigregister(svg_groups_of_line_segments)
 
-            # Hide the getters with read-only property implementations
-    geometry = property(geometry)
-
-serialized_element_double_precision_swigregister = _ifcopenshell_wrapper.serialized_element_double_precision_swigregister
-serialized_element_double_precision_swigregister(serialized_element_double_precision)
-
-class transformation_double_precision(_object):
-    """Proxy of C++ IfcGeom::Transformation<(double)> class."""
+class svg_point(_object):
+    """Proxy of C++ std::array<(double,2)> class."""
 
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, transformation_double_precision, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_point, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, transformation_double_precision, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_point, name)
     __repr__ = _swig_repr
 
-    def __init__(self, settings, trsf):
-        """__init__(IfcGeom::Transformation<(double)> self, ElementSettings settings, gp_Trsf const & trsf) -> transformation_double_precision"""
-        this = _ifcopenshell_wrapper.new_transformation_double_precision(settings, trsf)
+    def iterator(self):
+        """iterator(svg_point self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_point_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_point self) -> bool"""
+        return _ifcopenshell_wrapper.svg_point___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(svg_point self) -> bool"""
+        return _ifcopenshell_wrapper.svg_point___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_point self) -> std::array< double,2 >::size_type"""
+        return _ifcopenshell_wrapper.svg_point___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_point self, std::array< double,2 >::difference_type i, std::array< double,2 >::difference_type j) -> svg_point"""
+        return _ifcopenshell_wrapper.svg_point___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_point self, std::array< double,2 >::difference_type i, std::array< double,2 >::difference_type j)
+        __setslice__(svg_point self, std::array< double,2 >::difference_type i, std::array< double,2 >::difference_type j, svg_point v)
+        """
+        return _ifcopenshell_wrapper.svg_point___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(svg_point self, std::array< double,2 >::difference_type i, std::array< double,2 >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_point___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_point self, std::array< double,2 >::difference_type i)
+        __delitem__(svg_point self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_point___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_point self, PySliceObject * slice) -> svg_point
+        __getitem__(svg_point self, std::array< double,2 >::difference_type i) -> std::array< double,2 >::value_type const &
+        """
+        return _ifcopenshell_wrapper.svg_point___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_point self, PySliceObject * slice, svg_point v)
+        __setitem__(svg_point self, PySliceObject * slice)
+        __setitem__(svg_point self, std::array< double,2 >::difference_type i, std::array< double,2 >::value_type const & x)
+        """
+        return _ifcopenshell_wrapper.svg_point___setitem__(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::array<(double,2)> self) -> svg_point
+        __init__(std::array<(double,2)> self, svg_point arg2) -> svg_point
+        """
+        this = _ifcopenshell_wrapper.new_svg_point(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
-    def data(self):
-        """data(transformation_double_precision self) -> gp_Trsf const &"""
-        return _ifcopenshell_wrapper.transformation_double_precision_data(self)
+    def empty(self):
+        """empty(svg_point self) -> bool"""
+        return _ifcopenshell_wrapper.svg_point_empty(self)
 
 
-    def matrix(self):
-        """matrix(transformation_double_precision self) -> matrix_double_precision"""
-        return _ifcopenshell_wrapper.transformation_double_precision_matrix(self)
+    def size(self):
+        """size(svg_point self) -> std::array< double,2 >::size_type"""
+        return _ifcopenshell_wrapper.svg_point_size(self)
 
 
-    def inverted(self):
-        """inverted(transformation_double_precision self) -> transformation_double_precision"""
-        return _ifcopenshell_wrapper.transformation_double_precision_inverted(self)
+    def swap(self, v):
+        """swap(svg_point self, svg_point v)"""
+        return _ifcopenshell_wrapper.svg_point_swap(self, v)
 
 
-    def multiplied(self, other):
-        """multiplied(transformation_double_precision self, transformation_double_precision other) -> transformation_double_precision"""
-        return _ifcopenshell_wrapper.transformation_double_precision_multiplied(self, other)
+    def begin(self):
+        """begin(svg_point self) -> std::array< double,2 >::iterator"""
+        return _ifcopenshell_wrapper.svg_point_begin(self)
 
 
-            # Hide the getters with read-only property implementations
-    matrix = property(matrix)
+    def end(self):
+        """end(svg_point self) -> std::array< double,2 >::iterator"""
+        return _ifcopenshell_wrapper.svg_point_end(self)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_transformation_double_precision
+
+    def rbegin(self):
+        """rbegin(svg_point self) -> std::array< double,2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_point_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_point self) -> std::array< double,2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_point_rend(self)
+
+
+    def front(self):
+        """front(svg_point self) -> std::array< double,2 >::value_type const &"""
+        return _ifcopenshell_wrapper.svg_point_front(self)
+
+
+    def back(self):
+        """back(svg_point self) -> std::array< double,2 >::value_type const &"""
+        return _ifcopenshell_wrapper.svg_point_back(self)
+
+
+    def fill(self, u):
+        """fill(svg_point self, std::array< double,2 >::value_type const & u)"""
+        return _ifcopenshell_wrapper.svg_point_fill(self, u)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_point
     __del__ = lambda self: None
-transformation_double_precision_swigregister = _ifcopenshell_wrapper.transformation_double_precision_swigregister
-transformation_double_precision_swigregister(transformation_double_precision)
+svg_point_swigregister = _ifcopenshell_wrapper.svg_point_swigregister
+svg_point_swigregister(svg_point)
 
-class matrix_double_precision(_object):
-    """Proxy of C++ IfcGeom::Matrix<(double)> class."""
+class line_segment(_object):
+    """Proxy of C++ std::array<(svgfill::point_2,2)> class."""
 
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, matrix_double_precision, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, line_segment, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, matrix_double_precision, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, line_segment, name)
     __repr__ = _swig_repr
 
-    def __init__(self, settings, trsf):
-        """__init__(IfcGeom::Matrix<(double)> self, ElementSettings settings, gp_Trsf const & trsf) -> matrix_double_precision"""
-        this = _ifcopenshell_wrapper.new_matrix_double_precision(settings, trsf)
+    def iterator(self):
+        """iterator(line_segment self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.line_segment_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(line_segment self) -> bool"""
+        return _ifcopenshell_wrapper.line_segment___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(line_segment self) -> bool"""
+        return _ifcopenshell_wrapper.line_segment___bool__(self)
+
+
+    def __len__(self):
+        """__len__(line_segment self) -> std::array< svgfill::point_2,2 >::size_type"""
+        return _ifcopenshell_wrapper.line_segment___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i, std::array< svgfill::point_2,2 >::difference_type j) -> line_segment"""
+        return _ifcopenshell_wrapper.line_segment___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i, std::array< svgfill::point_2,2 >::difference_type j)
+        __setslice__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i, std::array< svgfill::point_2,2 >::difference_type j, line_segment v)
+        """
+        return _ifcopenshell_wrapper.line_segment___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i, std::array< svgfill::point_2,2 >::difference_type j)"""
+        return _ifcopenshell_wrapper.line_segment___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i)
+        __delitem__(line_segment self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.line_segment___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(line_segment self, PySliceObject * slice) -> line_segment
+        __getitem__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i) -> std::array< svgfill::point_2,2 >::value_type const &
+        """
+        return _ifcopenshell_wrapper.line_segment___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(line_segment self, PySliceObject * slice, line_segment v)
+        __setitem__(line_segment self, PySliceObject * slice)
+        __setitem__(line_segment self, std::array< svgfill::point_2,2 >::difference_type i, std::array< svgfill::point_2,2 >::value_type const & x)
+        """
+        return _ifcopenshell_wrapper.line_segment___setitem__(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::array<(svgfill::point_2,2)> self) -> line_segment
+        __init__(std::array<(svgfill::point_2,2)> self, line_segment arg2) -> line_segment
+        """
+        this = _ifcopenshell_wrapper.new_line_segment(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
 
-    def data(self):
-        """data(matrix_double_precision self) -> std::vector< double > const &"""
-        return _ifcopenshell_wrapper.matrix_double_precision_data(self)
+    def empty(self):
+        """empty(line_segment self) -> bool"""
+        return _ifcopenshell_wrapper.line_segment_empty(self)
 
 
-            # Hide the getters with read-only property implementations
-    data = property(data)
+    def size(self):
+        """size(line_segment self) -> std::array< svgfill::point_2,2 >::size_type"""
+        return _ifcopenshell_wrapper.line_segment_size(self)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_matrix_double_precision
+
+    def swap(self, v):
+        """swap(line_segment self, line_segment v)"""
+        return _ifcopenshell_wrapper.line_segment_swap(self, v)
+
+
+    def begin(self):
+        """begin(line_segment self) -> std::array< svgfill::point_2,2 >::iterator"""
+        return _ifcopenshell_wrapper.line_segment_begin(self)
+
+
+    def end(self):
+        """end(line_segment self) -> std::array< svgfill::point_2,2 >::iterator"""
+        return _ifcopenshell_wrapper.line_segment_end(self)
+
+
+    def rbegin(self):
+        """rbegin(line_segment self) -> std::array< svgfill::point_2,2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.line_segment_rbegin(self)
+
+
+    def rend(self):
+        """rend(line_segment self) -> std::array< svgfill::point_2,2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.line_segment_rend(self)
+
+
+    def front(self):
+        """front(line_segment self) -> std::array< svgfill::point_2,2 >::value_type const &"""
+        return _ifcopenshell_wrapper.line_segment_front(self)
+
+
+    def back(self):
+        """back(line_segment self) -> std::array< svgfill::point_2,2 >::value_type const &"""
+        return _ifcopenshell_wrapper.line_segment_back(self)
+
+
+    def fill(self, u):
+        """fill(line_segment self, std::array< svgfill::point_2,2 >::value_type const & u)"""
+        return _ifcopenshell_wrapper.line_segment_fill(self, u)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_line_segment
     __del__ = lambda self: None
-matrix_double_precision_swigregister = _ifcopenshell_wrapper.matrix_double_precision_swigregister
-matrix_double_precision_swigregister(matrix_double_precision)
+line_segment_swigregister = _ifcopenshell_wrapper.line_segment_swigregister
+line_segment_swigregister(line_segment)
 
-class triangulation_double_precision(Representation):
-    """Proxy of C++ IfcGeom::Representation::Triangulation<(double)> class."""
+class svg_polygons(_object):
+    """Proxy of C++ std::vector<(svgfill::polygon_2)> class."""
 
     __swig_setmethods__ = {}
-    for _s in [Representation]:
-        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
-    __setattr__ = lambda self, name, value: _swig_setattr(self, triangulation_double_precision, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_polygons, name, value)
     __swig_getmethods__ = {}
-    for _s in [Representation]:
-        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
-    __getattr__ = lambda self, name: _swig_getattr(self, triangulation_double_precision, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_polygons, name)
     __repr__ = _swig_repr
 
-    def id(self):
-        """id(triangulation_double_precision self) -> std::string const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_id(self)
+    def iterator(self):
+        """iterator(svg_polygons self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_polygons_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_polygons___nonzero__(self)
 
 
-    def verts(self):
-        """verts(triangulation_double_precision self) -> std::vector< double > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_verts(self)
+    def __bool__(self):
+        """__bool__(svg_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_polygons___bool__(self)
 
 
-    def faces(self):
-        """faces(triangulation_double_precision self) -> std::vector< int > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_faces(self)
+    def __len__(self):
+        """__len__(svg_polygons self) -> std::vector< svgfill::polygon_2 >::size_type"""
+        return _ifcopenshell_wrapper.svg_polygons___len__(self)
 
 
-    def edges(self):
-        """edges(triangulation_double_precision self) -> std::vector< int > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_edges(self)
+    def __getslice__(self, i, j):
+        """__getslice__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i, std::vector< svgfill::polygon_2 >::difference_type j) -> svg_polygons"""
+        return _ifcopenshell_wrapper.svg_polygons___getslice__(self, i, j)
 
 
-    def normals(self):
-        """normals(triangulation_double_precision self) -> std::vector< double > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_normals(self)
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i, std::vector< svgfill::polygon_2 >::difference_type j)
+        __setslice__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i, std::vector< svgfill::polygon_2 >::difference_type j, svg_polygons v)
+        """
+        return _ifcopenshell_wrapper.svg_polygons___setslice__(self, *args)
 
 
-    def uvs(self):
-        """uvs(triangulation_double_precision self) -> std::vector< double > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_uvs(self)
+    def __delslice__(self, i, j):
+        """__delslice__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i, std::vector< svgfill::polygon_2 >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_polygons___delslice__(self, i, j)
 
 
-    def material_ids(self):
-        """material_ids(triangulation_double_precision self) -> std::vector< int > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_material_ids(self)
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i)
+        __delitem__(svg_polygons self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_polygons___delitem__(self, *args)
 
 
-    def materials(self):
-        """materials(triangulation_double_precision self) -> std::vector< IfcGeom::Material > const &"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_materials(self)
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_polygons self, PySliceObject * slice) -> svg_polygons
+        __getitem__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i) -> polygon_2
+        """
+        return _ifcopenshell_wrapper.svg_polygons___getitem__(self, *args)
 
 
-    def __init__(self, shape_model):
-        """__init__(IfcGeom::Representation::Triangulation<(double)> self, BRep shape_model) -> triangulation_double_precision"""
-        this = _ifcopenshell_wrapper.new_triangulation_double_precision(shape_model)
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_polygons self, PySliceObject * slice, svg_polygons v)
+        __setitem__(svg_polygons self, PySliceObject * slice)
+        __setitem__(svg_polygons self, std::vector< svgfill::polygon_2 >::difference_type i, polygon_2 x)
+        """
+        return _ifcopenshell_wrapper.svg_polygons___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(svg_polygons self) -> polygon_2"""
+        return _ifcopenshell_wrapper.svg_polygons_pop(self)
+
+
+    def append(self, x):
+        """append(svg_polygons self, polygon_2 x)"""
+        return _ifcopenshell_wrapper.svg_polygons_append(self, x)
+
+
+    def empty(self):
+        """empty(svg_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_polygons_empty(self)
+
+
+    def size(self):
+        """size(svg_polygons self) -> std::vector< svgfill::polygon_2 >::size_type"""
+        return _ifcopenshell_wrapper.svg_polygons_size(self)
+
+
+    def swap(self, v):
+        """swap(svg_polygons self, svg_polygons v)"""
+        return _ifcopenshell_wrapper.svg_polygons_swap(self, v)
+
+
+    def begin(self):
+        """begin(svg_polygons self) -> std::vector< svgfill::polygon_2 >::iterator"""
+        return _ifcopenshell_wrapper.svg_polygons_begin(self)
+
+
+    def end(self):
+        """end(svg_polygons self) -> std::vector< svgfill::polygon_2 >::iterator"""
+        return _ifcopenshell_wrapper.svg_polygons_end(self)
+
+
+    def rbegin(self):
+        """rbegin(svg_polygons self) -> std::vector< svgfill::polygon_2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_polygons_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_polygons self) -> std::vector< svgfill::polygon_2 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_polygons_rend(self)
+
+
+    def clear(self):
+        """clear(svg_polygons self)"""
+        return _ifcopenshell_wrapper.svg_polygons_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(svg_polygons self) -> std::vector< svgfill::polygon_2 >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_polygons_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(svg_polygons self)"""
+        return _ifcopenshell_wrapper.svg_polygons_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(svg_polygons self, std::vector< svgfill::polygon_2 >::iterator pos) -> std::vector< svgfill::polygon_2 >::iterator
+        erase(svg_polygons self, std::vector< svgfill::polygon_2 >::iterator first, std::vector< svgfill::polygon_2 >::iterator last) -> std::vector< svgfill::polygon_2 >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_polygons_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(svgfill::polygon_2)> self) -> svg_polygons
+        __init__(std::vector<(svgfill::polygon_2)> self, svg_polygons arg2) -> svg_polygons
+        __init__(std::vector<(svgfill::polygon_2)> self, std::vector< svgfill::polygon_2 >::size_type size) -> svg_polygons
+        __init__(std::vector<(svgfill::polygon_2)> self, std::vector< svgfill::polygon_2 >::size_type size, polygon_2 value) -> svg_polygons
+        """
+        this = _ifcopenshell_wrapper.new_svg_polygons(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_triangulation_double_precision
+
+    def push_back(self, x):
+        """push_back(svg_polygons self, polygon_2 x)"""
+        return _ifcopenshell_wrapper.svg_polygons_push_back(self, x)
+
+
+    def front(self):
+        """front(svg_polygons self) -> polygon_2"""
+        return _ifcopenshell_wrapper.svg_polygons_front(self)
+
+
+    def back(self):
+        """back(svg_polygons self) -> polygon_2"""
+        return _ifcopenshell_wrapper.svg_polygons_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_polygons self, std::vector< svgfill::polygon_2 >::size_type n, polygon_2 x)"""
+        return _ifcopenshell_wrapper.svg_polygons_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_polygons self, std::vector< svgfill::polygon_2 >::size_type new_size)
+        resize(svg_polygons self, std::vector< svgfill::polygon_2 >::size_type new_size, polygon_2 x)
+        """
+        return _ifcopenshell_wrapper.svg_polygons_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_polygons self, std::vector< svgfill::polygon_2 >::iterator pos, polygon_2 x) -> std::vector< svgfill::polygon_2 >::iterator
+        insert(svg_polygons self, std::vector< svgfill::polygon_2 >::iterator pos, std::vector< svgfill::polygon_2 >::size_type n, polygon_2 x)
+        """
+        return _ifcopenshell_wrapper.svg_polygons_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_polygons self, std::vector< svgfill::polygon_2 >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_polygons_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_polygons self) -> std::vector< svgfill::polygon_2 >::size_type"""
+        return _ifcopenshell_wrapper.svg_polygons_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_polygons
+    __del__ = lambda self: None
+svg_polygons_swigregister = _ifcopenshell_wrapper.svg_polygons_swigregister
+svg_polygons_swigregister(svg_polygons)
+
+class svg_groups_of_polygons(_object):
+    """Proxy of C++ std::vector<(std::vector<(svgfill::polygon_2)>)> class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_groups_of_polygons, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_groups_of_polygons, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        """iterator(svg_groups_of_polygons self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_groups_of_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(svg_groups_of_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i, std::vector< std::vector< svgfill::polygon_2 > >::difference_type j) -> svg_groups_of_polygons"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i, std::vector< std::vector< svgfill::polygon_2 > >::difference_type j)
+        __setslice__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i, std::vector< std::vector< svgfill::polygon_2 > >::difference_type j, svg_groups_of_polygons v)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i, std::vector< std::vector< svgfill::polygon_2 > >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i)
+        __delitem__(svg_groups_of_polygons self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_groups_of_polygons self, PySliceObject * slice) -> svg_groups_of_polygons
+        __getitem__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i) -> svg_polygons
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_groups_of_polygons self, PySliceObject * slice, svg_groups_of_polygons v)
+        __setitem__(svg_groups_of_polygons self, PySliceObject * slice)
+        __setitem__(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::difference_type i, svg_polygons x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(svg_groups_of_polygons self) -> svg_polygons"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_pop(self)
+
+
+    def append(self, x):
+        """append(svg_groups_of_polygons self, svg_polygons x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_append(self, x)
+
+
+    def empty(self):
+        """empty(svg_groups_of_polygons self) -> bool"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_empty(self)
+
+
+    def size(self):
+        """size(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_size(self)
+
+
+    def swap(self, v):
+        """swap(svg_groups_of_polygons self, svg_groups_of_polygons v)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_swap(self, v)
+
+
+    def begin(self):
+        """begin(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_begin(self)
+
+
+    def end(self):
+        """end(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_end(self)
+
+
+    def rbegin(self):
+        """rbegin(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_rend(self)
+
+
+    def clear(self):
+        """clear(svg_groups_of_polygons self)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(svg_groups_of_polygons self)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::iterator pos) -> std::vector< std::vector< svgfill::polygon_2 > >::iterator
+        erase(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::iterator first, std::vector< std::vector< svgfill::polygon_2 > >::iterator last) -> std::vector< std::vector< svgfill::polygon_2 > >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(std::vector<(svgfill::polygon_2)>)> self) -> svg_groups_of_polygons
+        __init__(std::vector<(std::vector<(svgfill::polygon_2)>)> self, svg_groups_of_polygons arg2) -> svg_groups_of_polygons
+        __init__(std::vector<(std::vector<(svgfill::polygon_2)>)> self, std::vector< std::vector< svgfill::polygon_2 > >::size_type size) -> svg_groups_of_polygons
+        __init__(std::vector<(std::vector<(svgfill::polygon_2)>)> self, std::vector< std::vector< svgfill::polygon_2 > >::size_type size, svg_polygons value) -> svg_groups_of_polygons
+        """
+        this = _ifcopenshell_wrapper.new_svg_groups_of_polygons(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        """push_back(svg_groups_of_polygons self, svg_polygons x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_push_back(self, x)
+
+
+    def front(self):
+        """front(svg_groups_of_polygons self) -> svg_polygons"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_front(self)
+
+
+    def back(self):
+        """back(svg_groups_of_polygons self) -> svg_polygons"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::size_type n, svg_polygons x)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::size_type new_size)
+        resize(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::size_type new_size, svg_polygons x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::iterator pos, svg_polygons x) -> std::vector< std::vector< svgfill::polygon_2 > >::iterator
+        insert(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::iterator pos, std::vector< std::vector< svgfill::polygon_2 > >::size_type n, svg_polygons x)
+        """
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_groups_of_polygons self, std::vector< std::vector< svgfill::polygon_2 > >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_groups_of_polygons self) -> std::vector< std::vector< svgfill::polygon_2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_groups_of_polygons_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_groups_of_polygons
+    __del__ = lambda self: None
+svg_groups_of_polygons_swigregister = _ifcopenshell_wrapper.svg_groups_of_polygons_swigregister
+svg_groups_of_polygons_swigregister(svg_groups_of_polygons)
+
+class svg_loop(_object):
+    """Proxy of C++ std::vector<(std::array<(double,2)>)> class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_loop, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_loop, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        """iterator(svg_loop self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_loop_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_loop self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loop___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(svg_loop self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loop___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_loop self) -> std::vector< std::array< double,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loop___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i, std::vector< std::array< double,2 > >::difference_type j) -> svg_loop"""
+        return _ifcopenshell_wrapper.svg_loop___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i, std::vector< std::array< double,2 > >::difference_type j)
+        __setslice__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i, std::vector< std::array< double,2 > >::difference_type j, svg_loop v)
+        """
+        return _ifcopenshell_wrapper.svg_loop___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i, std::vector< std::array< double,2 > >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_loop___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i)
+        __delitem__(svg_loop self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_loop___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_loop self, PySliceObject * slice) -> svg_loop
+        __getitem__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i) -> svg_point
+        """
+        return _ifcopenshell_wrapper.svg_loop___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_loop self, PySliceObject * slice, svg_loop v)
+        __setitem__(svg_loop self, PySliceObject * slice)
+        __setitem__(svg_loop self, std::vector< std::array< double,2 > >::difference_type i, svg_point x)
+        """
+        return _ifcopenshell_wrapper.svg_loop___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(svg_loop self) -> svg_point"""
+        return _ifcopenshell_wrapper.svg_loop_pop(self)
+
+
+    def append(self, x):
+        """append(svg_loop self, svg_point x)"""
+        return _ifcopenshell_wrapper.svg_loop_append(self, x)
+
+
+    def empty(self):
+        """empty(svg_loop self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loop_empty(self)
+
+
+    def size(self):
+        """size(svg_loop self) -> std::vector< std::array< double,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loop_size(self)
+
+
+    def swap(self, v):
+        """swap(svg_loop self, svg_loop v)"""
+        return _ifcopenshell_wrapper.svg_loop_swap(self, v)
+
+
+    def begin(self):
+        """begin(svg_loop self) -> std::vector< std::array< double,2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_loop_begin(self)
+
+
+    def end(self):
+        """end(svg_loop self) -> std::vector< std::array< double,2 > >::iterator"""
+        return _ifcopenshell_wrapper.svg_loop_end(self)
+
+
+    def rbegin(self):
+        """rbegin(svg_loop self) -> std::vector< std::array< double,2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_loop_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_loop self) -> std::vector< std::array< double,2 > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_loop_rend(self)
+
+
+    def clear(self):
+        """clear(svg_loop self)"""
+        return _ifcopenshell_wrapper.svg_loop_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(svg_loop self) -> std::vector< std::array< double,2 > >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_loop_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(svg_loop self)"""
+        return _ifcopenshell_wrapper.svg_loop_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(svg_loop self, std::vector< std::array< double,2 > >::iterator pos) -> std::vector< std::array< double,2 > >::iterator
+        erase(svg_loop self, std::vector< std::array< double,2 > >::iterator first, std::vector< std::array< double,2 > >::iterator last) -> std::vector< std::array< double,2 > >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_loop_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(std::array<(double,2)>)> self) -> svg_loop
+        __init__(std::vector<(std::array<(double,2)>)> self, svg_loop arg2) -> svg_loop
+        __init__(std::vector<(std::array<(double,2)>)> self, std::vector< std::array< double,2 > >::size_type size) -> svg_loop
+        __init__(std::vector<(std::array<(double,2)>)> self, std::vector< std::array< double,2 > >::size_type size, svg_point value) -> svg_loop
+        """
+        this = _ifcopenshell_wrapper.new_svg_loop(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        """push_back(svg_loop self, svg_point x)"""
+        return _ifcopenshell_wrapper.svg_loop_push_back(self, x)
+
+
+    def front(self):
+        """front(svg_loop self) -> svg_point"""
+        return _ifcopenshell_wrapper.svg_loop_front(self)
+
+
+    def back(self):
+        """back(svg_loop self) -> svg_point"""
+        return _ifcopenshell_wrapper.svg_loop_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_loop self, std::vector< std::array< double,2 > >::size_type n, svg_point x)"""
+        return _ifcopenshell_wrapper.svg_loop_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_loop self, std::vector< std::array< double,2 > >::size_type new_size)
+        resize(svg_loop self, std::vector< std::array< double,2 > >::size_type new_size, svg_point x)
+        """
+        return _ifcopenshell_wrapper.svg_loop_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_loop self, std::vector< std::array< double,2 > >::iterator pos, svg_point x) -> std::vector< std::array< double,2 > >::iterator
+        insert(svg_loop self, std::vector< std::array< double,2 > >::iterator pos, std::vector< std::array< double,2 > >::size_type n, svg_point x)
+        """
+        return _ifcopenshell_wrapper.svg_loop_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_loop self, std::vector< std::array< double,2 > >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_loop_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_loop self) -> std::vector< std::array< double,2 > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loop_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_loop
+    __del__ = lambda self: None
+svg_loop_swigregister = _ifcopenshell_wrapper.svg_loop_swigregister
+svg_loop_swigregister(svg_loop)
+
+class svg_loops(_object):
+    """Proxy of C++ std::vector<(std::vector<(std::array<(double,2)>)>)> class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, svg_loops, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, svg_loops, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        """iterator(svg_loops self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.svg_loops_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(svg_loops self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loops___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(svg_loops self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loops___bool__(self)
+
+
+    def __len__(self):
+        """__len__(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loops___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i, std::vector< std::vector< std::array< double,2 > > >::difference_type j) -> svg_loops"""
+        return _ifcopenshell_wrapper.svg_loops___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i, std::vector< std::vector< std::array< double,2 > > >::difference_type j)
+        __setslice__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i, std::vector< std::vector< std::array< double,2 > > >::difference_type j, svg_loops v)
+        """
+        return _ifcopenshell_wrapper.svg_loops___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i, std::vector< std::vector< std::array< double,2 > > >::difference_type j)"""
+        return _ifcopenshell_wrapper.svg_loops___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i)
+        __delitem__(svg_loops self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.svg_loops___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(svg_loops self, PySliceObject * slice) -> svg_loops
+        __getitem__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i) -> svg_loop
+        """
+        return _ifcopenshell_wrapper.svg_loops___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(svg_loops self, PySliceObject * slice, svg_loops v)
+        __setitem__(svg_loops self, PySliceObject * slice)
+        __setitem__(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::difference_type i, svg_loop x)
+        """
+        return _ifcopenshell_wrapper.svg_loops___setitem__(self, *args)
+
+
+    def pop(self):
+        """pop(svg_loops self) -> svg_loop"""
+        return _ifcopenshell_wrapper.svg_loops_pop(self)
+
+
+    def append(self, x):
+        """append(svg_loops self, svg_loop x)"""
+        return _ifcopenshell_wrapper.svg_loops_append(self, x)
+
+
+    def empty(self):
+        """empty(svg_loops self) -> bool"""
+        return _ifcopenshell_wrapper.svg_loops_empty(self)
+
+
+    def size(self):
+        """size(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loops_size(self)
+
+
+    def swap(self, v):
+        """swap(svg_loops self, svg_loops v)"""
+        return _ifcopenshell_wrapper.svg_loops_swap(self, v)
+
+
+    def begin(self):
+        """begin(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::iterator"""
+        return _ifcopenshell_wrapper.svg_loops_begin(self)
+
+
+    def end(self):
+        """end(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::iterator"""
+        return _ifcopenshell_wrapper.svg_loops_end(self)
+
+
+    def rbegin(self):
+        """rbegin(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_loops_rbegin(self)
+
+
+    def rend(self):
+        """rend(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::reverse_iterator"""
+        return _ifcopenshell_wrapper.svg_loops_rend(self)
+
+
+    def clear(self):
+        """clear(svg_loops self)"""
+        return _ifcopenshell_wrapper.svg_loops_clear(self)
+
+
+    def get_allocator(self):
+        """get_allocator(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::allocator_type"""
+        return _ifcopenshell_wrapper.svg_loops_get_allocator(self)
+
+
+    def pop_back(self):
+        """pop_back(svg_loops self)"""
+        return _ifcopenshell_wrapper.svg_loops_pop_back(self)
+
+
+    def erase(self, *args):
+        """
+        erase(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::iterator pos) -> std::vector< std::vector< std::array< double,2 > > >::iterator
+        erase(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::iterator first, std::vector< std::vector< std::array< double,2 > > >::iterator last) -> std::vector< std::vector< std::array< double,2 > > >::iterator
+        """
+        return _ifcopenshell_wrapper.svg_loops_erase(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::vector<(std::vector<(std::array<(double,2)>)>)> self) -> svg_loops
+        __init__(std::vector<(std::vector<(std::array<(double,2)>)>)> self, svg_loops arg2) -> svg_loops
+        __init__(std::vector<(std::vector<(std::array<(double,2)>)>)> self, std::vector< std::vector< std::array< double,2 > > >::size_type size) -> svg_loops
+        __init__(std::vector<(std::vector<(std::array<(double,2)>)>)> self, std::vector< std::vector< std::array< double,2 > > >::size_type size, svg_loop value) -> svg_loops
+        """
+        this = _ifcopenshell_wrapper.new_svg_loops(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        """push_back(svg_loops self, svg_loop x)"""
+        return _ifcopenshell_wrapper.svg_loops_push_back(self, x)
+
+
+    def front(self):
+        """front(svg_loops self) -> svg_loop"""
+        return _ifcopenshell_wrapper.svg_loops_front(self)
+
+
+    def back(self):
+        """back(svg_loops self) -> svg_loop"""
+        return _ifcopenshell_wrapper.svg_loops_back(self)
+
+
+    def assign(self, n, x):
+        """assign(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::size_type n, svg_loop x)"""
+        return _ifcopenshell_wrapper.svg_loops_assign(self, n, x)
+
+
+    def resize(self, *args):
+        """
+        resize(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::size_type new_size)
+        resize(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::size_type new_size, svg_loop x)
+        """
+        return _ifcopenshell_wrapper.svg_loops_resize(self, *args)
+
+
+    def insert(self, *args):
+        """
+        insert(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::iterator pos, svg_loop x) -> std::vector< std::vector< std::array< double,2 > > >::iterator
+        insert(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::iterator pos, std::vector< std::vector< std::array< double,2 > > >::size_type n, svg_loop x)
+        """
+        return _ifcopenshell_wrapper.svg_loops_insert(self, *args)
+
+
+    def reserve(self, n):
+        """reserve(svg_loops self, std::vector< std::vector< std::array< double,2 > > >::size_type n)"""
+        return _ifcopenshell_wrapper.svg_loops_reserve(self, n)
+
+
+    def capacity(self):
+        """capacity(svg_loops self) -> std::vector< std::vector< std::array< double,2 > > >::size_type"""
+        return _ifcopenshell_wrapper.svg_loops_capacity(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_svg_loops
+    __del__ = lambda self: None
+svg_loops_swigregister = _ifcopenshell_wrapper.svg_loops_swigregister
+svg_loops_swigregister(svg_loops)
+
+class polygon_2(_object):
+    """Proxy of C++ svgfill::polygon_2 class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, polygon_2, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, polygon_2, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["boundary"] = _ifcopenshell_wrapper.polygon_2_boundary_set
+    __swig_getmethods__["boundary"] = _ifcopenshell_wrapper.polygon_2_boundary_get
+    if _newclass:
+        boundary = _swig_property(_ifcopenshell_wrapper.polygon_2_boundary_get, _ifcopenshell_wrapper.polygon_2_boundary_set)
+    __swig_setmethods__["inner_boundaries"] = _ifcopenshell_wrapper.polygon_2_inner_boundaries_set
+    __swig_getmethods__["inner_boundaries"] = _ifcopenshell_wrapper.polygon_2_inner_boundaries_get
+    if _newclass:
+        inner_boundaries = _swig_property(_ifcopenshell_wrapper.polygon_2_inner_boundaries_get, _ifcopenshell_wrapper.polygon_2_inner_boundaries_set)
+    __swig_setmethods__["point_inside"] = _ifcopenshell_wrapper.polygon_2_point_inside_set
+    __swig_getmethods__["point_inside"] = _ifcopenshell_wrapper.polygon_2_point_inside_get
+    if _newclass:
+        point_inside = _swig_property(_ifcopenshell_wrapper.polygon_2_point_inside_get, _ifcopenshell_wrapper.polygon_2_point_inside_set)
+
+    def __init__(self):
+        """__init__(svgfill::polygon_2 self) -> polygon_2"""
+        this = _ifcopenshell_wrapper.new_polygon_2()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_polygon_2
+    __del__ = lambda self: None
+polygon_2_swigregister = _ifcopenshell_wrapper.polygon_2_swigregister
+polygon_2_swigregister(polygon_2)
+
+CARTESIAN_DOUBLE = _ifcopenshell_wrapper.CARTESIAN_DOUBLE
+CARTESIAN_QUOTIENT = _ifcopenshell_wrapper.CARTESIAN_QUOTIENT
+FILTERED_CARTESIAN_QUOTIENT = _ifcopenshell_wrapper.FILTERED_CARTESIAN_QUOTIENT
+EXACT_PREDICATES = _ifcopenshell_wrapper.EXACT_PREDICATES
+EXACT_CONSTRUCTIONS = _ifcopenshell_wrapper.EXACT_CONSTRUCTIONS
+class abstract_arrangement(_object):
+    """Proxy of C++ svgfill::abstract_arrangement class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, abstract_arrangement, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, abstract_arrangement, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_abstract_arrangement
     __del__ = lambda self: None
 
-    def box_project_uvs(vertices, normals):
-        """box_project_uvs(std::vector< double > const & vertices, std::vector< double > const & normals) -> std::vector< double >"""
-        return _ifcopenshell_wrapper.triangulation_double_precision_box_project_uvs(vertices, normals)
-
-    box_project_uvs = staticmethod(box_project_uvs)
-
-            # Hide the getters with read-only property implementations
-    id = property(id)
-    faces = property(faces)
-    edges = property(edges)
-    material_ids = property(material_ids)
-    materials = property(materials)
+    def __call__(self, eps, segments, progress):
+        """__call__(abstract_arrangement self, double eps, svg_line_segments segments, std::function< void (float) > & progress) -> bool"""
+        return _ifcopenshell_wrapper.abstract_arrangement___call__(self, eps, segments, progress)
 
 
-            # Hide the getters with read-only property implementations
-    verts = property(verts)
-    normals = property(normals)
+    def write(self, polygons, progress):
+        """write(abstract_arrangement self, svg_polygons polygons, std::function< void (float) > & progress) -> bool"""
+        return _ifcopenshell_wrapper.abstract_arrangement_write(self, polygons, progress)
 
-triangulation_double_precision_swigregister = _ifcopenshell_wrapper.triangulation_double_precision_swigregister
-triangulation_double_precision_swigregister(triangulation_double_precision)
 
-def triangulation_double_precision_box_project_uvs(vertices, normals):
-    """triangulation_double_precision_box_project_uvs(std::vector< double > const & vertices, std::vector< double > const & normals) -> std::vector< double >"""
-    return _ifcopenshell_wrapper.triangulation_double_precision_box_project_uvs(vertices, normals)
+    def merge(self, edge_indices):
+        """merge(abstract_arrangement self, std::vector< int,std::allocator< int > > const & edge_indices)"""
+        return _ifcopenshell_wrapper.abstract_arrangement_merge(self, edge_indices)
 
+
+    def get_face_pairs(self):
+        """get_face_pairs(abstract_arrangement self) -> std::vector< int,std::allocator< int > >"""
+        return _ifcopenshell_wrapper.abstract_arrangement_get_face_pairs(self)
+
+
+    def num_edges(self):
+        """num_edges(abstract_arrangement self) -> size_t"""
+        return _ifcopenshell_wrapper.abstract_arrangement_num_edges(self)
+
+
+    def num_faces(self):
+        """num_faces(abstract_arrangement self) -> size_t"""
+        return _ifcopenshell_wrapper.abstract_arrangement_num_faces(self)
+
+abstract_arrangement_swigregister = _ifcopenshell_wrapper.abstract_arrangement_swigregister
+abstract_arrangement_swigregister(abstract_arrangement)
+
+class context(_object):
+    """Proxy of C++ svgfill::context class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, context, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, context, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, *args):
+        """
+        __init__(svgfill::context self, svgfill::solver s, double eps) -> context
+        __init__(svgfill::context self, svgfill::solver s, double eps, std::function< void (float) > & progress) -> context
+        """
+        this = _ifcopenshell_wrapper.new_context(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def add(self, segments):
+        """add(context self, svg_line_segments segments)"""
+        return _ifcopenshell_wrapper.context_add(self, segments)
+
+
+    def build(self):
+        """build(context self) -> bool"""
+        return _ifcopenshell_wrapper.context_build(self)
+
+
+    def get_face_pairs(self):
+        """get_face_pairs(context self) -> std::vector< int,std::allocator< int > >"""
+        return _ifcopenshell_wrapper.context_get_face_pairs(self)
+
+
+    def merge(self, edge_indices):
+        """merge(context self, std::vector< int,std::allocator< int > > const & edge_indices)"""
+        return _ifcopenshell_wrapper.context_merge(self, edge_indices)
+
+
+    def write(self, arg2):
+        """write(context self, svg_groups_of_polygons arg2)"""
+        return _ifcopenshell_wrapper.context_write(self, arg2)
+
+
+    def num_edges(self):
+        """num_edges(context self) -> size_t"""
+        return _ifcopenshell_wrapper.context_num_edges(self)
+
+
+    def num_faces(self):
+        """num_faces(context self) -> size_t"""
+        return _ifcopenshell_wrapper.context_num_faces(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_context
+    __del__ = lambda self: None
+context_swigregister = _ifcopenshell_wrapper.context_swigregister
+context_swigregister(context)
+
+
+def polygons_to_svg(polygons, random_color=False):
+    """
+    polygons_to_svg(svg_groups_of_polygons polygons, bool random_color=False) -> std::string
+    polygons_to_svg(svg_groups_of_polygons polygons) -> std::string
+    """
+    return _ifcopenshell_wrapper.polygons_to_svg(polygons, random_color)
+
+def svg_to_line_segments(data, class_name):
+    """svg_to_line_segments(std::string const & data, boost::optional< std::string > const & class_name) -> svg_groups_of_line_segments"""
+    return _ifcopenshell_wrapper.svg_to_line_segments(data, class_name)
+
+def line_segments_to_polygons(s, eps, segments):
+    """line_segments_to_polygons(svgfill::solver s, double eps, svg_groups_of_line_segments segments) -> svg_groups_of_polygons"""
+    return _ifcopenshell_wrapper.line_segments_to_polygons(s, eps, segments)
 class IfcEntityInstanceData(_object):
     """Proxy of C++ IfcEntityInstanceData class."""
 
@@ -1106,6 +4125,39 @@ class IfcEntityInstanceData(_object):
 IfcEntityInstanceData_swigregister = _ifcopenshell_wrapper.IfcEntityInstanceData_swigregister
 IfcEntityInstanceData_swigregister(IfcEntityInstanceData)
 
+class attribute_value_derived(_object):
+    """Proxy of C++ attribute_value_derived class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, attribute_value_derived, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, attribute_value_derived, name)
+    __repr__ = _swig_repr
+
+    def __bool__(self): return False
+    def __repr__(self): return '*'
+
+
+    def __init__(self):
+        """__init__(attribute_value_derived self) -> attribute_value_derived"""
+        this = _ifcopenshell_wrapper.new_attribute_value_derived()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_attribute_value_derived
+    __del__ = lambda self: None
+attribute_value_derived_swigregister = _ifcopenshell_wrapper.attribute_value_derived_swigregister
+attribute_value_derived_swigregister(attribute_value_derived)
+
+
+def set_feature(x, v):
+    """set_feature(std::string const & x, PyObject * v)"""
+    return _ifcopenshell_wrapper.set_feature(x, v)
+
+def get_feature(x):
+    """get_feature(std::string const & x) -> PyObject *"""
+    return _ifcopenshell_wrapper.get_feature(x)
 class HeaderEntity(IfcEntityInstanceData):
     """Proxy of C++ IfcParse::HeaderEntity class."""
 
@@ -1123,7 +4175,7 @@ class HeaderEntity(IfcEntityInstanceData):
     __repr__ = _swig_repr
 
     def getArgumentCount(self):
-        """getArgumentCount(HeaderEntity self) -> unsigned int"""
+        """getArgumentCount(HeaderEntity self) -> size_t"""
         return _ifcopenshell_wrapper.HeaderEntity_getArgumentCount(self)
 
 
@@ -1134,10 +4186,9 @@ class HeaderEntity(IfcEntityInstanceData):
         """
         return _ifcopenshell_wrapper.HeaderEntity_toString(self, upper)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_HeaderEntity
-    __del__ = lambda self: None
 HeaderEntity_swigregister = _ifcopenshell_wrapper.HeaderEntity_swigregister
 HeaderEntity_swigregister(HeaderEntity)
+cvar = _ifcopenshell_wrapper.cvar
 
 class FileDescription(HeaderEntity):
     """Proxy of C++ IfcParse::FileDescription class."""
@@ -1157,8 +4208,8 @@ class FileDescription(HeaderEntity):
 
     def description(self, *args):
         """
-        description(FileDescription self) -> std::vector< std::string >
-        description(FileDescription self, std::vector< std::string > const & value)
+        description(FileDescription self) -> std::vector< std::string,std::allocator< std::string > >
+        description(FileDescription self, std::vector< std::string,std::allocator< std::string > > const & value)
         """
         return _ifcopenshell_wrapper.FileDescription_description(self, *args)
 
@@ -1214,16 +4265,16 @@ class FileName(HeaderEntity):
 
     def author(self, *args):
         """
-        author(FileName self) -> std::vector< std::string >
-        author(FileName self, std::vector< std::string > const & value)
+        author(FileName self) -> std::vector< std::string,std::allocator< std::string > >
+        author(FileName self, std::vector< std::string,std::allocator< std::string > > const & value)
         """
         return _ifcopenshell_wrapper.FileName_author(self, *args)
 
 
     def organization(self, *args):
         """
-        organization(FileName self) -> std::vector< std::string >
-        organization(FileName self, std::vector< std::string > const & value)
+        organization(FileName self) -> std::vector< std::string,std::allocator< std::string > >
+        organization(FileName self, std::vector< std::string,std::allocator< std::string > > const & value)
         """
         return _ifcopenshell_wrapper.FileName_organization(self, *args)
 
@@ -1283,8 +4334,8 @@ class FileSchema(HeaderEntity):
 
     def schema_identifiers(self, *args):
         """
-        schema_identifiers(FileSchema self) -> std::vector< std::string >
-        schema_identifiers(FileSchema self, std::vector< std::string > const & value)
+        schema_identifiers(FileSchema self) -> std::vector< std::string,std::allocator< std::string > >
+        schema_identifiers(FileSchema self, std::vector< std::string,std::allocator< std::string > > const & value)
         """
         return _ifcopenshell_wrapper.FileSchema_schema_identifiers(self, *args)
 
@@ -1418,6 +4469,35 @@ class file(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, file, name)
     __repr__ = _swig_repr
+    INSTANCE_ID = _ifcopenshell_wrapper.file_INSTANCE_ID
+    INSTANCE_TYPE = _ifcopenshell_wrapper.file_INSTANCE_TYPE
+    ATTRIBUTE_INDEX = _ifcopenshell_wrapper.file_ATTRIBUTE_INDEX
+    __swig_setmethods__["lazy_load_"] = _ifcopenshell_wrapper.file_lazy_load__set
+    __swig_getmethods__["lazy_load_"] = _ifcopenshell_wrapper.file_lazy_load__get
+    if _newclass:
+        lazy_load_ = _swig_property(_ifcopenshell_wrapper.file_lazy_load__get, _ifcopenshell_wrapper.file_lazy_load__set)
+
+    def lazy_load(*args):
+        """
+        lazy_load() -> bool
+        lazy_load(bool b)
+        """
+        return _ifcopenshell_wrapper.file_lazy_load(*args)
+
+    lazy_load = staticmethod(lazy_load)
+    __swig_setmethods__["guid_map_"] = _ifcopenshell_wrapper.file_guid_map__set
+    __swig_getmethods__["guid_map_"] = _ifcopenshell_wrapper.file_guid_map__get
+    if _newclass:
+        guid_map_ = _swig_property(_ifcopenshell_wrapper.file_guid_map__get, _ifcopenshell_wrapper.file_guid_map__set)
+
+    def guid_map(*args):
+        """
+        guid_map() -> bool
+        guid_map(bool b)
+        """
+        return _ifcopenshell_wrapper.file_guid_map(*args)
+
+    guid_map = staticmethod(guid_map)
     __swig_setmethods__["stream"] = _ifcopenshell_wrapper.file_stream_set
     __swig_getmethods__["stream"] = _ifcopenshell_wrapper.file_stream_get
     if _newclass:
@@ -1467,22 +4547,22 @@ class file(_object):
 
     def by_type(self, *args):
         """
-        by_type(file self, declaration arg2) -> IfcEntityList::ptr
-        by_type(file self, std::string const & t) -> IfcEntityList::ptr
+        by_type(file self, declaration arg2) -> aggregate_of_instance::ptr
+        by_type(file self, std::string const & t) -> aggregate_of_instance::ptr
         """
         return _ifcopenshell_wrapper.file_by_type(self, *args)
 
 
     def by_type_excl_subtypes(self, *args):
         """
-        by_type_excl_subtypes(file self, declaration arg2) -> IfcEntityList::ptr
-        by_type_excl_subtypes(file self, std::string const & t) -> IfcEntityList::ptr
+        by_type_excl_subtypes(file self, declaration arg2) -> aggregate_of_instance::ptr
+        by_type_excl_subtypes(file self, std::string const & t) -> aggregate_of_instance::ptr
         """
         return _ifcopenshell_wrapper.file_by_type_excl_subtypes(self, *args)
 
 
     def instances_by_reference(self, id):
-        """instances_by_reference(file self, int id) -> IfcEntityList::ptr"""
+        """instances_by_reference(file self, int id) -> aggregate_of_instance::ptr"""
         return _ifcopenshell_wrapper.file_instances_by_reference(self, id)
 
 
@@ -1498,20 +4578,28 @@ class file(_object):
 
     def traverse(self, instance, max_level=-1):
         """
-        traverse(file self, entity_instance instance, int max_level=-1) -> IfcEntityList::ptr
-        traverse(file self, entity_instance instance) -> IfcEntityList::ptr
+        traverse(file self, entity_instance instance, int max_level=-1) -> aggregate_of_instance::ptr
+        traverse(file self, entity_instance instance) -> aggregate_of_instance::ptr
         """
         return _ifcopenshell_wrapper.file_traverse(self, instance, max_level)
 
 
+    def traverse_breadth_first(self, instance, max_level=-1):
+        """
+        traverse_breadth_first(file self, entity_instance instance, int max_level=-1) -> aggregate_of_instance::ptr
+        traverse_breadth_first(file self, entity_instance instance) -> aggregate_of_instance::ptr
+        """
+        return _ifcopenshell_wrapper.file_traverse_breadth_first(self, instance, max_level)
+
+
     def getInverse(self, instance_id, type, attribute_index):
-        """getInverse(file self, int instance_id, declaration type, int attribute_index) -> IfcEntityList::ptr"""
+        """getInverse(file self, int instance_id, declaration type, int attribute_index) -> aggregate_of_instance::ptr"""
         return _ifcopenshell_wrapper.file_getInverse(self, instance_id, type, attribute_index)
 
 
-    def mark_entity_as_modified(self, id):
-        """mark_entity_as_modified(file self, int id)"""
-        return _ifcopenshell_wrapper.file_mark_entity_as_modified(self, id)
+    def getTotalInverses(self, instance_id):
+        """getTotalInverses(file self, int instance_id) -> int"""
+        return _ifcopenshell_wrapper.file_getTotalInverses(self, instance_id)
 
 
     def FreshId(self):
@@ -1519,14 +4607,42 @@ class file(_object):
         return _ifcopenshell_wrapper.file_FreshId(self)
 
 
-    def add(self, entity):
-        """add(file self, entity_instance entity) -> entity_instance"""
-        return _ifcopenshell_wrapper.file_add(self, entity)
+    def getMaxId(self):
+        """getMaxId(file self) -> unsigned int"""
+        return _ifcopenshell_wrapper.file_getMaxId(self)
+
+
+    def ifcroot_type(self):
+        """ifcroot_type(file self) -> declaration"""
+        return _ifcopenshell_wrapper.file_ifcroot_type(self)
+
+
+    def recalculate_id_counter(self):
+        """recalculate_id_counter(file self)"""
+        return _ifcopenshell_wrapper.file_recalculate_id_counter(self)
+
+
+    def add(self, entity, id=-1):
+        """
+        add(file self, entity_instance entity, int id=-1) -> entity_instance
+        add(file self, entity_instance entity) -> entity_instance
+        """
+        return _ifcopenshell_wrapper.file_add(self, entity, id)
 
 
     def addEntities(self, es):
-        """addEntities(file self, IfcEntityList::ptr es)"""
+        """addEntities(file self, aggregate_of_instance::ptr es)"""
         return _ifcopenshell_wrapper.file_addEntities(self, es)
+
+
+    def batch(self):
+        """batch(file self)"""
+        return _ifcopenshell_wrapper.file_batch(self)
+
+
+    def unbatch(self):
+        """unbatch(file self)"""
+        return _ifcopenshell_wrapper.file_unbatch(self)
 
 
     def remove(self, entity):
@@ -1547,9 +4663,12 @@ class file(_object):
         return _ifcopenshell_wrapper.file_createTimestamp(self)
 
 
-    def load(self, entity_instance_name, attributes, num_attributes):
-        """load(file self, unsigned int entity_instance_name, Argument **& attributes, size_t num_attributes) -> size_t"""
-        return _ifcopenshell_wrapper.file_load(self, entity_instance_name, attributes, num_attributes)
+    def load(self, entity_instance_name, entity, attributes, num_attributes, attribute_index=-1):
+        """
+        load(file self, unsigned int entity_instance_name, entity entity, Argument **& attributes, size_t num_attributes, int attribute_index=-1) -> size_t
+        load(file self, unsigned int entity_instance_name, entity entity, Argument **& attributes, size_t num_attributes) -> size_t
+        """
+        return _ifcopenshell_wrapper.file_load(self, entity_instance_name, entity, attributes, num_attributes, attribute_index)
 
 
     def seek_to(self, data):
@@ -1580,14 +4699,37 @@ class file(_object):
         return _ifcopenshell_wrapper.file_build_inverses(self)
 
 
+    def internal_guid_map(self):
+        """internal_guid_map(file self) -> IfcParse::IfcFile::entity_by_guid_t &"""
+        return _ifcopenshell_wrapper.file_internal_guid_map(self)
+
+
+    def file_pointer(self):
+        """file_pointer(file self) -> size_t"""
+        return _ifcopenshell_wrapper.file_file_pointer(self)
+
+
     def by_guid(self, guid):
         """by_guid(file self, std::string const & guid) -> entity_instance"""
         return _ifcopenshell_wrapper.file_by_guid(self, guid)
 
 
     def get_inverse(self, e):
-        """get_inverse(file self, entity_instance e) -> IfcEntityList::ptr"""
+        """get_inverse(file self, entity_instance e) -> aggregate_of_instance::ptr"""
         return _ifcopenshell_wrapper.file_get_inverse(self, e)
+
+
+    def get_inverse_indices(self, *args):
+        """
+        get_inverse_indices(file self, int instance_id) -> std::vector< int,std::allocator< int > >
+        get_inverse_indices(file self, entity_instance e) -> std::vector< int,std::allocator< int > >
+        """
+        return _ifcopenshell_wrapper.file_get_inverse_indices(self, *args)
+
+
+    def get_total_inverses(self, e):
+        """get_total_inverses(file self, entity_instance e) -> int"""
+        return _ifcopenshell_wrapper.file_get_total_inverses(self, e)
 
 
     def write(self, fn):
@@ -1601,17 +4743,17 @@ class file(_object):
 
 
     def entity_names(self):
-        """entity_names(file self) -> std::vector< unsigned int >"""
+        """entity_names(file self) -> std::vector< unsigned int,std::allocator< unsigned int > >"""
         return _ifcopenshell_wrapper.file_entity_names(self)
 
 
     def types(self):
-        """types(file self) -> std::vector< std::string >"""
+        """types(file self) -> std::vector< std::string,std::allocator< std::string > >"""
         return _ifcopenshell_wrapper.file_types(self)
 
 
     def types_with_super(self):
-        """types_with_super(file self) -> std::vector< std::string >"""
+        """types_with_super(file self) -> std::vector< std::string,std::allocator< std::string > >"""
         return _ifcopenshell_wrapper.file_types_with_super(self)
 
 
@@ -1627,12 +4769,63 @@ class file(_object):
 file_swigregister = _ifcopenshell_wrapper.file_swigregister
 file_swigregister(file)
 
-class entity_instance(_object):
+def file_lazy_load(*args):
+    """
+    lazy_load() -> bool
+    file_lazy_load(bool b)
+    """
+    return _ifcopenshell_wrapper.file_lazy_load(*args)
+
+def file_guid_map(*args):
+    """
+    guid_map() -> bool
+    file_guid_map(bool b)
+    """
+    return _ifcopenshell_wrapper.file_guid_map(*args)
+
+
+def parse_ifcxml(filename):
+    """parse_ifcxml(std::string const & filename) -> file"""
+    return _ifcopenshell_wrapper.parse_ifcxml(filename)
+class IfcBaseInterface(_object):
+    """Proxy of C++ IfcUtil::IfcBaseInterface class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IfcBaseInterface, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IfcBaseInterface, name)
+
+    def __init__(self, *args, **kwargs):
+        raise AttributeError("No constructor defined - class is abstract")
+    __repr__ = _swig_repr
+
+    def data(self, *args):
+        """
+        data(IfcBaseInterface self) -> IfcEntityInstanceData
+        data(IfcBaseInterface self) -> IfcEntityInstanceData
+        """
+        return _ifcopenshell_wrapper.IfcBaseInterface_data(self, *args)
+
+
+    def declaration(self):
+        """declaration(IfcBaseInterface self) -> declaration"""
+        return _ifcopenshell_wrapper.IfcBaseInterface_declaration(self)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_IfcBaseInterface
+    __del__ = lambda self: None
+IfcBaseInterface_swigregister = _ifcopenshell_wrapper.IfcBaseInterface_swigregister
+IfcBaseInterface_swigregister(IfcBaseInterface)
+
+class entity_instance(IfcBaseInterface):
     """Proxy of C++ IfcUtil::IfcBaseClass class."""
 
     __swig_setmethods__ = {}
+    for _s in [IfcBaseInterface]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
     __setattr__ = lambda self, name, value: _swig_setattr(self, entity_instance, name, value)
     __swig_getmethods__ = {}
+    for _s in [IfcBaseInterface]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
     __getattr__ = lambda self, name: _swig_getattr(self, entity_instance, name)
 
     def __init__(self, *args, **kwargs):
@@ -1654,6 +4847,11 @@ class entity_instance(_object):
         return _ifcopenshell_wrapper.entity_instance_declaration(self)
 
 
+    def identity(self):
+        """identity(entity_instance self) -> uint32_t"""
+        return _ifcopenshell_wrapper.entity_instance_identity(self)
+
+
     def get_attribute_category(self, name):
         """get_attribute_category(entity_instance self, std::string const & name) -> int"""
         return _ifcopenshell_wrapper.entity_instance_get_attribute_category(self, name)
@@ -1670,18 +4868,19 @@ class entity_instance(_object):
 
 
     def get_attribute_names(self):
-        """get_attribute_names(entity_instance self) -> std::vector< std::string >"""
+        """get_attribute_names(entity_instance self) -> std::vector< std::string,std::allocator< std::string > >"""
         return _ifcopenshell_wrapper.entity_instance_get_attribute_names(self)
 
 
     def get_inverse_attribute_names(self):
-        """get_inverse_attribute_names(entity_instance self) -> std::vector< std::string >"""
+        """get_inverse_attribute_names(entity_instance self) -> std::vector< std::string,std::allocator< std::string > >"""
         return _ifcopenshell_wrapper.entity_instance_get_inverse_attribute_names(self)
 
 
     def is_a(self, *args):
         """
         is_a(entity_instance self, std::string const & s) -> bool
+        is_a(entity_instance self, bool with_schema=False) -> std::string
         is_a(entity_instance self) -> std::string
         """
         return _ifcopenshell_wrapper.entity_instance_is_a(self, *args)
@@ -1705,6 +4904,11 @@ class entity_instance(_object):
         return _ifcopenshell_wrapper.entity_instance___repr__(self)
 
 
+    def to_string(self, valid_spf):
+        """to_string(entity_instance self, bool valid_spf) -> std::string"""
+        return _ifcopenshell_wrapper.entity_instance_to_string(self, valid_spf)
+
+
     def file_pointer(self):
         """file_pointer(entity_instance self) -> size_t"""
         return _ifcopenshell_wrapper.entity_instance_file_pointer(self)
@@ -1716,7 +4920,7 @@ class entity_instance(_object):
 
 
     def get_inverse(self, a):
-        """get_inverse(entity_instance self, std::string const & a) -> IfcEntityList::ptr"""
+        """get_inverse(entity_instance self, std::string const & a) -> aggregate_of_instance::ptr"""
         return _ifcopenshell_wrapper.entity_instance_get_inverse(self, a)
 
 
@@ -1745,6 +4949,11 @@ class entity_instance(_object):
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsBool(self, i, v)
 
 
+    def setArgumentAsLogical(self, i, v):
+        """setArgumentAsLogical(entity_instance self, unsigned int i, boost::logic::tribool v)"""
+        return _ifcopenshell_wrapper.entity_instance_setArgumentAsLogical(self, i, v)
+
+
     def setArgumentAsDouble(self, i, v):
         """setArgumentAsDouble(entity_instance self, unsigned int i, double v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsDouble(self, i, v)
@@ -1756,17 +4965,17 @@ class entity_instance(_object):
 
 
     def setArgumentAsAggregateOfInt(self, i, v):
-        """setArgumentAsAggregateOfInt(entity_instance self, unsigned int i, std::vector< int > const & v)"""
+        """setArgumentAsAggregateOfInt(entity_instance self, unsigned int i, std::vector< int,std::allocator< int > > const & v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfInt(self, i, v)
 
 
     def setArgumentAsAggregateOfDouble(self, i, v):
-        """setArgumentAsAggregateOfDouble(entity_instance self, unsigned int i, std::vector< double > const & v)"""
+        """setArgumentAsAggregateOfDouble(entity_instance self, unsigned int i, std::vector< double,std::allocator< double > > const & v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfDouble(self, i, v)
 
 
     def setArgumentAsAggregateOfString(self, i, v):
-        """setArgumentAsAggregateOfString(entity_instance self, unsigned int i, std::vector< std::string > const & v)"""
+        """setArgumentAsAggregateOfString(entity_instance self, unsigned int i, std::vector< std::string,std::allocator< std::string > > const & v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfString(self, i, v)
 
 
@@ -1776,22 +4985,22 @@ class entity_instance(_object):
 
 
     def setArgumentAsAggregateOfEntityInstance(self, i, v):
-        """setArgumentAsAggregateOfEntityInstance(entity_instance self, unsigned int i, IfcEntityList::ptr v)"""
+        """setArgumentAsAggregateOfEntityInstance(entity_instance self, unsigned int i, aggregate_of_instance::ptr v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfEntityInstance(self, i, v)
 
 
     def setArgumentAsAggregateOfAggregateOfInt(self, i, v):
-        """setArgumentAsAggregateOfAggregateOfInt(entity_instance self, unsigned int i, std::vector< std::vector< int > > const & v)"""
+        """setArgumentAsAggregateOfAggregateOfInt(entity_instance self, unsigned int i, std::vector< std::vector< int,std::allocator< int > >,std::allocator< std::vector< int,std::allocator< int > > > > const & v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfAggregateOfInt(self, i, v)
 
 
     def setArgumentAsAggregateOfAggregateOfDouble(self, i, v):
-        """setArgumentAsAggregateOfAggregateOfDouble(entity_instance self, unsigned int i, std::vector< std::vector< double > > const & v)"""
+        """setArgumentAsAggregateOfAggregateOfDouble(entity_instance self, unsigned int i, std::vector< std::vector< double,std::allocator< double > >,std::allocator< std::vector< double,std::allocator< double > > > > const & v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfAggregateOfDouble(self, i, v)
 
 
     def setArgumentAsAggregateOfAggregateOfEntityInstance(self, i, v):
-        """setArgumentAsAggregateOfAggregateOfEntityInstance(entity_instance self, unsigned int i, IfcEntityListList::ptr v)"""
+        """setArgumentAsAggregateOfAggregateOfEntityInstance(entity_instance self, unsigned int i, aggregate_of_aggregate_of_instance::ptr v)"""
         return _ifcopenshell_wrapper.entity_instance_setArgumentAsAggregateOfAggregateOfEntityInstance(self, i, v)
 
 entity_instance_swigregister = _ifcopenshell_wrapper.entity_instance_swigregister
@@ -1854,7 +5063,7 @@ class IfcBaseEntity(entity_instance):
 
 
     def get_inverse(self, a):
-        """get_inverse(IfcBaseEntity self, std::string const & a) -> boost::shared_ptr< IfcEntityList >"""
+        """get_inverse(IfcBaseEntity self, std::string const & a) -> boost::shared_ptr< aggregate_of_instance >"""
         return _ifcopenshell_wrapper.IfcBaseEntity_get_inverse(self, a)
 
     __swig_destroy__ = _ifcopenshell_wrapper.delete_IfcBaseEntity
@@ -1895,6 +5104,8 @@ class parameter_type(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, parameter_type, name)
     __repr__ = _swig_repr
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_parameter_type
+    __del__ = lambda self: None
 
     def as_named_type(self):
         """as_named_type(parameter_type self) -> named_type"""
@@ -1926,8 +5137,6 @@ class parameter_type(_object):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_parameter_type
-    __del__ = lambda self: None
 parameter_type_swigregister = _ifcopenshell_wrapper.parameter_type_swigregister
 parameter_type_swigregister(parameter_type)
 
@@ -2049,6 +5258,8 @@ class aggregation_type(parameter_type):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_aggregation_type
+    __del__ = lambda self: None
 
     def type_of_aggregation(self):
         """type_of_aggregation(aggregation_type self) -> IfcParse::aggregation_type::aggregate_type"""
@@ -2089,8 +5300,6 @@ class aggregation_type(parameter_type):
     		self.type_of_element()
     	)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_aggregation_type
-    __del__ = lambda self: None
 aggregation_type_swigregister = _ifcopenshell_wrapper.aggregation_type_swigregister
 aggregation_type_swigregister(aggregation_type)
 
@@ -2118,9 +5327,9 @@ class declaration(_object):
         return _ifcopenshell_wrapper.declaration_name(self)
 
 
-    def name_lc(self):
-        """name_lc(declaration self) -> std::string const &"""
-        return _ifcopenshell_wrapper.declaration_name_lc(self)
+    def name_uc(self):
+        """name_uc(declaration self) -> std::string const &"""
+        return _ifcopenshell_wrapper.declaration_name_uc(self)
 
 
     def as_type_declaration(self):
@@ -2188,6 +5397,8 @@ class type_declaration(declaration):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_type_declaration
+    __del__ = lambda self: None
 
     def declared_type(self):
         """declared_type(type_declaration self) -> parameter_type"""
@@ -2202,8 +5413,11 @@ class type_declaration(declaration):
     def __repr__(self):
     	return "<type %s: %r>" % (self.name(), self.declared_type())
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_type_declaration
-    __del__ = lambda self: None
+
+    def argument_types(self):
+        """argument_types(type_declaration self) -> std::vector< std::string,std::allocator< std::string > >"""
+        return _ifcopenshell_wrapper.type_declaration_argument_types(self)
+
 type_declaration_swigregister = _ifcopenshell_wrapper.type_declaration_swigregister
 type_declaration_swigregister(type_declaration)
 
@@ -2221,7 +5435,7 @@ class select_type(declaration):
     __repr__ = _swig_repr
 
     def __init__(self, name, index_in_schema, select_list):
-        """__init__(IfcParse::select_type self, std::string const & name, int index_in_schema, std::vector< IfcParse::declaration const * > const & select_list) -> select_type"""
+        """__init__(IfcParse::select_type self, std::string const & name, int index_in_schema, std::vector< IfcParse::declaration const *,std::allocator< IfcParse::declaration const * > > const & select_list) -> select_type"""
         this = _ifcopenshell_wrapper.new_select_type(name, index_in_schema, select_list)
         try:
             self.this.append(this)
@@ -2229,7 +5443,7 @@ class select_type(declaration):
             self.this = this
 
     def select_list(self):
-        """select_list(select_type self) -> std::vector< IfcParse::declaration const * > const &"""
+        """select_list(select_type self) -> std::vector< IfcParse::declaration const *,std::allocator< IfcParse::declaration const * > > const &"""
         return _ifcopenshell_wrapper.select_type_select_list(self)
 
 
@@ -2260,7 +5474,7 @@ class enumeration_type(declaration):
     __repr__ = _swig_repr
 
     def __init__(self, name, index_in_schema, enumeration_items):
-        """__init__(IfcParse::enumeration_type self, std::string const & name, int index_in_schema, std::vector< std::string > const & enumeration_items) -> enumeration_type"""
+        """__init__(IfcParse::enumeration_type self, std::string const & name, int index_in_schema, std::vector< std::string,std::allocator< std::string > > const & enumeration_items) -> enumeration_type"""
         this = _ifcopenshell_wrapper.new_enumeration_type(name, index_in_schema, enumeration_items)
         try:
             self.this.append(this)
@@ -2268,7 +5482,7 @@ class enumeration_type(declaration):
             self.this = this
 
     def enumeration_items(self):
-        """enumeration_items(enumeration_type self) -> std::vector< std::string > const &"""
+        """enumeration_items(enumeration_type self) -> std::vector< std::string,std::allocator< std::string > > const &"""
         return _ifcopenshell_wrapper.enumeration_type_enumeration_items(self)
 
 
@@ -2279,6 +5493,11 @@ class enumeration_type(declaration):
 
     def __repr__(self):
     	return "<enumeration %s: (%s)>" % (self.name(), ", ".join(self.enumeration_items()))
+
+
+    def argument_types(self):
+        """argument_types(enumeration_type self) -> std::vector< std::string,std::allocator< std::string > >"""
+        return _ifcopenshell_wrapper.enumeration_type_argument_types(self)
 
     __swig_destroy__ = _ifcopenshell_wrapper.delete_enumeration_type
     __del__ = lambda self: None
@@ -2301,6 +5520,8 @@ class attribute(_object):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_attribute
+    __del__ = lambda self: None
 
     def name(self):
         """name(attribute self) -> std::string const &"""
@@ -2320,8 +5541,6 @@ class attribute(_object):
     def __repr__(self):
     	return "<attribute %s%s: %s>" % (self.name(), "?" if self.optional() else "", self.type_of_attribute())
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_attribute
-    __del__ = lambda self: None
 attribute_swigregister = _ifcopenshell_wrapper.attribute_swigregister
 attribute_swigregister(attribute)
 
@@ -2416,14 +5635,8 @@ class entity(declaration):
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-
-    def _is(self, *args):
-        """
-        _is(entity self, std::string const & name) -> bool
-        _is(entity self, declaration decl) -> bool
-        """
-        return _ifcopenshell_wrapper.entity__is(self, *args)
-
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_entity
+    __del__ = lambda self: None
 
     def is_abstract(self):
         """is_abstract(entity self) -> bool"""
@@ -2431,42 +5644,42 @@ class entity(declaration):
 
 
     def set_subtypes(self, subtypes):
-        """set_subtypes(entity self, std::vector< IfcParse::entity const * > const & subtypes)"""
+        """set_subtypes(entity self, std::vector< IfcParse::entity const *,std::allocator< IfcParse::entity const * > > const & subtypes)"""
         return _ifcopenshell_wrapper.entity_set_subtypes(self, subtypes)
 
 
     def set_attributes(self, attributes, derived):
-        """set_attributes(entity self, std::vector< IfcParse::attribute const * > const & attributes, std::vector< bool > const & derived)"""
+        """set_attributes(entity self, std::vector< IfcParse::attribute const *,std::allocator< IfcParse::attribute const * > > const & attributes, std::vector< bool,std::allocator< bool > > const & derived)"""
         return _ifcopenshell_wrapper.entity_set_attributes(self, attributes, derived)
 
 
     def set_inverse_attributes(self, inverse_attributes):
-        """set_inverse_attributes(entity self, std::vector< IfcParse::inverse_attribute const * > const & inverse_attributes)"""
+        """set_inverse_attributes(entity self, std::vector< IfcParse::inverse_attribute const *,std::allocator< IfcParse::inverse_attribute const * > > const & inverse_attributes)"""
         return _ifcopenshell_wrapper.entity_set_inverse_attributes(self, inverse_attributes)
 
 
     def subtypes(self):
-        """subtypes(entity self) -> std::vector< IfcParse::entity const * > const &"""
+        """subtypes(entity self) -> std::vector< IfcParse::entity const *,std::allocator< IfcParse::entity const * > > const &"""
         return _ifcopenshell_wrapper.entity_subtypes(self)
 
 
     def attributes(self):
-        """attributes(entity self) -> std::vector< IfcParse::attribute const * > const &"""
+        """attributes(entity self) -> std::vector< IfcParse::attribute const *,std::allocator< IfcParse::attribute const * > > const &"""
         return _ifcopenshell_wrapper.entity_attributes(self)
 
 
     def derived(self):
-        """derived(entity self) -> std::vector< bool > const &"""
+        """derived(entity self) -> std::vector< bool,std::allocator< bool > > const &"""
         return _ifcopenshell_wrapper.entity_derived(self)
 
 
     def all_attributes(self):
-        """all_attributes(entity self) -> std::vector< IfcParse::attribute const * > const"""
+        """all_attributes(entity self) -> std::vector< IfcParse::attribute const *,std::allocator< IfcParse::attribute const * > > const"""
         return _ifcopenshell_wrapper.entity_all_attributes(self)
 
 
     def all_inverse_attributes(self):
-        """all_inverse_attributes(entity self) -> std::vector< IfcParse::inverse_attribute const * > const"""
+        """all_inverse_attributes(entity self) -> std::vector< IfcParse::inverse_attribute const *,std::allocator< IfcParse::inverse_attribute const * > > const"""
         return _ifcopenshell_wrapper.entity_all_inverse_attributes(self)
 
 
@@ -2501,8 +5714,11 @@ class entity(declaration):
     def __repr__(self):
     	return "<entity %s>" % (self.name())
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_entity
-    __del__ = lambda self: None
+
+    def argument_types(self):
+        """argument_types(entity self) -> std::vector< std::string,std::allocator< std::string > >"""
+        return _ifcopenshell_wrapper.entity_argument_types(self)
+
 entity_swigregister = _ifcopenshell_wrapper.entity_swigregister
 entity_swigregister(entity)
 
@@ -2517,13 +5733,13 @@ class instance_factory(_object):
     def __init__(self, *args, **kwargs):
         raise AttributeError("No constructor defined - class is abstract")
     __repr__ = _swig_repr
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_instance_factory
+    __del__ = lambda self: None
 
     def __call__(self, data):
         """__call__(instance_factory self, IfcEntityInstanceData data) -> entity_instance"""
         return _ifcopenshell_wrapper.instance_factory___call__(self, data)
 
-    __swig_destroy__ = _ifcopenshell_wrapper.delete_instance_factory
-    __del__ = lambda self: None
 instance_factory_swigregister = _ifcopenshell_wrapper.instance_factory_swigregister
 instance_factory_swigregister(instance_factory)
 
@@ -2537,7 +5753,7 @@ class schema_definition(_object):
     __repr__ = _swig_repr
 
     def __init__(self, name, declarations, factory):
-        """__init__(IfcParse::schema_definition self, std::string const & name, std::vector< IfcParse::declaration const * > const & declarations, instance_factory factory) -> schema_definition"""
+        """__init__(IfcParse::schema_definition self, std::string const & name, std::vector< IfcParse::declaration const *,std::allocator< IfcParse::declaration const * > > const & declarations, instance_factory factory) -> schema_definition"""
         this = _ifcopenshell_wrapper.new_schema_definition(name, declarations, factory)
         try:
             self.this.append(this)
@@ -2555,27 +5771,27 @@ class schema_definition(_object):
 
 
     def declarations(self):
-        """declarations(schema_definition self) -> std::vector< IfcParse::declaration const * > const &"""
+        """declarations(schema_definition self) -> std::vector< IfcParse::declaration const *,std::allocator< IfcParse::declaration const * > > const &"""
         return _ifcopenshell_wrapper.schema_definition_declarations(self)
 
 
     def type_declarations(self):
-        """type_declarations(schema_definition self) -> std::vector< IfcParse::type_declaration const * > const &"""
+        """type_declarations(schema_definition self) -> std::vector< IfcParse::type_declaration const *,std::allocator< IfcParse::type_declaration const * > > const &"""
         return _ifcopenshell_wrapper.schema_definition_type_declarations(self)
 
 
     def select_types(self):
-        """select_types(schema_definition self) -> std::vector< IfcParse::select_type const * > const &"""
+        """select_types(schema_definition self) -> std::vector< IfcParse::select_type const *,std::allocator< IfcParse::select_type const * > > const &"""
         return _ifcopenshell_wrapper.schema_definition_select_types(self)
 
 
     def enumeration_types(self):
-        """enumeration_types(schema_definition self) -> std::vector< IfcParse::enumeration_type const * > const &"""
+        """enumeration_types(schema_definition self) -> std::vector< IfcParse::enumeration_type const *,std::allocator< IfcParse::enumeration_type const * > > const &"""
         return _ifcopenshell_wrapper.schema_definition_enumeration_types(self)
 
 
     def entities(self):
-        """entities(schema_definition self) -> std::vector< IfcParse::entity const * > const &"""
+        """entities(schema_definition self) -> std::vector< IfcParse::entity const *,std::allocator< IfcParse::entity const * > > const &"""
         return _ifcopenshell_wrapper.schema_definition_entities(self)
 
 
@@ -2600,9 +5816,17 @@ def schema_by_name(arg1):
     """schema_by_name(std::string const & arg1) -> schema_definition"""
     return _ifcopenshell_wrapper.schema_by_name(arg1)
 
+def schema_names():
+    """schema_names() -> std::vector< std::string,std::allocator< std::string > >"""
+    return _ifcopenshell_wrapper.schema_names()
+
 def register_schema(arg1):
     """register_schema(schema_definition arg1)"""
     return _ifcopenshell_wrapper.register_schema(arg1)
+
+def clear_schemas():
+    """clear_schemas()"""
+    return _ifcopenshell_wrapper.clear_schemas()
 
 def open(fn):
     """open(std::string const & fn) -> file"""
@@ -2624,9 +5848,164 @@ def get_log():
     """get_log() -> std::string"""
     return _ifcopenshell_wrapper.get_log()
 
+def turn_on_detailed_logging():
+    """turn_on_detailed_logging()"""
+    return _ifcopenshell_wrapper.turn_on_detailed_logging()
+
+def turn_off_detailed_logging():
+    """turn_off_detailed_logging()"""
+    return _ifcopenshell_wrapper.turn_off_detailed_logging()
+
+def set_log_format_json():
+    """set_log_format_json()"""
+    return _ifcopenshell_wrapper.set_log_format_json()
+
+def set_log_format_text():
+    """set_log_format_text()"""
+    return _ifcopenshell_wrapper.set_log_format_text()
+
 def get_info_cpp(v):
     """get_info_cpp(entity_instance v) -> PyObject *"""
     return _ifcopenshell_wrapper.get_info_cpp(v)
+class float_array_3(_object):
+    """Proxy of C++ std::array<(double,3)> class."""
+
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, float_array_3, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, float_array_3, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        """iterator(float_array_3 self) -> SwigPyIterator"""
+        return _ifcopenshell_wrapper.float_array_3_iterator(self)
+
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        """__nonzero__(float_array_3 self) -> bool"""
+        return _ifcopenshell_wrapper.float_array_3___nonzero__(self)
+
+
+    def __bool__(self):
+        """__bool__(float_array_3 self) -> bool"""
+        return _ifcopenshell_wrapper.float_array_3___bool__(self)
+
+
+    def __len__(self):
+        """__len__(float_array_3 self) -> std::array< double,3 >::size_type"""
+        return _ifcopenshell_wrapper.float_array_3___len__(self)
+
+
+    def __getslice__(self, i, j):
+        """__getslice__(float_array_3 self, std::array< double,3 >::difference_type i, std::array< double,3 >::difference_type j) -> float_array_3"""
+        return _ifcopenshell_wrapper.float_array_3___getslice__(self, i, j)
+
+
+    def __setslice__(self, *args):
+        """
+        __setslice__(float_array_3 self, std::array< double,3 >::difference_type i, std::array< double,3 >::difference_type j)
+        __setslice__(float_array_3 self, std::array< double,3 >::difference_type i, std::array< double,3 >::difference_type j, float_array_3 v)
+        """
+        return _ifcopenshell_wrapper.float_array_3___setslice__(self, *args)
+
+
+    def __delslice__(self, i, j):
+        """__delslice__(float_array_3 self, std::array< double,3 >::difference_type i, std::array< double,3 >::difference_type j)"""
+        return _ifcopenshell_wrapper.float_array_3___delslice__(self, i, j)
+
+
+    def __delitem__(self, *args):
+        """
+        __delitem__(float_array_3 self, std::array< double,3 >::difference_type i)
+        __delitem__(float_array_3 self, PySliceObject * slice)
+        """
+        return _ifcopenshell_wrapper.float_array_3___delitem__(self, *args)
+
+
+    def __getitem__(self, *args):
+        """
+        __getitem__(float_array_3 self, PySliceObject * slice) -> float_array_3
+        __getitem__(float_array_3 self, std::array< double,3 >::difference_type i) -> std::array< double,3 >::value_type const &
+        """
+        return _ifcopenshell_wrapper.float_array_3___getitem__(self, *args)
+
+
+    def __setitem__(self, *args):
+        """
+        __setitem__(float_array_3 self, PySliceObject * slice, float_array_3 v)
+        __setitem__(float_array_3 self, PySliceObject * slice)
+        __setitem__(float_array_3 self, std::array< double,3 >::difference_type i, std::array< double,3 >::value_type const & x)
+        """
+        return _ifcopenshell_wrapper.float_array_3___setitem__(self, *args)
+
+
+    def __init__(self, *args):
+        """
+        __init__(std::array<(double,3)> self) -> float_array_3
+        __init__(std::array<(double,3)> self, float_array_3 arg2) -> float_array_3
+        """
+        this = _ifcopenshell_wrapper.new_float_array_3(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def empty(self):
+        """empty(float_array_3 self) -> bool"""
+        return _ifcopenshell_wrapper.float_array_3_empty(self)
+
+
+    def size(self):
+        """size(float_array_3 self) -> std::array< double,3 >::size_type"""
+        return _ifcopenshell_wrapper.float_array_3_size(self)
+
+
+    def swap(self, v):
+        """swap(float_array_3 self, float_array_3 v)"""
+        return _ifcopenshell_wrapper.float_array_3_swap(self, v)
+
+
+    def begin(self):
+        """begin(float_array_3 self) -> std::array< double,3 >::iterator"""
+        return _ifcopenshell_wrapper.float_array_3_begin(self)
+
+
+    def end(self):
+        """end(float_array_3 self) -> std::array< double,3 >::iterator"""
+        return _ifcopenshell_wrapper.float_array_3_end(self)
+
+
+    def rbegin(self):
+        """rbegin(float_array_3 self) -> std::array< double,3 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.float_array_3_rbegin(self)
+
+
+    def rend(self):
+        """rend(float_array_3 self) -> std::array< double,3 >::reverse_iterator"""
+        return _ifcopenshell_wrapper.float_array_3_rend(self)
+
+
+    def front(self):
+        """front(float_array_3 self) -> std::array< double,3 >::value_type const &"""
+        return _ifcopenshell_wrapper.float_array_3_front(self)
+
+
+    def back(self):
+        """back(float_array_3 self) -> std::array< double,3 >::value_type const &"""
+        return _ifcopenshell_wrapper.float_array_3_back(self)
+
+
+    def fill(self, u):
+        """fill(float_array_3 self, std::array< double,3 >::value_type const & u)"""
+        return _ifcopenshell_wrapper.float_array_3_fill(self, u)
+
+    __swig_destroy__ = _ifcopenshell_wrapper.delete_float_array_3
+    __del__ = lambda self: None
+float_array_3_swigregister = _ifcopenshell_wrapper.float_array_3_swigregister
+float_array_3_swigregister(float_array_3)
+
 # This file is compatible with both classic and new-style classes.
 
 

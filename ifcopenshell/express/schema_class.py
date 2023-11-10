@@ -1,21 +1,21 @@
-###############################################################################
-#                                                                             #
-# This file is part of IfcOpenShell.                                          #
-#                                                                             #
-# IfcOpenShell is free software: you can redistribute it and/or modify        #
-# it under the terms of the Lesser GNU General Public License as published by #
-# the Free Software Foundation, either version 3.0 of the License, or         #
-# (at your option) any later version.                                         #
-#                                                                             #
-# IfcOpenShell is distributed in the hope that it will be useful,             #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of              #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                #
-# Lesser GNU General Public License for more details.                         #
-#                                                                             #
-# You should have received a copy of the Lesser GNU General Public License    #
-# along with this program. If not, see <http://www.gnu.org/licenses/>.        #
-#                                                                             #
-###############################################################################
+# IfcOpenShell - IFC toolkit and geometry engine
+# Copyright (C) 2021 Thomas Krijnen <thomas@aecgeeks.com>
+#
+# This file is part of IfcOpenShell.
+#
+# IfcOpenShell is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# IfcOpenShell is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with IfcOpenShell.  If not, see <http://www.gnu.org/licenses/>.
+
 
 import operator
 
@@ -84,7 +84,7 @@ class LateBoundSchemaInstantiator:
         for attr_name, decl_type, optional in attribute_definitions:
             attributes.append(w.attribute(attr_name, decl_type, optional))
         self.declarations[str(name)].set_attributes(attributes, is_derived)
-        self.cache.append(attributes)
+        self.cache.extend(attributes)
 
     def inverse_attributes(self, name, inv_attrs):
         attributes = []
@@ -100,6 +100,7 @@ class LateBoundSchemaInstantiator:
                     en.attributes()[attribute_entity_index],
                 )
             )
+        self.cache.extend(attributes)
         self.declarations[str(name)].set_inverse_attributes(attributes)
 
     def entity_subtypes(self, name, tys):
@@ -109,6 +110,10 @@ class LateBoundSchemaInstantiator:
         self.schema = w.schema_definition(
             override_schema_name or self.schema_name, list(self.declarations.values()), None
         )
+
+    def disown(self):
+        for elem in self.cache + list(self.declarations.values()):
+            elem.this.disown()
 
 
 class EarlyBoundCodeWriter:
@@ -283,10 +288,22 @@ __attribute__((optnone))
 
         self.statements.extend(
             (
-                "const schema_definition& %s::get_schema() {" % schema_name_title,
+                "static std::unique_ptr<schema_definition> schema;",
                 "",
-                "    static const schema_definition* s = %(schema_name)s_populate_schema();" % locals(),
-                "    return *s;",
+                "void %s::clear_schema() {" % schema_name_title,
+                "    schema.reset();",
+                "}",
+                "",
+            )
+        )
+
+        self.statements.extend(
+            (
+                "const schema_definition& %s::get_schema() {" % schema_name_title,
+                "    if (!schema) {",
+                "        schema.reset(%(schema_name)s_populate_schema());" % locals(),
+                "    }",
+                "    return *schema;",
                 "}",
                 "",
                 "",
@@ -360,9 +377,10 @@ class SchemaClass(codegen.Base):
                 else:
                     return x.simple_type(type)
             else:
-                raise ValueError("No mapping for '%s'" % type)
+                raise ValueError("No declared type for <%r>" % type)
 
         def find_inverse_name_and_index(entity_name, attribute_name):
+            entity_name_orig = entity_name
             attributes_per_subtype = []
             while True:
                 entity = mapping.schema.entities[entity_name]
@@ -380,7 +398,7 @@ class SchemaClass(codegen.Base):
                     pass
 
             else:
-                raise Exception("No declared type for <%r>" % type)
+                raise Exception("No attribute named %s.%s" % (entity_name_orig, attribute_name))
 
         collections_by_type = (
             ("entity", mapping.schema.entities),
@@ -398,7 +416,7 @@ class SchemaClass(codegen.Base):
         x.begin_schema()
 
         emitted = set()
-        len_to_emit = len(mapping.schema)
+        len_to_emit = len(mapping.schema) - len(mapping.schema.rules) - len(mapping.schema.functions)
 
         def write_simpletype(schema_name, name, type):
             try:
@@ -434,6 +452,10 @@ class SchemaClass(codegen.Base):
                 fn = write_entity
             elif mapping.schema.is_select(name):
                 fn = write_select
+            elif name in mapping.schema.rules:
+                return
+            elif name in mapping.schema.functions:
+                return
 
             decl = mapping.schema[name]
             if isinstance(decl, nodes.TypeDeclaration):
@@ -488,10 +510,12 @@ class SchemaClass(codegen.Base):
         for name, tys in subtypes.items():
             x.entity_subtypes(name, tys)
 
-        can_be_instantiated_set = set(list(mapping.schema.entities.keys()) + \
-            list(mapping.schema.simpletypes.keys()) + \
-            list(mapping.schema.enumerations.keys()))
-            
+        can_be_instantiated_set = set(
+            list(mapping.schema.entities.keys())
+            + list(mapping.schema.simpletypes.keys())
+            + list(mapping.schema.enumerations.keys())
+        )
+
         x.finalize(can_be_instantiated_set)
 
         self.str = str(x)

@@ -1,21 +1,21 @@
-###############################################################################
-#                                                                             #
-# This file is part of IfcOpenShell.                                          #
-#                                                                             #
-# IfcOpenShell is free software: you can redistribute it and/or modify        #
-# it under the terms of the Lesser GNU General Public License as published by #
-# the Free Software Foundation, either version 3.0 of the License, or         #
-# (at your option) any later version.                                         #
-#                                                                             #
-# IfcOpenShell is distributed in the hope that it will be useful,             #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of              #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                #
-# Lesser GNU General Public License for more details.                         #
-#                                                                             #
-# You should have received a copy of the Lesser GNU General Public License    #
-# along with this program. If not, see <http://www.gnu.org/licenses/>.        #
-#                                                                             #
-###############################################################################
+# IfcOpenShell - IFC toolkit and geometry engine
+# Copyright (C) 2021 Thomas Krijnen <thomas@aecgeeks.com>
+#
+# This file is part of IfcOpenShell.
+#
+# IfcOpenShell is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# IfcOpenShell is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with IfcOpenShell.  If not, see <http://www.gnu.org/licenses/>.
+
 
 import codegen
 import templates
@@ -55,6 +55,14 @@ class Implementation(codegen.Base):
                     templates.enum_from_string_stmt % dict(context, **locals()) for value in enum.values
                 ),
             )
+            
+        for name, enum in mapping.schema.selects.items():
+            write(
+                templates.select_function,
+                name=name,
+                schema_name=schema_name,
+                schema_name_upper=schema_name_upper
+            )
 
         write = lambda str, **kwargs: entity_implementations.append(str % kwargs)
 
@@ -74,21 +82,9 @@ class Implementation(codegen.Base):
             write_attr = lambda str, **kwargs: attributes.append(str % kwargs)
             for arg in constructor_arguments:
                 if not arg["is_inherited"] and not arg["is_derived"]:
-                    if arg["is_optional"]:
-                        write_attr(
-                            templates.const_function,
-                            class_name=name,
-                            schema_name=schema_name,
-                            schema_name_upper=schema_name_upper,
-                            name="has%s" % arg["name"],
-                            arguments="",
-                            return_type="bool",
-                            body=templates.optional_attr_stmt % {"index": arg["index"] - 1},
-                        )
 
                     def find_template(arg):
                         simple = mapping.schema.is_simpletype(arg["list_instance_type"])
-                        select = arg["list_instance_type"] == "IfcUtil::IfcBaseClass"
                         express = (
                             mapping.flatten_type_string(arg["list_instance_type"]) in mapping.express_to_cpp_typemapping
                         )
@@ -96,12 +92,23 @@ class Implementation(codegen.Base):
                             return templates.get_attr_stmt_enum
                         elif arg["is_nested"] and arg["is_templated_list"]:
                             return templates.get_attr_stmt_nested_array
-                        elif arg["is_templated_list"] and not (select or simple or express):
+                        elif arg["is_templated_list"] and not (simple or express):
                             return templates.get_attr_stmt_array
                         elif arg["non_optional_type"].endswith("*"):
                             return templates.get_attr_stmt_entity
                         else:
                             return templates.get_attr_stmt
+
+                    null_check = ""
+                    if arg["is_optional"]:
+                        attr_check = (
+                            "if(!data_->getArgument(%d) || data_->getArgument(%d)->isNull()) { return %%s; }"
+                            % (arg["index"] - 1, arg["index"] - 1)
+                        )
+                        if "boost::optional" in arg["full_type"]:
+                            null_check = attr_check % "boost::none"
+                        else:
+                            null_check = attr_check % "nullptr"
 
                     tmpl = find_template(arg)
                     write_attr(
@@ -111,12 +118,17 @@ class Implementation(codegen.Base):
                         arguments="",
                         schema_name=schema_name,
                         schema_name_upper=schema_name_upper,
-                        return_type=arg["non_optional_type"],
+                        return_type=arg["full_type"],
                         body=tmpl
                         % {
                             "index": arg["index"] - 1,
-                            "type": arg["non_optional_type"].replace("::Value", ""),
+                            "type": arg["full_type"].replace("::Value", ""),
+                            "non_optional_type": arg["non_optional_type"].replace("::Value", ""),
+                            "non_optional_type_no_pointer": arg["non_optional_type"]
+                            .replace("::Value", "")
+                            .replace("*", ""),
                             "list_instance_type": arg["list_instance_type"],
+                            "null_check": null_check,
                         },
                     )
 
@@ -136,12 +148,19 @@ class Implementation(codegen.Base):
                         templates.function,
                         class_name=name,
                         name="set%s" % arg["name"],
-                        arguments="%s v" % arg["non_optional_type"],
+                        arguments="%s v" % arg["full_type"],
                         return_type="void",
                         schema_name=schema_name,
                         schema_name_upper=schema_name_upper,
                         body=tmpl
-                        % {"index": arg["index"] - 1, "type": arg["non_optional_type"].replace("::Value", "")},
+                        % {
+                            "index": arg["index"] - 1,
+                            "type": arg["full_type"].replace("::Value", ""),
+                            "non_optional_type": arg["non_optional_type"].replace("::Value", ""),
+                            "star_if_optional": "*" if "boost::optional" in arg["full_type"] else "",
+                            "check_optional_set_begin": "if (v) {" if "boost::optional" in arg["full_type"] else "",
+                            "check_optional_set_end": "}" if "boost::optional" in arg["full_type"] else "",
+                        },
                     )
 
                 if arg["is_derived"]:
@@ -328,13 +347,21 @@ class Implementation(codegen.Base):
             )
             simple_type_impl.append("")
 
-        external_definitions = [
-            ("extern entity* %s_%%s_type;" % schema_name_upper) % n for n in mapping.schema.entities.keys()
-        ] + [
-            ("extern type_declaration* %s_%%s_type;" % schema_name_upper) % n for n in mapping.schema.simpletypes.keys()
-        ] + [
-            ("extern enumeration_type* %s_%%s_type;" % schema_name_upper) % n for n in mapping.schema.enumerations.keys()
-        ]
+        external_definitions = (
+            [("extern entity* %s_%%s_type;" % schema_name_upper) % n for n in mapping.schema.entities.keys()]
+            + [
+                ("extern type_declaration* %s_%%s_type;" % schema_name_upper) % n
+                for n in mapping.schema.simpletypes.keys()
+            ]
+            + [
+                ("extern enumeration_type* %s_%%s_type;" % schema_name_upper) % n
+                for n in mapping.schema.enumerations.keys()
+            ]
+            + [
+                ("extern select_type* %s_%%s_type;" % schema_name_upper) % n
+                for n in mapping.schema.selects.keys()
+            ]
+        )
 
         self.str = templates.implementation % {
             "schema_name_upper": schema_name_upper,
