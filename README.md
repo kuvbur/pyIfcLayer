@@ -11,7 +11,9 @@ layers_rule.csv - Файл с правилами. Первый столбец - 
 
 Перевод Архикада в Навис через IFC
 
-***renga_ifc_compat.py***
 
-Скрипт для починки архикадовских зон после выгрузки в IFC
+## Renga IFC Compatibility Tool
 
+Convert zones shape representation in IFC file from "Tessellation" to "SweptSolid" to be compatible with Renga.
+
+- [renga_ifc_compat.py](renga_ifc_compat.py)
