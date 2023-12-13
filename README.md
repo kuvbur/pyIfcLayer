@@ -17,3 +17,14 @@ layers_rule.csv - Файл с правилами. Первый столбец - 
 Convert zones shape representation in IFC file from "Tessellation" to "SweptSolid" to be compatible with Renga.
 
 - [renga_ifc_compat.py](renga_ifc_compat.py)
+
+### Usage
+
+```sh
+./renga_ifc_compat.py input.ifc output.ifc
+```
+
+- `input.ifc`
+	- input IFC file with "Tessellation" zone shape representation
+- `output.ifc`
+	- new converted output IFC file with "SweptSolid" zone shape representation
