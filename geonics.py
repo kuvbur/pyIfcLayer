@@ -1,5 +1,4 @@
 import os
-import uuid
 import ifcopenshell
 
 def ifc_proc(ifc_loc):
