@@ -11,6 +11,9 @@ layers_rule.csv - Файл с правилами. Первый столбец - 
 
 Перевод Архикада в Навис через IFC
 
+***geonics.py***
+
+Обрабатывает IFC файлы, полученные из NanoCAD GeoniCS. Переводит IfcSpatialZone в IfcCivilElement, связывая их с IfcSite. Обработка ведётся дл всех файлов IFC в папке со скриптом, обработанные файлы сохраняются с суффиксом _clean
 
 ## Renga IFC Compatibility Tool
 
